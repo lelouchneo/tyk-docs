@@ -104,6 +104,12 @@ Tyk supports GraphQL natively. Proxy to existing service or build it from scratc
 Log into dashboard and portal with your existing IDP.
 {{< /badge >}}
 
+{{< badge title="New in v3.3" href="/docs/sql-configuration/" >}}
+### SQL Configuration
+
+Tyk supports SQL configuration natively. Store all data inside desired SQL database.
+{{< /badge >}}
+
 {{< /grid >}}
 
 {{< button href="/docs/basic-config-and-security/" color="black" content="More Tyk Configuration" >}}

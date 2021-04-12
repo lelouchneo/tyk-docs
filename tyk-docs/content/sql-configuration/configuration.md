@@ -8,12 +8,24 @@ menu:
 url: "/sql-configuration"
 ---
 
-Tyk supports SQL engine **natively**. This means Tyk have support for desired SQL rational database to be used instead of defaul MongoDB and let users to decide which DB type is the best for their usage.
+Tyk supports SQL engine **natively**. This means Tyk have support for desired SQL rational database to be used instead of default MongoDB and let users to decide which DB type is the best for their usage.
 
-Now you can use SQL engine to store dashboard configuration (no analytics support yet, mongo still required, work in progress).
+While our SQL engine does not depend on database specific functionalities and can work with any SQL database, at the moment we officially support and test only Postgres and SQLite databases. SQLite can be used only for development environments.
 
-Example with different SQL egines following (also works with all compatible dbs).
-## Postgres
+Previously dashboard was using single mongo database for all the data. 
+Now Dashboard has three data storage layers, which can be configured separately (new configuration options).
+- `config_storage` - Configuration storage (APIs, Policies, Users, User Groups, etc.)
+- `log_analytics_storage` - Log storage (Log browser page) - 
+- `analytics_storage` - Analytics storage (used for display all the charts and for all analytics screens)
+
+Which means that if you want you can have dashboard configuration in mongo, but analytics in postgress. 
+Or have configuration in SQLite but analytics use AWS Redshift, or another specialised SQL compatible database. 
+By default Log storage and Analytics storage will use Configuration storage, if you not set them in config.
+
+Note that if legacy "mongo_url" in root config is set, it will use "legacy" mode, and will ignore config_storage section.
+
+
+### Postgres
 ```
 "config_storage": {
   "type": "postgres",
@@ -26,7 +38,7 @@ TYK_DB_CONFIGSTORAGE_TYPE="postgres"
 TYK_DB_CONFIGSTORAGE_SQLDSN="user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
 TYK_DB_MONGOURL=""
 ```
-## SQLite
+### SQLite
 For SQLite you can omit DSN option, and it will use in-memory engine.
 ```
 "config_storage": {
@@ -39,18 +51,7 @@ Or set the following ENV vars:
 TYK_DB_CONFIGSTORAGE_TYPE="sqlite" TYK_DB_MONGOURL=""
 ```
 
-Command line commad for running analytics in such meaner is the following
-
-```
-TYK_DB_CONFIGSTORAGE_TYPE="sqlite" TYK_DB_CONFIGSTORAGE_SQLDSN="/tmp/test.db"
-TYK_DB_MONGOURL="" TYK_DB_LOGANALYTICSSTORAGE_TYPE="mongo"
-TYK_DB_LOGANALYTICSSTORAGE_MONGO_MONGOURL="mongodb://127.0.0.1:27017/tyk_analytics"
-TYK_DB_ANALYTICSSTORAGE_SQLDSN="/tmp/test.db"
-TYK_DB_ANALYTICSSTORAGE_TABLESHARDING=true TYK_LOGLEVEL=debug
-./tyk-analytics --conf ../tyk-develop-env/confs/tyk_analytics.conf
-```
-
-## MySQL
+### MySQL
 ```
 "config_storage": {
   "type": "mysql",
@@ -58,7 +59,7 @@ TYK_DB_ANALYTICSSTORAGE_TABLESHARDING=true TYK_LOGLEVEL=debug
 }
 ```
 
-## Mongo
+### Mongo
 ```
 "config_storage": {
   "type": "mongo",
@@ -67,7 +68,26 @@ TYK_DB_ANALYTICSSTORAGE_TABLESHARDING=true TYK_LOGLEVEL=debug
   }
 }
 ```
-Note that if legacy "mongo_url" in root config is set, it will use "legacy" mode, and will ignore config_storage section.
-Analytics in this build will not work.
 
+## Tyk Pump
+
+Addeddd two new pumps: `sql` and `sql_aggregate`. 
+From configuration point of view they behave similar to the dashboard. 
+
+```
+"sql": {
+    "name": "sql",
+    "meta": {
+       "type": "sqlite",
+       "dsn": "/tmp/test.db"
+    }
+},
+"sql_aggregate": {
+    "name": "sql_aggregate",
+    "meta": {
+        "type": "sqlite",
+        "dsn": "/tmp/test.db"
+    }
+}
+```
 

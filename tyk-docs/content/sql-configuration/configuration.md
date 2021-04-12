@@ -42,7 +42,7 @@ TYK_DB_CONFIGSTORAGE_TYPE="sqlite" TYK_DB_MONGOURL=""
 Command line commad for running analytics in such meaner is the following
 
 ```
-go build -i && TYK_DB_CONFIGSTORAGE_TYPE="sqlite" TYK_DB_CONFIGSTORAGE_SQLDSN="/tmp/test.db"
+TYK_DB_CONFIGSTORAGE_TYPE="sqlite" TYK_DB_CONFIGSTORAGE_SQLDSN="/tmp/test.db"
 TYK_DB_MONGOURL="" TYK_DB_LOGANALYTICSSTORAGE_TYPE="mongo"
 TYK_DB_LOGANALYTICSSTORAGE_MONGO_MONGOURL="mongodb://127.0.0.1:27017/tyk_analytics"
 TYK_DB_ANALYTICSSTORAGE_SQLDSN="/tmp/test.db"

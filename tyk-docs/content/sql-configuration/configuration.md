@@ -90,4 +90,3 @@ From configuration point of view they behave similar to the dashboard.
     }
 }
 ```
-

@@ -12,14 +12,14 @@ Tyk supports SQL engine **natively**. This means Tyk have support for desired SQ
 
 While our SQL engine does not depend on database specific functionalities and can work with any SQL database, at the moment we officially support and test only Postgres and SQLite databases. SQLite can be used only for development environments.
 
-Previously dashboard was using single mongo database for all the data. 
+Previously dashboard was using single mongo database for all the data.
 Now Dashboard has three data storage layers, which can be configured separately (new configuration options).
 - `config_storage` - Configuration storage (APIs, Policies, Users, User Groups, etc.)
-- `log_analytics_storage` - Log storage (Log browser page) - 
+- `log_analytics_storage` - Log storage (Log browser page) -
 - `analytics_storage` - Analytics storage (used for display all the charts and for all analytics screens)
 
-Which means that if you want you can have dashboard configuration in mongo, but analytics in postgress. 
-Or have configuration in SQLite but analytics use AWS Redshift, or another specialised SQL compatible database. 
+Which means that if you want you can have dashboard configuration in mongo, but analytics in postgress.
+Or have configuration in SQLite but analytics use AWS Redshift, or another specialised SQL compatible database.
 By default Log storage and Analytics storage will use Configuration storage, if you not set them in config.
 
 Note that if legacy "mongo_url" in root config is set, it will use "legacy" mode, and will ignore config_storage section.
@@ -64,15 +64,15 @@ TYK_DB_CONFIGSTORAGE_TYPE="sqlite" TYK_DB_MONGOURL=""
 "config_storage": {
   "type": "mongo",
   "mongo": {
-     "url": "..."
+     "url": "mongodb://127.0.0.1:27017/schema_name"
   }
 }
 ```
 
 ## Tyk Pump
 
-Addeddd two new pumps: `sql` and `sql_aggregate`. 
-From configuration point of view they behave similar to the dashboard. 
+Addeddd two new pumps: `sql` and `sql_aggregate`.
+From configuration point of view they behave similar to the dashboard.
 
 ```
 "sql": {

@@ -1,5 +1,7 @@
 ---
 title: "SQL Configuration"
+tags: ["SQL", "Postgres", "SQLite", "Database Configuration"]
+description: "How to configure Tyk to use Postgres or SQLite"
 date: 2021-04-12
 weight: 200
 menu:

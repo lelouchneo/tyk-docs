@@ -14,57 +14,74 @@ While our SQL engine does not depend on database specific functionalities and ca
 
 Previously dashboard was using single mongo database for all the data.
 Now Dashboard has three data storage layers, which can be configured separately (new configuration options).
-- `config_storage` - Configuration storage (APIs, Policies, Users, User Groups, etc.)
-- `log_analytics_storage` - Log storage (Log browser page) -
-- `analytics_storage` - Analytics storage (used for display all the charts and for all analytics screens)
+```
+{
+  "storage": {
+    "main":{},
+    "analytics":{},
+    "logs":{},
+  }
+}
+```
+- `main` - Configuration storage (APIs, Policies, Users, User Groups, etc.)
+- `analytics` - Analytics storage (used for display all the charts and for all analytics screens)
+- `logs` - Log storage (Log browser page) -
 
 Which means that if you want you can have dashboard configuration in mongo, but analytics in postgress.
 Or have configuration in SQLite but analytics use AWS Redshift, or another specialised SQL compatible database.
 By default Log storage and Analytics storage will use Configuration storage, if you not set them in config.
 
-Note that if legacy "mongo_url" in root config is set, it will use "legacy" mode, and will ignore config_storage section.
+Note that if legacy "mongo_url" in root config is set, it will use "legacy" mode, and will ignore `main` storage section.
 
 
 ### Postgres
 ```
-"config_storage": {
-  "type": "postgres",
-  "dsn": "user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
+"storage": {
+  "main": {
+    "type": "postgres",
+    "dsn": "user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
+  }
 }
 ```
 Or set the following ENV vars:
 ```
-TYK_DB_CONFIGSTORAGE_TYPE="postgres"
-TYK_DB_CONFIGSTORAGE_SQLDSN="user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
+TYK_DB_STORAGE_MAIN_TYPE="postgres"
+TYK_DB_STORAGE_MAIN_DSN="user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
 TYK_DB_MONGOURL=""
 ```
 ### SQLite
 For SQLite you can omit DSN option, and it will use in-memory engine.
 ```
-"config_storage": {
-  "type": "sqlite",
-  "dsn": "./test.db"
+"storage": {
+  "main": {
+    "type": "sqlite",
+    "dsn": "./test.db"
+  }
 }
 ```
 Or set the following ENV vars:
 ```
-TYK_DB_CONFIGSTORAGE_TYPE="sqlite" TYK_DB_MONGOURL=""
+TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_MONGOURL=""
 ```
 
 ### MySQL
 ```
-"config_storage": {
-  "type": "mysql",
-  "dsn": "gorm:gorm@tcp(127.0.0.1:3306)/gorm?charset=utf8&parseTime=True&loc=Local"
+"storage": {
+  "main": {
+    "type": "mysql",
+    "dsn": "gorm:gorm@tcp(127.0.0.1:3306)/gorm?charset=utf8&parseTime=True&loc=Local"
+  }
 }
 ```
 
 ### Mongo
 ```
-"config_storage": {
-  "type": "mongo",
-  "mongo": {
-     "url": "mongodb://127.0.0.1:27017/schema_name"
+"storage": {
+  "main": {
+    "type": "mongo",
+    "mongo": {
+      "url": "mongodb://127.0.0.1:27017/schema_name"
+    }
   }
 }
 ```

@@ -25,15 +25,15 @@ Now Dashboard has three data storage layers, which can be configured separately 
   }
 }
 ```
-- `main` - Configuration storage (APIs, Policies, Users, User Groups, etc.)
+- `main` - Main storage (APIs, Policies, Users, User Groups, etc.)
 - `analytics` - Analytics storage (used for display all the charts and for all analytics screens)
-- `logs` - Log storage (Log browser page) -
+- `logs` - Logs storage (log browser page) -
 
 Which means that if you want you can have dashboard configuration in mongo, but analytics in postgress.
 Or have configuration in SQLite but analytics use AWS Redshift, or another specialised SQL compatible database.
-By default Log storage and Analytics storage will use Configuration storage, if you not set them in config.
+By default Logs storage and Analytics storage will use Main storage, if you not set them in config.
 
-Note that if legacy "mongo_url" in root config is set, it will use "legacy" mode, and will ignore `main` storage section.
+Note that if legacy `mongo_url` in root config is set, it will use "legacy" mode, and will ignore `main` storage section.
 
 
 ### Postgres

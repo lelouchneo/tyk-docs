@@ -4,7 +4,7 @@ date: 2020-03-26T10:32:49Z
 menu:
   main:
     parent: "Frequently Asked Questions"
-weight: 0 
+weight: 0
 ---
 
 As AWS DocumentDB runs with TLS enabled, we require a way to run it without disabling the TLS verification.
@@ -13,19 +13,28 @@ Additionally DocumentDB can't be exposed to the local machine outside of the Ama
 
 So, in order to support it, we provide the following variables for both our [Tyk Analytics Dashboard](/docs/tyk-configuration-reference/tyk-dashboard-configuration-options/) and [Tyk Pump](/docs/tyk-configuration-reference/tyk-pump-configuration/):
 
-* `mongo_ssl_ca_file` - path to the PEM file with trusted root certificates
-* `mongo_ssl_pem_keyfile` - path to the PEM file which contains both client certificate and private key. This is required for Mutual TLS.
-* `mongo_ssl_allow_invalid_hostnames` - ignore hostname check when it differs from the original (for example with SSH tunneling). The rest of the TLS verification will still be performed.
-
+- `ca_file` - path to the PEM file with trusted root certificates
+- `key_file` - path to the PEM file which contains both client certificate and private key. This is required for Mutual TLS.
+- `allow_invalid_hostnames` - ignore hostname check when it differs from the original (for example with SSH tunneling). The rest of the TLS verification will still be performed.
 
 A working DocumentDB configuration looks like this (assuming that there is SSH tunnel, proxying to 27018 port).
 
 ```{.json}
-  "mongo_url": "mongodb://testest:testtest@127.0.0.1:27018/tyk_analytics?connect=direct",
-  "mongo_use_ssl": true,
-  "mongo_ssl_insecure_skip_verify": false,
-  "mongo_ssl_ca_file": "<path to>/rds-combined-ca-bundle.pem",
-  "mongo_ssl_allow_invalid_hostnames": true,
+"storage": {
+  "main": {
+    "mongo": {
+      "url": "mongodb://testest:testtest@127.0.0.1:27018/tyk_analytics?connect=direct",
+      "ssl": {
+        "enabled": true,
+        "insecure_skip_verify": false,
+        "ca_file": "<path to>/rds-combined-ca-bundle.pem",
+        "allow_invalid_hostnames": true,
+        "key_file": "<path to>/key_file",
+      }
+      "batch_size": 1
+    }
+  }
+}
 ```
 
 ### Capped Collections

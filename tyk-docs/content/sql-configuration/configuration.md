@@ -5,8 +5,8 @@ description: "How to configure Tyk to use Postgres or SQLite"
 date: 2021-04-12
 weight: 200
 menu:
-    main:
-        parent: Tyk Gateway
+  main:
+    parent: Tyk Gateway
 url: "/sql-configuration"
 ---
 
@@ -16,6 +16,7 @@ While our SQL engine does not depend on database specific functionalities and ca
 
 Previously dashboard was using single mongo database for all the data.
 Now Dashboard has three data storage layers, which can be configured separately (new configuration options).
+
 ```
 {
   "storage": {
@@ -25,6 +26,7 @@ Now Dashboard has three data storage layers, which can be configured separately 
   }
 }
 ```
+
 - `main` - Main storage (APIs, Policies, Users, User Groups, etc.)
 - `analytics` - Analytics storage (used for display all the charts and for all analytics screens)
 - `logs` - Logs storage (log browser page) -
@@ -35,8 +37,8 @@ By default Logs storage and Analytics storage will use Main storage, if you not 
 
 Note that if legacy `mongo_url` in root config is set, it will use "legacy" mode, and will ignore `main` storage section.
 
-
 ### Postgres
+
 ```
 "storage": {
   "main": {
@@ -45,14 +47,19 @@ Note that if legacy `mongo_url` in root config is set, it will use "legacy" mode
   }
 }
 ```
+
 Or set the following ENV vars:
+
 ```
 TYK_DB_STORAGE_MAIN_TYPE="postgres"
 TYK_DB_STORAGE_MAIN_DSN="user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
 TYK_DB_MONGOURL=""
 ```
+
 ### SQLite
+
 For SQLite you can omit DSN option, and it will use in-memory engine.
+
 ```
 "storage": {
   "main": {
@@ -61,12 +68,15 @@ For SQLite you can omit DSN option, and it will use in-memory engine.
   }
 }
 ```
+
 Or set the following ENV vars:
+
 ```
 TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_MONGOURL=""
 ```
 
 ### MySQL
+
 ```
 "storage": {
   "main": {
@@ -77,12 +87,19 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_MONGOURL=""
 ```
 
 ### Mongo
+
 ```
 "storage": {
   "main": {
     "type": "mongo",
     "mongo": {
-      "url": "mongodb://127.0.0.1:27017/schema_name"
+      "url": "mongodb://127.0.0.1:27017/schema_name",
+      "ssl": {
+        "enabled": true,
+        "insecure_skip_verify": true,
+        ...
+      },
+      "batch_size": 1
     }
   }
 }

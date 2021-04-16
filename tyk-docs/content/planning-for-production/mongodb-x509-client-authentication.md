@@ -41,7 +41,7 @@ You have to url encode the `:` character into `%40`.   So replace any `:` in the
 
 ### 2. Certificates
 
-We have two provide two certificates to complete the X509 Client Authentication.  
+We have two provide two certificates to complete the X509 Client Authentication.
 
 
 **CA Cert**, Should contain just the public key of the CA.
@@ -58,10 +58,18 @@ Your tyk_analytics.conf should include these fields at the root level:
 ```json
 {
   ...
-  "mongo_url": "mongodb://<username>@<host>:<port>/<db>?authSource=$external&authMechanism=MONGODB-X509",
-  "mongo_use_ssl": true,
-  "mongo_ssl_ca_file": "ca.pem",
-  "mongo_ssl_pem_keyfile": "client.pem"
+  "storage": {
+    "main": {
+      "mongo": {
+        "url": "mongodb://<username>@<host>:<port>/<db>?authSource=$external&authMechanism=MONGODB-X509",
+        "ssl": {
+          "enabled": true,
+          "ca_file": "ca.pem",
+          "key_file": "client.pem",
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -78,12 +86,12 @@ Your tyk_analytics.conf should include these fields at the root level:
 
 
 ## Tyk Pump
-There are 3 mongo pumps, `mongo`, `mongo_aggregate`, and `mongo_selective`.  
+There are 3 mongo pumps, `mongo`, `mongo_aggregate`, and `mongo_selective`.
 
 In order to setup X509 certificate authentication with MongoDB, you can add the following tags to the `meta` section to each of these 3 pumps, ie:
 
 ```json
-{ 
+{
   ...
   "pumps": {
     "mongo": {
@@ -104,12 +112,12 @@ In addition to the other configs, these are the ones related to MongoDB:
 
 | Config File           | Type  | Examples
 | -- | -- | --
-"mongo_url" | string     | "mongodb://{username}@{host}:{port}/{db}?authSource=$external&authMechanism=MONGODB-X509" |   
+"mongo_url" | string     | "mongodb://{username}@{host}:{port}/{db}?authSource=$external&authMechanism=MONGODB-X509" |
 "mongo_use_ssl" | bool | true, false |
-"mongo_ssl_ca_file" | string      | "certificates/ca.pem" |  
-“mongo_ssl_pem_keyfile" | string     | "certificates/key.pem" |     
-"mongo_ssl_insecure_skip_verify" | bool     | true, false |     
-"mongo_ssl_allow_invalid_hostnames" | bool         | true, false | 
+"mongo_ssl_ca_file" | string      | "certificates/ca.pem" |
+“mongo_ssl_pem_keyfile" | string     | "certificates/key.pem" |
+"mongo_ssl_insecure_skip_verify" | bool     | true, false |
+"mongo_ssl_allow_invalid_hostnames" | bool         | true, false |
 
 ## Tyk Sink
 
@@ -139,4 +147,4 @@ The config settings are exactly the same as the Tyk Dashboard steps, just nested
 "analytics.mongo_ssl_allow_invalid_hostnames" | TYK_MDCB_ANALYTICS_MongoSSLAllowInvalidHostnames | bool  | true, false |
 "analytics.mongo_session_consistency" | TYK_MDCB_ANALYTICS_MongoSessionConsistency | string |  "strong", "eventual", or "monotonic". default is "strong" |
 "analytics.mongo_batch_size" |  TYK_MDCB_ANALYTICS_MongoBatchSize | int |  Default "2000", min "100" |
-    
+

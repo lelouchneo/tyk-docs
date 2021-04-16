@@ -4,7 +4,7 @@ title: Tyk Dashboard Configuration Options
 menu:
   main:
     parent: "Tyk Dashboard"
-weight: 2 
+weight: 2
 url: /tyk-dashboard/configuration
 aliases:
     - /tyk-configuration-reference/tyk-dashboard-configuration-options/
@@ -195,13 +195,13 @@ You may see `net::ERR_CONNECTION_REFUSED` errors in the browser console if you d
 This section contains details for a Tyk Gateway node that the Tyk Dashboard can speak to. The Dashboard controls Tyk using the Gateway API and only requires visibility to one node, so long as all nodes are using the same API Definitions.
 
 {{< note success >}}
-**Note**  
+**Note**
 
 If the Dashboard cannot see a Tyk node, key management functions will not work properly.
 {{< /note >}}
 
 {{< warning success >}}
-**Warning**  
+**Warning**
 
 In a sharded environment, the Gateway node specified in `tyk_api_config` must not be sharded.
 {{< /warning >}}
@@ -232,12 +232,12 @@ As of Tyk Gateway **v2.0** and Tyk Dashboard **v1.0** all Tyk API Gateway nodes 
 (env var:**TYK_DB_NODESECRET**)
 
 {{< note success >}}
-**Note**  
+**Note**
 
 This value should match with the [`node_secret`](/docs/tyk-configuration-reference/tyk-gateway-configuration-options/#a-name-node-secret-a-node-secret) Gateway configuration option value.
 {{< /note >}}
 
-    
+
 Each node communicates with the Dashboard via a shared secret (this setting) and a nonce to ensure that out-of-band requests cannot be made. Nodes will send a heartbeat every few seconds to notify the Dashboard that they are running.
 
 #### admin_secret
@@ -252,7 +252,7 @@ This purpose of these endpoints is to allow functionality that regular Dashboard
 The full URL to your MongoDB instance, this can be a clustered instance if necessary and should include the database and username / password data.
 
 {{< note success >}}
-**Note**  
+**Note**
 
 This should be the same as the credentials that your Tyk installation uses.
 {{< /note >}}
@@ -288,7 +288,7 @@ The port that your Redis installation listens on.
 (env var:**TYK_DB_REDISPORT**)
 
 {{< note success >}}
-**Note**  
+**Note**
 
 The Tyk Dashboard uses Redis to store its session data and to communicate with your Tyk Gateway nodes occasionally. The Redis details used by the dashboard must be the same as those set for your Tyk installation.
 {{< /note >}}
@@ -333,7 +333,7 @@ Set this to `true` if you are using a Redis cluster.
 ### redis_hosts
 
 {{< note success >}}
-**Note**  
+**Note**
 
 From v1.9.3 `redis_hosts` has been deprecated and replaced by `redis_addrs`
 {{< /note >}}
@@ -429,6 +429,8 @@ The name to use when sending emails.
 #### dashboard_hostname
 
 Your public dashboard hostname.
+{{< note success >}}
+**Note**
 
 (env var:**TYK_DB_EMAILBACKEND_DASHBOARDHOSTNAME**)
 
@@ -488,9 +490,9 @@ Tyk will by default try to manage domain names based on the organisation slug, s
 ```
 org-slug.hostname.com/api-slug
 ```
-    
+
 However, if you are not using the host manager, then domains are hard-coded per API, or at a Gateway level, and the org-slug moniker is not needed to construct demo URLs (e.g. for Swagger docs and the API pages). To stop this guessing behaviour, change this option to `true` and the Dashboard will stop trying to add an org-slug to the start of URLs.
-    
+
 For legacy installs or upgrades using the host manager, leave this value as `false`.
 
 (env var:**TYK_DB_HOSTCONFIG_DISABLEORGSLUGPREFIX**)
@@ -563,7 +565,7 @@ Array of allowed cipher suites as defined at https://golang.org/pkg/crypto/tls/#
 #### http_server_options.prefer_server_ciphers
 
 A boolean value to control whether the server selects the preferred ciphersuite for the client, or the preferred ciphersuite for the server. If set to `true`, the server preferences in the order of the elements listed in `ssl_ciphers` is used.
-    
+
 For more information see [TLS and SSL](/docs/basic-config-and-security/security/tls-and-ssl/)
 
 (env var:**TYK_DB_HTTPSERVEROPTIONS_PREFERSERVERCIPHERSUITES**)
@@ -754,13 +756,13 @@ The shared secret between TIB and the Dashboard. This ensures all API requests b
 ### allow_explicit_policy_id
 
 By default in a Pro installation, Tyk will load Policy IDs and use the internal object-ID as the ID of the policy. This is not portable in cases where the data needs to be moved from installation to installation.
-    
+
 If you set this value to `true`, then the `id` parameter in a stored policy (or imported policy using the REST API of the Dashboard) will be used instead of the internal ID.
 
 (env var:**TYK_DB_ALLOWEXPLICITPOLICYID**)
 
 {{< note success >}}
-**Note**  
+**Note**
 
 This option should only be used when transporting an installation to a new database.
 {{< /note >}}
@@ -876,7 +878,7 @@ Set to `true` to create users in different organisations, using the same email a
 (env var:**TYK_DB_ENABLEMULTIORGUSERS**)
 
 {{< note success >}}
-**Note**  
+**Note**
 
 This is only available for clients with a two node or more Tyk Dashboard licence.
 {{< /note >}}

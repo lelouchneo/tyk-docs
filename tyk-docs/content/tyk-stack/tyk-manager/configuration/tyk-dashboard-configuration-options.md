@@ -7,10 +7,9 @@ menu:
 weight: 2
 url: /tyk-dashboard/configuration
 aliases:
-    - /tyk-configuration-reference/tyk-dashboard-configuration-options/
-    - /configure/tyk-dashboard-configuration-options/
+  - /tyk-configuration-reference/tyk-dashboard-configuration-options/
+  - /configure/tyk-dashboard-configuration-options/
 ---
-
 
 The Tyk Dashboard has a separate configuration file, it is small and comes packaged with the tarball. It uses a separate configuration file as it may be installed on a different host to your Tyk Gateway nodes.
 
@@ -22,7 +21,7 @@ Environment variables (env var) can be used to override the settings defined in 
 
 The file will look like the sample below, the various fields are explained in the following sections:
 
-``` {.copyWrapper}
+```{.copyWrapper}
 {
     "listen_port": 3000,
     "tyk_api_config": {
@@ -31,11 +30,19 @@ The file will look like the sample below, the various fields are explained in th
         "Secret": "352d20ee67be67f6340b4c0605b044b7"
     },
     "enable_ownership": false,
-    "mongo_url": "mongodb://tyk-mongo:27017/tyk_analytics",
-    "mongo_use_ssl": false,
-    "mongo_ssl_insecure_skip_verify": false,
-    "mongo_session_consistency": "",
-    "mongo_batch_size": 2000,
+    "storage": {
+        "main": {
+            "mongo": {
+                "url": "mongodb://tyk-mongo:27017/tyk_analytics",
+                "ssl": {
+                    "enabled": false,
+                    "insecure_skip_verify": false,
+                    "session_consistency": "",
+                    "batch_size": 2000,
+                }
+            }
+        }
+    },
     "page_size": 10,
     "admin_secret": "12345",
     "shared_node_secret": "352d20ee67be67f6340b4c0605b044b7",
@@ -176,8 +183,10 @@ The file will look like the sample below, the various fields are explained in th
     },
     "enable_multi_org_users": false,
     "version_check_url": ""
+
 }
 ```
+
 ### listen_port
 
 Setting this value will change the port that Tyk Dashboard listens on. By default Tyk will try to listen on port `3000`.
@@ -205,7 +214,6 @@ If the Dashboard cannot see a Tyk node, key management functions will not work p
 
 In a sharded environment, the Gateway node specified in `tyk_api_config` must not be sharded.
 {{< /warning >}}
-
 
 #### tyk_api_config.Host
 
@@ -237,7 +245,6 @@ As of Tyk Gateway **v2.0** and Tyk Dashboard **v1.0** all Tyk API Gateway nodes 
 This value should match with the [`node_secret`](/docs/tyk-configuration-reference/tyk-gateway-configuration-options/#a-name-node-secret-a-node-secret) Gateway configuration option value.
 {{< /note >}}
 
-
 Each node communicates with the Dashboard via a shared secret (this setting) and a nonce to ensure that out-of-band requests cannot be made. Nodes will send a heartbeat every few seconds to notify the Dashboard that they are running.
 
 #### admin_secret
@@ -248,6 +255,29 @@ This purpose of these endpoints is to allow functionality that regular Dashboard
 (env var:**TYK_DB_ADMINSECRET**)
 
 ### mongo_url
+    The full URL to your MongoDB instance, this can be a clustered instance if necessary and should include the database and username / password data. (This is backward compatibility settings)
+## storage
+
+This is a main configuration object where we keep all details for storage itself
+
+sample of configuration obeject is
+
+```
+    "storage": {
+        "main": {
+            "mongo": {
+                "url": "mongodb://tyk-mongo:27017/tyk_analytics",
+                "ssl": {
+                    "enabled": false,
+                    "insecure_skip_verify": false,
+                    "session_consistency": "",
+                    "batch_size": 2000,
+                }
+            }
+        }
+    },
+```
+### mongo > url
 
 The full URL to your MongoDB instance, this can be a clustered instance if necessary and should include the database and username / password data.
 
@@ -257,20 +287,17 @@ The full URL to your MongoDB instance, this can be a clustered instance if neces
 This should be the same as the credentials that your Tyk installation uses.
 {{< /note >}}
 
+### mongo > ssl is a object inside Mongo where configuration settings for SSL should be included
 
-### mongo_ssl_insecure_skip_verify
+### mongo > ssl > insecure_skip_verify
 
 This setting allows the use of self-signed certificates when connecting to an encrypted MongoDB database.
 
-(env var:**TYK_DB_MONGOSSLINSECURESKIPVERIFY**)
-
-### mongo_use_ssl
+### mongo > ssl > enabled
 
 A Boolean setting for Mongo SSL support. Set to `true` to enable SSL.
 
-(env var:**TYK_DB_MONGOUSESSL**)
-
-### mongo_batch_size
+### mongo > ssl > batch_size
 
 Sets the batch size for mongo results. Defaults to `2000`. Increasing this number can decrease dashboard performance. This value cannot be lower than `100` and will fallback to `100` if a lower value has been set.
 
@@ -292,7 +319,6 @@ The port that your Redis installation listens on.
 
 The Tyk Dashboard uses Redis to store its session data and to communicate with your Tyk Gateway nodes occasionally. The Redis details used by the dashboard must be the same as those set for your Tyk installation.
 {{< /note >}}
-
 
 ### redis_host
 
@@ -433,7 +459,6 @@ Your public dashboard hostname.
 **Note**
 
 (env var:**TYK_DB_EMAILBACKEND_DASHBOARDHOSTNAME**)
-
 
 ### hide_listen_path
 
@@ -705,6 +730,7 @@ The following settings are used internally by Tyk for our Cloud product, and can
         "dont_allow_license_management_view": false,
         "cloud": false
 ```
+
 Also
 
 ```
@@ -766,7 +792,6 @@ If you set this value to `true`, then the `id` parameter in a stored policy (or 
 
 This option should only be used when transporting an installation to a new database.
 {{< /note >}}
-
 
 ### use_sharded_analytics
 
@@ -841,31 +866,31 @@ Enables detailed records in audit log, by defaultt set to `false`. If set to `tr
 
 Audit record fields for `json` format:
 
-*   `req_id` - unique request ID
+- `req_id` - unique request ID
 
-*   `org_id` - organization ID
+- `org_id` - organization ID
 
-*   `date` - date in `RFC1123` format
+- `date` - date in `RFC1123` format
 
-*   `timestamp` - unix timestamp
+- `timestamp` - unix timestamp
 
-*   `ip` - IP address the request was originating from
+- `ip` - IP address the request was originating from
 
-*   `user` - dashboard user who performed the request
+- `user` - dashboard user who performed the request
 
-*   `action` - description of action performed (`i.e. `Update User`)
+- `action` - description of action performed (`i.e. `Update User`)
 
-*   `method` - HTTP-method of the request
+- `method` - HTTP-method of the request
 
-*   `url` - URL of the request
+- `url` - URL of the request
 
-*   `status` - HTTP response status of the request
+- `status` - HTTP response status of the request
 
-*   `diff` - provides diff of changed fields (available only for PUT requests)
+- `diff` - provides diff of changed fields (available only for PUT requests)
 
-*   `request_dump` - HTTP request copy (available if `audit.detailed_recording` is set to `true`)
+- `request_dump` - HTTP request copy (available if `audit.detailed_recording` is set to `true`)
 
-*   `response_dump` - HTTP response copy (available if `audit.detailed_recording` is set to `true`)
+- `response_dump` - HTTP response copy (available if `audit.detailed_recording` is set to `true`)
 
 Audit record fields for `text` format - all fields are in plain text separated with new line and provided in the same order as fields for `json` format.
 

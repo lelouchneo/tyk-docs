@@ -97,7 +97,7 @@ Once installed, modify your `/opt/tyk-sink/tyk_sink.conf` file as follows:
   "hash_keys": true,
   "forward_analytics_to_pump": true,
   "ignore_tag_prefix_list": [
-    
+
   ],
   "analytics": {
     "mongo_url": "mongodb://localhost/tyk_analytics"

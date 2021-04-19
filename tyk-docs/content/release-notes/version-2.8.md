@@ -8,7 +8,7 @@ weight: 5
 
 ## Looping
 
-You now can configure complex request pipelines, allowing you to specify different actions for the same path, depending 
+You now can configure complex request pipelines, allowing you to specify different actions for the same path, depending
 on defined conditions.
 
 Visit the [looping section](/docs/advanced-configuration/transform-traffic/looping) for more information.
@@ -29,9 +29,9 @@ See [Debugging Tab](/docs/advanced-configuration/transform-traffic/endpoint-desi
 
 ## Separate rate limits and quotas per API within the same Policy
 
-If you set the `Limits and Quotas per API` flag while configuring a policy, you will be able to configure separate rate limits and quotas per API.  
+If you set the `Limits and Quotas per API` flag while configuring a policy, you will be able to configure separate rate limits and quotas per API.
 
-Note that you can’t mix this functionality with 
+Note that you can’t mix this functionality with
 [partitioned policies](/docs/basic-config-and-security/security/security-policies/partitioned-policies/).
 
 ---
@@ -49,15 +49,15 @@ The Developer portal now fully supports exposing oAuth2 APIs:
 
 NOTE: Currently only available with >2 node Dashboard licence.
 
-You can now create users with the same email address in different organisations. Users will then be able to select an organisation 
-when logging in, and can easily switch between organisations via the navigation menu. To enable set 
+You can now create users with the same email address in different organisations. Users will then be able to select an organisation
+when logging in, and can easily switch between organisations via the navigation menu. To enable set
 `"enable_multi_org_users": true`.
 
 ---
 
 ## Request throttling
 
-When hitting quota or rate limits, the Gateway now can now automatically queue and auto-retry client requests. Throttling can be configured at a key or policy level via two new fields: `throttle_interval` and `throttle_retry_limit`. 
+When hitting quota or rate limits, the Gateway now can now automatically queue and auto-retry client requests. Throttling can be configured at a key or policy level via two new fields: `throttle_interval` and `throttle_retry_limit`.
 
 1. `throttle_interval`: Interval(seconds) between each request retry.
 2. `throttle_retry_limit`: Total request retry number.
@@ -66,10 +66,10 @@ When hitting quota or rate limits, the Gateway now can now automatically queue a
 
 ## Password policy improvements
 
-* `security.user_password_max_days` Set the maximum lifetime of a password in days for a user. 
-  They will be prompted to reset their password if the lifetime exceeds the configured expiry value. 
+* `security.user_password_max_days` Set the maximum lifetime of a password in days for a user.
+  They will be prompted to reset their password if the lifetime exceeds the configured expiry value.
   e.g. If the value is set to `30` any user password used over 30 days is considered invalid and must be reset.
-* `security.enforce_password_history` Set a maximum number of previous passwords used by a user that cannot be reused. 
+* `security.enforce_password_history` Set a maximum number of previous passwords used by a user that cannot be reused.
   e.g. If set to `5` the user cannot reuse any of their 5 most recently used passwords.
 * `security.force_first_login_pw_reset` A newly created user will be forced to reset their password on their first login. By default this is set to `false`.
 
@@ -78,7 +78,7 @@ When hitting quota or rate limits, the Gateway now can now automatically queue a
 ## Developer management improvements
 * You can now manually create developer subscriptions from the developer screen.
 * We've added a quick way to change a subscription policy and reset a quota
-* All actions on the developer screen now only require developer permissions 
+* All actions on the developer screen now only require developer permissions
 
 ---
 
@@ -106,7 +106,7 @@ The Current logged in Developer can be accessed using the `.Profile` variable wi
 * `Fields` - A map containing custom developer fields
 * `OauthClients` - A map containing list of registered oAuth clients, where the key is the policy ID.
 
-The Current logged in Developer detailed subscription object can be accessed using the `.APIS` variable, containing a map, where the key is a policy ID and the values are in the following format: 
+The Current logged in Developer detailed subscription object can be accessed using the `.APIS` variable, containing a map, where the key is a policy ID and the values are in the following format:
 
 * `APIDescription` - API definition
     * `ID` - Internal API id
@@ -121,7 +121,7 @@ The Current logged in Developer detailed subscription object can be accessed usi
 
 ### Example
 
-You have different teams of developers, and for each team we want to show them a different list of APIs. 
+You have different teams of developers, and for each team we want to show them a different list of APIs.
 In this case, for each developer, we need to set a custom `Team` field, and add it to a template like this:
 
 ```
@@ -149,11 +149,11 @@ Similar functionality based on Key metadata can look like this:
 
 ## Custom analytics storage engines for Multi-Cloud & Enterprise MDCB users
 
-Multi-Cloud & Enterprise MDCB installations can now leverage the power of the Tyk Pump and send analytics to custom sources like ElasticSearch or InfluxDB from within their local Data Centers. 
+Multi-Cloud & Enterprise MDCB installations can now leverage the power of the Tyk Pump and send analytics to custom sources like ElasticSearch or InfluxDB from within their local Data Centers.
 
 This allows you disable sending the Tyk Gateway analytics to the Multi-Cloud / Master layer from the Gateway itself, allowing the Tyk Pump process to take care of it.
 
-In order to do that, you need to: 
+In order to do that, you need to:
 
 * Install Tyk Pump, with a `hybrid` pump section with the following configuration:
 
@@ -215,14 +215,14 @@ Audit records the following fields for `json` format:
  *   `diff` - provides a diff of changed fields (available only for PUT requests)
  *   `request_dump` - HTTP request copy (available if `detailed_recording` is set to `true`)
  *   `response_dump` - HTTP response copy (available if `detailed_recording` is set to `true`)
- 
+
  If you specify `text` format - all fields are in plain text separated with a new line and provided in the same order as for `json` format.
 
 ---
 
 ## Plugin bundler CLI tools now built-in to Tyk binary
 
-Previously you had to use a separate `tyk-cli` binary to build bundles. 
+Previously you had to use a separate `tyk-cli` binary to build bundles.
 The build command remains the same, but instead of using `tyk-cli bundle` you now use `tyk bundle`.
 
 ---
@@ -259,7 +259,7 @@ You can modify your API definition to let Tyk know how to get the credentials:
 ## Insecure Skip Verify on a per API basis
 
 Previously, it was possible to get Tyk Gateway to skip TLS verification globally (for ALL apis), but it was not possible to enable this on a per API basis. This meant that it was not previously possible to use self-signed certificates for some APIs, and actual certs for others.
-  
+
 It is now possible to control which APIs use skip secure verification as follows within the API Definition object:
 
 `api_definition.proxy.transport.ssl_insecure_skip_verify: bool` - Defaults to `false`.
@@ -272,9 +272,9 @@ Tyk's JSVM `TykMakeHttpRequest` function will also respect the above configurati
 
 ### Tyk Gateway 2.8.0
 - URL rewrite advanced rules extended with looping support, allowing you to build complex request pipelines.
-- Added an Admin Debugger API 
+- Added an Admin Debugger API
 - SSL verification now can be disabled at the API level in addition to the global level, using the new `proxy.transport.ssl_insecure_skip_verify` boolean variable.
-- You can rename the default `/hello` healthcheck endpoint using the new gateway `health_check_endpoint_name` string variable. 
+- You can rename the default `/hello` healthcheck endpoint using the new gateway `health_check_endpoint_name` string variable.
 - Basic auth plugin now can extract credentials from the request body
 - Bundler CLI tools now built in to the Tyk binary
 - Allow updating keys by hash
@@ -283,7 +283,7 @@ Tyk's JSVM `TykMakeHttpRequest` function will also respect the above configurati
 
 - Added API Debugger tab to the API Designer.
 - Extended the Portal templating functionality.
-- Similar to the Gateway, you now can whitelist a list of acceptable TLS ciphers using the 
+- Similar to the Gateway, you now can whitelist a list of acceptable TLS ciphers using the
   `http_server_options.cipher_suites` array option.
 - Audit log improvements
 - Exposing oAuth2 APIs to developer portal

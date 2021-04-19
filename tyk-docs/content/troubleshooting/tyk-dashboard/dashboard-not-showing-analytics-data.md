@@ -48,7 +48,7 @@ Ensure the Pump service is running.
 
 Ensure the Dashboard `tyk_analytics.conf` has:
 
-* `mongo_url` set to the same MongoDB instance that the Pump is connected to.
+*  inside storage main mongo object, `url` set to the same MongoDB instance that the Pump is connected to.
 
 #### MDCB incorrectly configured
 

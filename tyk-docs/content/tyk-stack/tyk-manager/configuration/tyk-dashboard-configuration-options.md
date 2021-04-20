@@ -32,8 +32,9 @@ The file will look like the sample below, the various fields are explained in th
     "enable_ownership": false,
     "storage": {
         "main": {
+            "type": "mongo",
+            "connection_string": "mongodb://tyk-mongo:27017/tyk_analytics",
             "mongo": {
-                "url": "mongodb://tyk-mongo:27017/tyk_analytics",
                 "ssl": {
                     "enabled": false,
                     "insecure_skip_verify": false,
@@ -265,8 +266,9 @@ sample of configuration obeject is
 ```
     "storage": {
         "main": {
+            "type": "mongo",
+            "connection_string": "mongodb://tyk-mongo:27017/tyk_analytics",
             "mongo": {
-                "url": "mongodb://tyk-mongo:27017/tyk_analytics",
                 "ssl": {
                     "enabled": false,
                     "insecure_skip_verify": false,
@@ -287,7 +289,7 @@ The full URL to your MongoDB instance, this can be a clustered instance if neces
 This should be the same as the credentials that your Tyk installation uses.
 {{< /note >}}
 
-### mongo > ssl is a object inside Mongo where configuration settings for SSL should be included
+### mongo > ssl is an object inside Mongo where configuration settings for SSL should be included
 
 ### mongo > ssl > insecure_skip_verify
 

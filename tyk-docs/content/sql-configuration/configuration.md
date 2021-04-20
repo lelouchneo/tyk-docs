@@ -43,7 +43,7 @@ Note that if legacy `mongo_url` in root config is set, it will use "legacy" mode
 "storage": {
   "main": {
     "type": "postgres",
-    "dsn": "user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
+    "connection_string": "user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
   }
 }
 ```
@@ -52,19 +52,19 @@ Or set the following ENV vars:
 
 ```
 TYK_DB_STORAGE_MAIN_TYPE="postgres"
-TYK_DB_STORAGE_MAIN_DSN="user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
+TYK_DB_STORAGE_MAIN_CONNECTIONSTRING="user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
 TYK_DB_MONGOURL=""
 ```
 
 ### SQLite
 
-For SQLite you can omit DSN option, and it will use in-memory engine.
+For SQLite you can omit `connection_string` option, and it will use in-memory engine.
 
 ```
 "storage": {
   "main": {
     "type": "sqlite",
-    "dsn": "./test.db"
+    "connection_string": "./test.db"
   }
 }
 ```
@@ -72,7 +72,7 @@ For SQLite you can omit DSN option, and it will use in-memory engine.
 Or set the following ENV vars:
 
 ```
-TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_MONGOURL=""
+TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=""
 ```
 
 ### MySQL
@@ -81,7 +81,7 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_MONGOURL=""
 "storage": {
   "main": {
     "type": "mysql",
-    "dsn": "gorm:gorm@tcp(127.0.0.1:3306)/gorm?charset=utf8&parseTime=True&loc=Local"
+    "connection_string": "gorm:gorm@tcp(127.0.0.1:3306)/gorm?charset=utf8&parseTime=True&loc=Local"
   }
 }
 ```
@@ -92,8 +92,8 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_MONGOURL=""
 "storage": {
   "main": {
     "type": "mongo",
+    "connection_string": "mongodb://127.0.0.1:27017/schema_name",
     "mongo": {
-      "url": "mongodb://127.0.0.1:27017/schema_name",
       "ssl": {
         "enabled": true,
         "insecure_skip_verify": true,

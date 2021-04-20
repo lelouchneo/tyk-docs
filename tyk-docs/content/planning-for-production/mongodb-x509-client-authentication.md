@@ -41,7 +41,7 @@ You have to url encode the `:` character into `%40`.   So replace any `:` in the
 
 ### 2. Certificates
 
-We have two provide two certificates to complete the X509 Client Authentication.
+We have to provide two certificates to complete the X509 Client Authentication.
 
 
 **CA Cert**, Should contain just the public key of the CA.
@@ -60,8 +60,9 @@ Your tyk_analytics.conf should include these fields at the root level:
   ...
   "storage": {
     "main": {
+      "type": "mongo",
+      "connection_string": "mongodb://<username>@<host>:<port>/<db>?authSource=$external&authMechanism=MONGODB-X509",
       "mongo": {
-        "url": "mongodb://<username>@<host>:<port>/<db>?authSource=$external&authMechanism=MONGODB-X509",
         "ssl": {
           "enabled": true,
           "ca_file": "ca.pem",
@@ -72,19 +73,19 @@ Your tyk_analytics.conf should include these fields at the root level:
   }
 }
 ```
-* old configuration of Mongo DB was inside root element of tyk_analytics.conf file, recently it has moved to be like this
+* old configuration of MongoDB was inside root element of tyk_analytics.conf file, recently it has moved to be like this
 
 
 | Config File           | Environment Variable | Type   | Examples
 | ---                   | --                   | ----   | ---- |
-| "url"                       | TYK_STORAGE_MAIN_MONGO_URL      | string | "mongodb://{username}@{host}:{port}/{db}?authSource=$external&authMechanism=MONGODB-X509" |
-| "ssl"                   | TYK_STORAGE_MAIN_MONGO_SSL_ENABLED      | bool | true, false |
-| "ca_file"               | TYK_STORAGE_MAIN_MONGO_SSL_CAFile      | string | "certificates/ca.pem" |
-| "pem_keyfile"           | TYK_STORAGE_MAIN_MONGO_SSL_PEMKeyfile      | string | "certificates/key.pem" |
-| "insecure_skip_verify"  | TYK_STORAGE_MAIN_MONGO_SSL_InsecureSkipVerify      | bool | true, false |
-| "allow_invalid_hostnames" | TYK_STORAGE_MAIN_MONGO_SSL_AllowInvalidHostnames      | bool | true, false |
-| "session_consistency"       | TYK_STORAGE_MAIN_MONGO_SSL_SessionConsistency      | string | "strong", "eventual", or "monotonic". default is "strong" |
-| "batch_size"                | TYK_STORAGE_MAIN_MONGO_SSL_BatchSize      | int | Default "2000", min "100" |
+| "connection_string"                       | TYK_DB_STORAGE_MAIN_CONNECTIONSTRING      | string | "mongodb://{username}@{host}:{port}/{db}?authSource=$external&authMechanism=MONGODB-X509" |
+| "ssl"                   | TYK_DB_STORAGE_MAIN_MONGO_SSL_ENABLED      | bool | true, false |
+| "ca_file"               | TYK_DB_STORAGE_MAIN_MONGO_SSL_CAFile      | string | "certificates/ca.pem" |
+| "pem_keyfile"           | TYK_DB_STORAGE_MAIN_MONGO_SSL_PEMKEYFILE      | string | "certificates/key.pem" |
+| "insecure_skip_verify"  | TYK_DB_STORAGE_MAIN_MONGO_SSL_INSECURESKIPVERIFY      | bool | true, false |
+| "allow_invalid_hostnames" | TYK_DB_STORAGE_MAIN_MONGO_SSL_ALLOWINVALIDHOSTNAMES      | bool | true, false |
+| "session_consistency"       | TYK_DB_STORAGE_MAIN_MONGO_SSL_SESSIONCONSISTENCY      | string | "strong", "eventual", or "monotonic". default is "strong" |
+| "batch_size"                | TYK_DB_STORAGE_MAIN_MONGO_SSL_BATCHSIZE      | int | Default "2000", min "100" |
 
 
 ## Tyk Pump

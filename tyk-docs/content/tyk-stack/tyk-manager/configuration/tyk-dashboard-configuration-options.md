@@ -881,11 +881,17 @@ Audit record fields for `json` format:
 *   `user` - dashboard user who performed the request
 
 *   `action` - description of action performed (`i.e. `Update User`)
+
 *   `method` - HTTP-method of the request
+
 *   `url` - URL of the request
+
 *   `status` - HTTP response status of the request
+
 *   `diff` - provides diff of changed fields (available only for PUT requests)
+
 *   `request_dump` - HTTP request copy (available if `audit.detailed_recording` is set to `true`)
+
 *   `response_dump` - HTTP response copy (available if `audit.detailed_recording` is set to `true`)
 
 Audit record fields for `text` format - all fields are in plain text separated with new line and provided in the same order as fields for `json` format.

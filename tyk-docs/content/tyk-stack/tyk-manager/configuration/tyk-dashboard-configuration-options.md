@@ -4,12 +4,13 @@ title: Tyk Dashboard Configuration Options
 menu:
   main:
     parent: "Tyk Dashboard"
-weight: 2
+weight: 2 
 url: /tyk-dashboard/configuration
 aliases:
     - /tyk-configuration-reference/tyk-dashboard-configuration-options/
     - /configure/tyk-dashboard-configuration-options/
 ---
+
 
 The Tyk Dashboard has a separate configuration file, it is small and comes packaged with the tarball. It uses a separate configuration file as it may be installed on a different host to your Tyk Gateway nodes.
 
@@ -205,16 +206,17 @@ You may see `net::ERR_CONNECTION_REFUSED` errors in the browser console if you d
 This section contains details for a Tyk Gateway node that the Tyk Dashboard can speak to. The Dashboard controls Tyk using the Gateway API and only requires visibility to one node, so long as all nodes are using the same API Definitions.
 
 {{< note success >}}
-**Note**
+**Note**  
 
 If the Dashboard cannot see a Tyk node, key management functions will not work properly.
 {{< /note >}}
 
 {{< warning success >}}
-**Warning**
+**Warning**  
 
 In a sharded environment, the Gateway node specified in `tyk_api_config` must not be sharded.
 {{< /warning >}}
+
 
 #### tyk_api_config.Host
 
@@ -241,10 +243,11 @@ As of Tyk Gateway **v2.0** and Tyk Dashboard **v1.0** all Tyk API Gateway nodes 
 (env var:**TYK_DB_NODESECRET**)
 
 {{< note success >}}
-**Note**
+**Note**  
 
 This value should match with the [`node_secret`](/docs/tyk-configuration-reference/tyk-gateway-configuration-options/#a-name-node-secret-a-node-secret) Gateway configuration option value.
 {{< /note >}}
+
 
 Each node communicates with the Dashboard via a shared secret (this setting) and a nonce to ensure that out-of-band requests cannot be made. Nodes will send a heartbeat every few seconds to notify the Dashboard that they are running.
 
@@ -317,7 +320,7 @@ The port that your Redis installation listens on.
 (env var:**TYK_DB_REDISPORT**)
 
 {{< note success >}}
-**Note**
+**Note**  
 
 The Tyk Dashboard uses Redis to store its session data and to communicate with your Tyk Gateway nodes occasionally. The Redis details used by the dashboard must be the same as those set for your Tyk installation.
 {{< /note >}}
@@ -361,7 +364,7 @@ Set this to `true` if you are using a Redis cluster.
 ### redis_hosts
 
 {{< note success >}}
-**Note**
+**Note**  
 
 From v1.9.3 `redis_hosts` has been deprecated and replaced by `redis_addrs`
 {{< /note >}}
@@ -458,9 +461,10 @@ The name to use when sending emails.
 
 Your public dashboard hostname.
 {{< note success >}}
-**Note**
+**Note**  
 
 (env var:**TYK_DB_EMAILBACKEND_DASHBOARDHOSTNAME**)
+
 
 ### hide_listen_path
 
@@ -790,7 +794,7 @@ If you set this value to `true`, then the `id` parameter in a stored policy (or 
 (env var:**TYK_DB_ALLOWEXPLICITPOLICYID**)
 
 {{< note success >}}
-**Note**
+**Note**  
 
 This option should only be used when transporting an installation to a new database.
 {{< /note >}}
@@ -905,7 +909,7 @@ Set to `true` to create users in different organisations, using the same email a
 (env var:**TYK_DB_ENABLEMULTIORGUSERS**)
 
 {{< note success >}}
-**Note**
+**Note**  
 
 This is only available for clients with a two node or more Tyk Dashboard licence.
 {{< /note >}}

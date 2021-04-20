@@ -37,8 +37,6 @@ By default Logs storage and Analytics storage will use Main storage, if you not 
 
 Note that if legacy `mongo_url` in root config is set, it will use "legacy" mode, and will ignore `main` storage section.
 
-Note MongoDB is considered as default database for storing data.
-
 ### Postgres
 
 ```

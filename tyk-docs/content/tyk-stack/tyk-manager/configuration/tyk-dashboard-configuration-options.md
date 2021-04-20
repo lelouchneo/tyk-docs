@@ -7,8 +7,8 @@ menu:
 weight: 2
 url: /tyk-dashboard/configuration
 aliases:
-  - /tyk-configuration-reference/tyk-dashboard-configuration-options/
-  - /configure/tyk-dashboard-configuration-options/
+    - /tyk-configuration-reference/tyk-dashboard-configuration-options/
+    - /configure/tyk-dashboard-configuration-options/
 ---
 
 The Tyk Dashboard has a separate configuration file, it is small and comes packaged with the tarball. It uses a separate configuration file as it may be installed on a different host to your Tyk Gateway nodes.
@@ -21,7 +21,7 @@ Environment variables (env var) can be used to override the settings defined in 
 
 The file will look like the sample below, the various fields are explained in the following sections:
 
-```{.copyWrapper}
+``` {.copyWrapper}
 {
     "listen_port": 3000,
     "tyk_api_config": {
@@ -868,31 +868,25 @@ Enables detailed records in audit log, by defaultt set to `false`. If set to `tr
 
 Audit record fields for `json` format:
 
-- `req_id` - unique request ID
+*   `req_id` - unique request ID
 
-- `org_id` - organization ID
+*   `org_id` - organization ID
 
-- `date` - date in `RFC1123` format
+*   `date` - date in `RFC1123` format
 
-- `timestamp` - unix timestamp
+*   `timestamp` - unix timestamp
 
-- `ip` - IP address the request was originating from
+*   `ip` - IP address the request was originating from
 
-- `user` - dashboard user who performed the request
+*   `user` - dashboard user who performed the request
 
-- `action` - description of action performed (`i.e. `Update User`)
-
-- `method` - HTTP-method of the request
-
-- `url` - URL of the request
-
-- `status` - HTTP response status of the request
-
-- `diff` - provides diff of changed fields (available only for PUT requests)
-
-- `request_dump` - HTTP request copy (available if `audit.detailed_recording` is set to `true`)
-
-- `response_dump` - HTTP response copy (available if `audit.detailed_recording` is set to `true`)
+*   `action` - description of action performed (`i.e. `Update User`)
+*   `method` - HTTP-method of the request
+*   `url` - URL of the request
+*   `status` - HTTP response status of the request
+*   `diff` - provides diff of changed fields (available only for PUT requests)
+*   `request_dump` - HTTP request copy (available if `audit.detailed_recording` is set to `true`)
+*   `response_dump` - HTTP response copy (available if `audit.detailed_recording` is set to `true`)
 
 Audit record fields for `text` format - all fields are in plain text separated with new line and provided in the same order as fields for `json` format.
 

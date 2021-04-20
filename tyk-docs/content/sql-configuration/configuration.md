@@ -105,29 +105,6 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=""
 }
 ```
 
-## Tyk Pump
-
-Addeddd two new pumps: `sql` and `sql_aggregate`.
-From configuration point of view they behave similar to the dashboard.
-
-```
-"sql": {
-    "name": "sql",
-    "meta": {
-       "type": "sqlite",
-       "dsn": "/tmp/test.db"
-    }
-},
-"sql_aggregate": {
-    "name": "sql_aggregate",
-    "meta": {
-        "type": "sqlite",
-        "dsn": "/tmp/test.db"
-    }
-}
-```
-
-
 ## Logs
 
 We support proper logs (for `main`, `analytics` and `logs` storages); you may lookup more detials inside and look up for lines like the following:

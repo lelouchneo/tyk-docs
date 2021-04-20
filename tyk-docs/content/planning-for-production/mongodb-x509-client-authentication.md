@@ -115,12 +115,12 @@ In addition to the other configs, these are the ones related to MongoDB:
 
 | Config File           | Type  | Examples
 | -- | -- | --
-"mongo_url" | string     | "mongodb://{username}@{host}:{port}/{db}?authSource=$external&authMechanism=MONGODB-X509" |   
+"mongo_url" | string     | "mongodb://{username}@{host}:{port}/{db}?authSource=$external&authMechanism=MONGODB-X509" |
 "mongo_use_ssl" | bool | true, false |
-"mongo_ssl_ca_file" | string      | "certificates/ca.pem" |  
-“mongo_ssl_pem_keyfile" | string     | "certificates/key.pem" |     
-"mongo_ssl_insecure_skip_verify" | bool     | true, false |     
-"mongo_ssl_allow_invalid_hostnames" | bool         | true, false | 
+"mongo_ssl_ca_file" | string      | "certificates/ca.pem" |
+“mongo_ssl_pem_keyfile" | string     | "certificates/key.pem" |
+"mongo_ssl_insecure_skip_verify" | bool     | true, false |
+"mongo_ssl_allow_invalid_hostnames" | bool         | true, false |
 
 ## Tyk Sink
 

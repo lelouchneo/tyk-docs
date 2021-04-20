@@ -128,3 +128,14 @@ From configuration point of view they behave similar to the dashboard.
     }
 }
 ```
+
+
+## Logs
+
+We support proper logs (for `main`, `analytics` and `logs` storages); you may lookup more detials inside and look up for lines like the following:
+
+```
+[Apr 15 17:33:34]  INFO Initializing Main storage with `postgres` database
+[Apr 15 17:33:34]  INFO Initializing Analytics storage with `sqlite` database
+[Apr 15 17:33:34]  INFO Initializing Logs storage with `mongo` database
+```

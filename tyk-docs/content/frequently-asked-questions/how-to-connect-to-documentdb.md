@@ -31,7 +31,7 @@ A working DocumentDB configuration looks like this (assuming that there is SSH t
         "allow_invalid_hostnames": true,
         "key_file": "<path to>/key_file",
       }
-      "batch_size": 100
+      "batch_size": 2000
     }
   }
 }

@@ -39,10 +39,10 @@ The file will look like the sample below, the various fields are explained in th
                 "ssl": {
                     "enabled": false,
                     "insecure_skip_verify": false,
-                    "session_consistency": "",
-                    "batch_size": 2000,
-                }
-            }
+                },
+                "session_consistency": "",
+                "batch_size": 2000,
+            },
         }
     },
     "page_size": 10,
@@ -275,10 +275,10 @@ sample of configuration obeject is
                 "ssl": {
                     "enabled": false,
                     "insecure_skip_verify": false,
-                    "session_consistency": "",
-                    "batch_size": 2000,
-                }
-            }
+                },
+                "session_consistency": "",
+                "batch_size": 2000,
+            },
         }
     },
 ```
@@ -302,7 +302,7 @@ This setting allows the use of self-signed certificates when connecting to an en
 
 A Boolean setting for Mongo SSL support. Set to `true` to enable SSL.
 
-### mongo > ssl > batch_size
+### mongo > batch_size
 
 Sets the batch size for mongo results. Defaults to `2000`. Increasing this number can decrease dashboard performance. This value cannot be lower than `100` and will fallback to `100` if a lower value has been set.
 

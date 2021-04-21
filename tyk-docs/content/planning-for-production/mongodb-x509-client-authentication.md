@@ -80,12 +80,12 @@ Your tyk_analytics.conf should include these fields at the root level:
 | ---                   | --                   | ----   | ---- |
 | "connection_string"                       | TYK_DB_STORAGE_MAIN_CONNECTIONSTRING      | string | "mongodb://{username}@{host}:{port}/{db}?authSource=$external&authMechanism=MONGODB-X509" |
 | "ssl"                   | TYK_DB_STORAGE_MAIN_MONGO_SSL_ENABLED      | bool | true, false |
-| "ca_file"               | TYK_DB_STORAGE_MAIN_MONGO_SSL_CAFile      | string | "certificates/ca.pem" |
-| "pem_keyfile"           | TYK_DB_STORAGE_MAIN_MONGO_SSL_PEMKEYFILE      | string | "certificates/key.pem" |
+| "ca_file"               | TYK_DB_STORAGE_MAIN_MONGO_SSL_CAFILE      | string | "certificates/ca.pem" |
+| "key_file"           | TYK_DB_STORAGE_MAIN_MONGO_SSL_KEYFILE      | string | "certificates/key.pem" |
 | "insecure_skip_verify"  | TYK_DB_STORAGE_MAIN_MONGO_SSL_INSECURESKIPVERIFY      | bool | true, false |
 | "allow_invalid_hostnames" | TYK_DB_STORAGE_MAIN_MONGO_SSL_ALLOWINVALIDHOSTNAMES      | bool | true, false |
-| "session_consistency"       | TYK_DB_STORAGE_MAIN_MONGO_SSL_SESSIONCONSISTENCY      | string | "strong", "eventual", or "monotonic". default is "strong" |
-| "batch_size"                | TYK_DB_STORAGE_MAIN_MONGO_SSL_BATCHSIZE      | int | Default "2000", min "100" |
+| "session_consistency"       | TYK_DB_STORAGE_MAIN_MONGO_SESSIONCONSISTENCY      | string | "strong", "eventual", or "monotonic". default is "strong" |
+| "batch_size"                | TYK_DB_STORAGE_MAIN_MONGO_BATCHSIZE      | int | Default "2000", min "100" |
 
 
 ## Tyk Pump

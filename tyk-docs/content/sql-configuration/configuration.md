@@ -37,6 +37,13 @@ By default Logs storage and Analytics storage will use Main storage, if you not 
 
 Note that if legacy `mongo_url` in root config is set, it will use "legacy" mode, and will ignore `main` storage section.
 
+After you finish the storage configuration and start the dashboard successfully, you will see the logs:
+```
+[Apr 15 17:33:34]  INFO Initializing Main storage with `postgres` database
+[Apr 15 17:33:34]  INFO Initializing Analytics storage with `sqlite` database
+[Apr 15 17:33:34]  INFO Initializing Logs storage with `mongo` database
+```
+
 ### Postgres
 
 ```
@@ -53,7 +60,6 @@ Or set the following ENV vars:
 ```
 TYK_DB_STORAGE_MAIN_TYPE="postgres"
 TYK_DB_STORAGE_MAIN_CONNECTIONSTRING="user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
-TYK_DB_MONGOURL=""
 ```
 
 ### SQLite
@@ -99,18 +105,8 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=""
         "insecure_skip_verify": true,
         ...
       },
-      "batch_size": 1
+      "batch_size": 2000
     }
   }
 }
-```
-
-## Logs
-
-We support proper logs (for `main`, `analytics` and `logs` storages); you may lookup more detials inside and look up for lines like the following:
-
-```
-[Apr 15 17:33:34]  INFO Initializing Main storage with `postgres` database
-[Apr 15 17:33:34]  INFO Initializing Analytics storage with `sqlite` database
-[Apr 15 17:33:34]  INFO Initializing Logs storage with `mongo` database
 ```

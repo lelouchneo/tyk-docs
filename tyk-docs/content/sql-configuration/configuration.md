@@ -18,6 +18,7 @@ Previously dashboard was using single mongo database for all the data.
 Now Dashboard has three data storage layers, which can be configured separately (new configuration options).
 
 ```
+//tyk-analytics.conf
 {
   ...
   "storage": {
@@ -48,6 +49,7 @@ After you finish the storage configuration and start the dashboard successfully,
 ### Postgres
 
 ```
+//tyk-analytics.conf
 {
   ...
   "storage": {
@@ -71,6 +73,7 @@ TYK_DB_STORAGE_MAIN_CONNECTIONSTRING="user=root password=admin host=127.0.0.1 po
 For SQLite you can omit `connection_string` option, and it will use in-memory engine.
 
 ```
+//tyk-analytics.conf
 {
   ...
   "storage": {
@@ -91,6 +94,7 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=""
 ### MySQL
 
 ```
+//tyk-analytics.conf
 {
   ...
   "storage": {
@@ -105,6 +109,7 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=""
 ### Mongo
 
 ```
+//tyk-analytics.conf
 {
   ...
   "storage": {

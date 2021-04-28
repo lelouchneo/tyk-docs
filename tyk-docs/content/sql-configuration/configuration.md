@@ -19,6 +19,7 @@ Now Dashboard has three data storage layers, which can be configured separately 
 
 ```
 {
+  ...
   "storage": {
     "main":{},
     "analytics":{},
@@ -47,10 +48,13 @@ After you finish the storage configuration and start the dashboard successfully,
 ### Postgres
 
 ```
-"storage": {
-  "main": {
-    "type": "postgres",
-    "connection_string": "user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
+{
+  ...
+  "storage": {
+    "main": {
+      "type": "postgres",
+      "connection_string": "user=root password=admin host=127.0.0.1 port=49691 sslmode=require"
+    }
   }
 }
 ```
@@ -67,10 +71,13 @@ TYK_DB_STORAGE_MAIN_CONNECTIONSTRING="user=root password=admin host=127.0.0.1 po
 For SQLite you can omit `connection_string` option, and it will use in-memory engine.
 
 ```
-"storage": {
-  "main": {
-    "type": "sqlite",
-    "connection_string": "./test.db"
+{
+  ...
+  "storage": {
+    "main": {
+      "type": "sqlite",
+      "connection_string": "./test.db"
+    }
   }
 }
 ```
@@ -84,10 +91,13 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=""
 ### MySQL
 
 ```
-"storage": {
-  "main": {
-    "type": "mysql",
-    "connection_string": "gorm:gorm@tcp(127.0.0.1:3306)/gorm?charset=utf8&parseTime=True&loc=Local"
+{
+  ...
+  "storage": {
+    "main": {
+      "type": "mysql",
+      "connection_string": "gorm:gorm@tcp(127.0.0.1:3306)/gorm?charset=utf8&parseTime=True&loc=Local"
+    }
   }
 }
 ```
@@ -95,17 +105,20 @@ TYK_DB_STORAGE_MAIN_TYPE="sqlite" TYK_DB_STORAGE_MAIN_CONNECTIONSTRING=""
 ### Mongo
 
 ```
-"storage": {
-  "main": {
-    "type": "mongo",
-    "connection_string": "mongodb://127.0.0.1:27017/schema_name",
-    "mongo": {
-      "ssl": {
-        "enabled": true,
-        "insecure_skip_verify": true,
-        ...
-      },
-      "batch_size": 2000
+{
+  ...
+  "storage": {
+    "main": {
+      "type": "mongo",
+      "connection_string": "mongodb://127.0.0.1:27017/schema_name",
+      "mongo": {
+        "ssl": {
+          "enabled": true,
+          "insecure_skip_verify": true,
+          ...
+        },
+        "batch_size": 2000
+      }
     }
   }
 }

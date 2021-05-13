@@ -1288,7 +1288,7 @@ Set this option to `true` to enable RPC caching for keys.
 
 (env var:**TYK_GW_SLAVEOPTIONS_ENABLERPCCACHE**)
 #### slave_options.bind_to_slugs
-For an On-Premises installation this can be left at `false` (the default setting). For Multi-Cloud Gateways it **must** be set to 'true'.
+Set this option to `true` to bind to the API slug/name instead of the listen path. For Self-Managed installations, including Hybrid Gateway installations, this can be left at `false` (the default setting).
 
 (env var:**TYK_GW_SLAVEOPTIONS_BINDTOSLUGSINSTEADOFLISTENPATHS**)
 

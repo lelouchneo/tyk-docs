@@ -441,27 +441,6 @@ Type: `string`<br />
 
 If CSP enabled, specify space separated string, with list of allowed resources.
 
-### security.open_policy
-OpenPolicy configuration
-
-### security.open_policy.enabled
-EV: **TYK_DB_SECURITY_OPENPOLICY_ENABLED**<br />
-Type: `bool`<br />
-
-Enable OpenPolicy
-
-### security.open_policy.debug
-EV: **TYK_DB_SECURITY_OPENPOLICY_DEBUG**<br />
-Type: `bool`<br />
-
-Enable OpenPolicy debug mode
-
-### security.open_policy.enable_api
-EV: **TYK_DB_SECURITY_OPENPOLICY_ENABLEAPI**<br />
-Type: `bool`<br />
-
-Enable modify OpenPolicy rules via UI and API
-
 ### security.private_certificate_encoding_secret
 EV: **TYK_DB_SECURITY_PRIVATECERTIFICATEENCODINGSECRET**<br />
 Type: `string`<br />

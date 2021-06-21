@@ -8,7 +8,7 @@ menu:
     parent: "Account and Billing"
 weight: 5
 aliases:
-    - /tyk-cloud/account-billing/managing-billing-admins/"
+    - /tyk-cloud/account-billing/managing-billing-admins/
 ---
 
 ## Introduction

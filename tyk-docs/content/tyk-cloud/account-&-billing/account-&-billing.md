@@ -7,7 +7,7 @@ weight: 6
 menu:
   main:
     parent: "Tyk Cloud"
-url: "/tyk-cloud/account-billing"
+url: /tyk-cloud/account-billing
 ---
 
 This section covers the following:

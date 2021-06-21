@@ -7,7 +7,7 @@ weight: 3
 menu:
   main:
     parent: "Tyk Cloud"
-url: "/Tyk Cloud/configuration-options"
+url: /Tyk Cloud/configuration-options
 ---
 
 This section will cover how you can configure your Tyk Cloud deployment.

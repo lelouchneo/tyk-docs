@@ -7,7 +7,7 @@ description: "How to use custom plugins with Tyk Cloud"
 menu:
   main:
     parent: "Configuration Options"
-url: "/tyk-cloud/using-plugins"
+url: /tyk-cloud/using-plugins
 ---
 
 ## Introduction

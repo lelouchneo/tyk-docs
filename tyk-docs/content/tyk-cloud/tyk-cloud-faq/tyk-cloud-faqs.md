@@ -5,7 +5,7 @@ weight: 7
 menu:
   main:
     parent: "Troubleshooting & Support"
-url: "/tyk-cloud/troubleshooting-&-support/faqs"
+url: /tyk-cloud/troubleshooting-&-support/faqs
 ---
 
 ## Introduction

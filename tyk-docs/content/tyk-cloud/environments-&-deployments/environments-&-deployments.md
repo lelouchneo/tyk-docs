@@ -7,7 +7,7 @@ description: "Creating a custom Python authentication plugin"
 menu:
   main:
     parent: "Tyk Cloud"
-url: "/tyk-cloud/environments-&-deployments"
+url: /tyk-cloud/environments-&-deployments
 ---
 
 This section covers the administration of the various components of your Tyk Cloud installation:

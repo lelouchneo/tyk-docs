@@ -7,7 +7,7 @@ menu:
   main:
     parent: "Environments & Deployments"
 weight: 3
-url: "/tyk-cloud/environments-&-deployments/managing-control-planes"
+url: /tyk-cloud/environments-&-deployments/managing-control-planes
 ---
 
 ## Introduction

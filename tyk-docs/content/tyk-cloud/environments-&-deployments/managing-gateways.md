@@ -7,7 +7,7 @@ menu:
   main:
     parent: "Environments & Deployments"
 weight: 4
-url: "/tyk-cloud/environments-&-deployments/managing-gateways"
+url: /tyk-cloud/environments-&-deployments/managing-gateways
 ---
 
 ## Introduction

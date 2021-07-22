@@ -33,6 +33,12 @@ Click the APIs menu item and then click **Add New API**.
 2. Scroll down to the **Target URL** setting and use the URL https://httpbin.org/
 3. Then scroll down to the Authentication section and select **Open(Keyless)** to keep things simple for this demo.
 
+{{< warning success >}}
+**Warning**
+  
+Ensure you configure a valid API Listen path.  Root ("/") listen paths are **not** supported on Tyk Cloud deployments prior to version v3.2.0.
+{{< /warning >}}
+
 ## Step Four - Advanced Options
 
 1. Click the **Advanced Options** tab of the API Designer.

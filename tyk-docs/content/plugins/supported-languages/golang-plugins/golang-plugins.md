@@ -76,6 +76,9 @@ Explanation to the command above:
 2. Make sure to specify your Tyk version via a Docker tag. For example `v2.9.3` . 
 3. The final argument is the plugin name. For the example `my-post-plugin.so`
 
+#### For Ubuntu 16.04 (Xenial Xerus)
+The plugin compiler does not support this OS as it uses glibc 2.23 which is incompatible with our standard build environment. If you absolutely must have go plugin support on Xenial, please write to us.
+
 ### When Upgrading your Tyk Installation
 
 We release a new version of the compiler for each Tyk version. After upgrading to a new version you will need to rebuild your plugin using the new Tyk version Docker tag of the compiler.
@@ -632,3 +635,114 @@ func MyPluginFunction(w http.ResponseWriter, r *http.Request) {
 }
 ```
 `ctx.GetSession` returns an UserSession object, the Go data structure can be found [here](https://github.com/TykTechnologies/tyk/blob/master/user/session.go#L87)
+
+
+### Using a Go Response Plugin
+
+Now you need to instruct Tyk to load this shared library for an API so it will start processing traffic as part of the middleware chain. To do so you will need to edit your API spec using the raw JSON editor in the Tyk Dashboard or directly in the JSON file (in the case of the Open Source edition). This change needs to be done for the "custom_middleware" field and it looks like this:
+
+```
+"custom_middleware": {
+  "pre": [],
+  "post_key_auth": [],
+  "auth_check": {},
+  "post": [],
+  "response": [
+    {
+      "name": "MyResponsePlugin",
+      "path": "<path>/resplugin.so"
+    }
+  ],
+  "driver": "goplugin"
+}
+
+```
+
+Here you have:
+
+`"driver"` - Set this to goplugin (no value created for this plugin) which says to Tyk that this custom middleware is a Golang native plugin.
+`"response"` - This is the hook name. You use middleware with a hook type response because you want this custom middleware to process the request on its return leg of a round trip.
+`response.name` - is your function name from the go plugin project.
+`response.path` - is the full or relative (to the Tyk binary) path to .so file with plugin implementation (make sure Tyk has read access to this file)
+Response plugin method signature
+
+To write a response plugin in Go you need it to have a method signature as in the example below i.e. `func MyResponseFunctionName(rw http.ResponseWriter, res *http.Response, req *http.Request)`. You can then access and modify any part of the request or response. User session and API definition data can be accessed as with other Go plugin hook types.
+
+
+```
+package main
+
+import (
+	"bytes"
+	"encoding/json"
+	"io/ioutil"
+	"net/http"
+
+)
+
+// MyPluginResponse intercepts response from upstream 
+func MyPluginResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) {
+        // add a header to our response object
+	res.Header.Add("X-Response-Added", "resp-added")
+
+        // overwrite our response body
+	var buf bytes.Buffer
+	buf.Write([]byte(`{"message":"Hi! I'm a response plugin"}`))
+	res.Body = ioutil.NopCloser(&buf)
+
+}
+
+func main() {}
+```
+
+### Golang Virtual Endpoints
+
+Golang plugins are also available for invocation as part of the API Designer middleware chain.
+
+This means that one or many Golang functions can be called on path and method combinations in a similar way to existing JSVM virtual endpoints documented here: https://tyk.io/docs/advanced-configuration/compose-apis/virtual-endpoints/
+
+Golang virtual endpoints can be either a high performance replacement for the JSVM virtual endpoints or for cases when you want to utilise external libraries.
+
+In addition, unlike JSVM virtual endpoints which always must be returned from the middleware, we use the existing Golang plugin framework with these Golang virtual endpoints meaning requests can be passed onwards or a response can be sent from the Golang virtual endpoint.
+
+### Building Golang Virtual Endpoints
+
+Golang virtual endpoints must first be compiled and built like all Golang plugins. See https://tyk.io/docs/plugins/supported-languages/golang/#building-a-golang-plugin for details.
+
+### Adding Golang Virtual Endpoints to your API definition
+
+Golang virtual endpoints follow the same layout and setup as other elements in the extended_path section of the API definition. i.e.:
+```
+... 
+   "go_plugin: [
+       {
+           "plugin_path": "../test/goplugins/goplugins.so",
+           "path": "/get",
+           "method": "GET",
+           "func_name": "MyPluginPerPathFoo"
+       },
+       {
+           "plugin_path": "../test/goplugins/goplugins.so",
+           "path": "/bar",
+           "method": "GET",
+           "func_name": "MyPluginPerPathBar"
+       }
+   ]       
+...
+```
+
+The parameters are similar to other endpoint designer middleware.
+
+- `plugin_path` is the relative path of the shared object containing the function you wish to call. One or many `.so` files can be called.
+- `path` is the regex path on the API you want this middleware to be called on
+- `method` is the HTTP method on which this middleware sits alongside its relative path
+- `func_name` is the "symbol" or function you are calling in your Golang plugin shared object file once loaded - a function can be called by one or more APIs and is concurrency safe
+
+### Responding from Golang virtual endpoints
+
+See https://tyk.io/docs/plugins/supported-languages/golang/#sending-http-response-from-tyk-golang-plugin as Golang virtual endpoints work in the same way but are configured in a different part of the API definition as per the fields defined above. The Goland virtual endpoints run after all other endpoint designer middlewares apart from JSVM virtual endpoints and request signing.
+
+
+### Simple Golang virtual endpoint example
+
+You can follow the existing Golang plugin example above https://tyk.io/docs/plugins/supported-languages/golang/#golang-plugin-example as a starting point and refer to the loading Golang virtual endpoints to you API definition section above to load your Go virtual endpoint plugins.

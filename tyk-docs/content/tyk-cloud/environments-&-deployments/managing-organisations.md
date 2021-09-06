@@ -7,7 +7,7 @@ menu:
   main:
     parent: "Environments & Deployments"
 weight: 1
-url: "/tyk-cloud/environments-&-deployments/managing-organisations"
+url: /tyk-cloud/environments-&-deployments/managing-organisations
 ---
 
 ## Introduction

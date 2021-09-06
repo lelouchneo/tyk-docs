@@ -5,7 +5,7 @@ weight: 10
 menu:
   main:
     parent: "Troubleshooting & Support"
-url: "tyk-cloud/troubleshooting-&-support/glossary/"
+url: tyk-cloud/troubleshooting-&-support/glossary/
 aliases:
     - /tyk-cloud/glossary/
 ---

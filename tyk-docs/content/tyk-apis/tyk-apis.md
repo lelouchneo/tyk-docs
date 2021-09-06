@@ -15,7 +15,6 @@ This API is very small, and has no granular permissions system. It is used purel
 * Managing and listing API Definitions (only when not using the Dashboard)
 * Hot reloads / reloading a cluster configuration
 * OAuth client creation (only when not using the Dashboard)
-
 ## [Tyk Dashboard API](/docs/tyk-dashboard-api/)
 
 The Tyk Dashboard API allows much more fine-grained, secure and multi-user access to your Tyk cluster, and should be used to manage a database-backed Tyk node. The Tyk Dashboard API works seamlessly with the Tyk Dashboard (the two come bundled together).

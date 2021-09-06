@@ -5,7 +5,7 @@ menu:
   main:
     parent: "Teams & Users"
 weight: 3
-url: "/tyk-cloud/teams-&-users/managing-users"
+url: /tyk-cloud/teams-&-users/managing-users
 ---
 
 ## Introduction

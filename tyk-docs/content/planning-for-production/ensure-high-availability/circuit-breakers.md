@@ -72,7 +72,8 @@ To enable the breaker in your API Definition, you will need to add a new section
     "method": "GET",
     "threshold_percent": 0.5,
     "samples": 5,
-    "return_to_service_after": 60
+    "return_to_service_after": 60,
+    "disable_half_open_state": false
   }
 ]
 ```
@@ -82,6 +83,7 @@ To enable the breaker in your API Definition, you will need to add a new section
 *   `threshold_percent`: The percentage of requests that can error before the breaker is tripped. This must be a value between 0.0 and 1.0.
 *   `samples`: The number of samples to take for a circuit breaker window.
 *   `return_to_service_after`: The cool-down period of the breaker to return to service (seconds).
+*   `disable_half_open_state`: By default the Tyk circuit breaker has enabled the half-open state, if the desired behavior is to only check after the time configured in `return_to_service_after` is consumed then you can disable this by this option to `true`.
 
 ## Configure with the Dashboard
 

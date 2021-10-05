@@ -74,6 +74,8 @@ If you are migrating from platforms like Mashery, which use request signing, you
   "signature": {
     "algorithm": "MasherySHA256",
     "header": "X-Signature",
+    "use_param": false,
+    "param_name": "",
     "secret": "secret",
     "allowed_clock_skew": 2
   }
@@ -87,6 +89,10 @@ If you are migrating from platforms like Mashery, which use request signing, you
  - `MasheryMD5`
  
  `signature.header`: header key of attempted signature
+
+ `signature.use_param`: boolean value to use URL query parameters instead of a header
+ 
+ `signature.param_name`: param key of attempted signature
  
  `signature.secret`: the shared secret which was used to sign the request
  - Can hold a dynamic value, by referencing `$tyk_meta` or `$tyk_context` variables.

@@ -200,6 +200,12 @@ Type: `uint16`<br />
 
 Minimum TLS version. Possible values: https://tyk.io/docs/basic-config-and-security/security/tls-and-ssl/#values-for-tls-versions
 
+### http_server_options.max_version
+EV: **TYK_GW_HTTPSERVEROPTIONS_MAXVERSION**<br />
+Type: `uint16`<br />
+
+Maximum TLS version.
+
 ### http_server_options.flush_interval
 EV: **TYK_GW_HTTPSERVEROPTIONS_FLUSHINTERVAL**<br />
 Type: `int`<br />
@@ -309,6 +315,13 @@ This is not portable in cases where the data needs to be moved from installation
 If you set this value to `true`, then the id parameter in a stored policy (or imported policy using the Dashboard API), will be used instead of the internal ID.
 
 This option should only be used when moving an installation to a new database.
+
+### policies.policy_path
+EV: **TYK_GW_POLICIES_POLICYPATH**<br />
+Type: `string`<br />
+
+This option is used for storing a policies  if `policies.policy_source` is set to `file`.
+it should be some existing file path on hard drive
 
 ### ports_whitelist
 Defines the ports that will be available for the API services to bind to.
@@ -761,6 +774,12 @@ EV: **TYK_GW_PROXYSSLMINVERSION**<br />
 Type: `uint16`<br />
 
 Minimum TLS version for connection between Tyk and your upstream service.
+
+### proxy_ssl_max_version
+EV: **TYK_GW_PROXYSSLMAXVERSION**<br />
+Type: `uint16`<br />
+
+Maximum TLS version for connection between Tyk and your upstream service.
 
 ### proxy_ssl_ciphers
 EV: **TYK_GW_PROXYSSLCIPHERSUITES**<br />
@@ -1648,4 +1667,10 @@ EV: **TYK_GW_CLOUD**<br />
 Type: `bool`<br />
 
 Cloud flag shows the Gateway runs in Tyk-cloud.
+
+### jwt_ssl_insecure_skip_verify
+EV: **TYK_GW_JWTSSLINSECURESKIPVERIFY**<br />
+Type: `bool`<br />
+
+Skip TLS verification for JWT JWKs url validation
 

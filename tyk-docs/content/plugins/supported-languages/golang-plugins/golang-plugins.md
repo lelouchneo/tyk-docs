@@ -769,54 +769,6 @@ func MyPluginResponse(rw http.ResponseWriter, res *http.Response, req *http.Requ
 func main() {}
 ```
 
-### Golang Virtual Endpoints
-
-As of Tyk `v4+`, Golang plugins are available for invocation as part of the API Designer middleware chain.
-
-This means that one or many Golang functions can be called on path and method combinations in a similar way to existing JSVM virtual endpoints documented here: https://tyk.io/docs/advanced-configuration/compose-apis/virtual-endpoints/
-
-Golang virtual endpoints can be either a high performance replacement for the JSVM virtual endpoints or for cases when you want to utilise external libraries.
-
-In addition, unlike JSVM virtual endpoints which always must be returned from the middleware, we use the existing Golang plugin framework with these Golang virtual endpoints meaning requests can be passed onwards or a response can be sent from the Golang virtual endpoint.
-
-#### Adding Golang Virtual Endpoints to your API definition
-
-Golang virtual endpoints follow the same layout and setup as other elements in the extended_path section of the API definition. i.e.:
-```
-... 
-   "go_plugin: [
-       {
-           "plugin_path": "../test/goplugins/goplugins.so",
-           "path": "/get",
-           "method": "GET",
-           "func_name": "MyPluginPerPathFoo"
-       },
-       {
-           "plugin_path": "../test/goplugins/goplugins.so",
-           "path": "/bar",
-           "method": "GET",
-           "func_name": "MyPluginPerPathBar"
-       }
-   ]       
-...
-```
-
-The parameters are similar to other endpoint designer middleware.
-
-- `plugin_path` is the relative path of the shared object containing the function you wish to call. One or many `.so` files can be called.
-- `path` is the regex path on the API you want this middleware to be called on
-- `method` is the HTTP method on which this middleware sits alongside its relative path
-- `func_name` is the "symbol" or function you are calling in your Golang plugin shared object file once loaded - a function can be called by one or more APIs and is concurrency safe
-
-#### Responding from Golang virtual endpoints
-
-See https://tyk.io/docs/plugins/supported-languages/golang/#sending-http-response-from-tyk-golang-plugin as Golang virtual endpoints work in the same way but are configured in a different part of the API definition as per the fields defined above. The Goland virtual endpoints run after all other endpoint designer middlewares apart from JSVM virtual endpoints and request signing.
-
-
-#### Simple Golang virtual endpoint example
-
-You can follow the existing Golang plugin example above https://tyk.io/docs/plugins/supported-languages/golang/#golang-plugin-example as a starting point and refer to the loading Golang virtual endpoints to you API definition section above to load your Go virtual endpoint plugins.
-
 
 ### Building from Source
 

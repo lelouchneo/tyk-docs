@@ -50,6 +50,14 @@ Selet the User Group Permissions you want to apply.
 
 ![Add permissions](/docs/img/2.10/user_group_permissions.png)
 
+{{< note success >}}
+**Note**
+
+You can now create your own custom permissions using the [Additional Permissions API](/docs/tyk-dashboard-api/org/permissions/) or by updating the [`security.additional_permissions`](/docs/tyk-dashboard/open-policy-agent/#configuration) settings in your Tyk Dashboard `tyk_analytics.conf`.
+See [Open Policy Agent](/docs/tyk-dashboard/open-policy-agent/) for more details.
+{{< /note >}}
+
+
 ### Step 4: Click "Save" to create the Group
 
 ![Click Save](/docs/img/2.10/user_group_save.png)

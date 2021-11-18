@@ -448,6 +448,7 @@ img {
   -ms-interpolation-mode: bicubic;
   max-width: 100%;
   height: auto;
+  margin-top: -10px;
 }
 
 iframe {

@@ -52,7 +52,11 @@ Developer Portal.
 
 A: This will be exposed in later phases per deployment.
 
-## Q8: How do Segment tags work with Tyk Cloud?
+## 08: Is there any sender email configured in Tyk Cloud?
+
+A: No, the sender email isn't enabled by defualt in Tyk Cloud. Therefore, you won't receive any email when configuring the key approval manually.
+
+## Q9: How do Segment tags work with Tyk Cloud?
 
 A: When an Edge Gateway is deployed, the tag 'edge' and a location tag are automatically generated for the Edge Gateway. You use these tags to connect your API to the appropriate Edge Gateway. It works as follows:
 

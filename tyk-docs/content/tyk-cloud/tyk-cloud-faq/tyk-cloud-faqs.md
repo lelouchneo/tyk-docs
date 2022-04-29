@@ -52,7 +52,7 @@ Developer Portal.
 
 A: This will be exposed in later phases per deployment.
 
-## 08: Is there any sender email configured in Tyk Cloud?
+## Q8: Is there any sender email configured in Tyk Cloud?
 
 A: No, the sender email isn't enabled by defualt in Tyk Cloud. Therefore, you won't receive any email when configuring the key approval manually.
 

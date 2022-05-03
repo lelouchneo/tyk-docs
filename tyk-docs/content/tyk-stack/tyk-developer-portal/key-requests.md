@@ -34,7 +34,7 @@ Once a key request is created, one of two things can be done to it:
 
 A key request can be created using the Dashboard API too, in fact, the Key Request mechanism is a great way to create a mapping between an identity (a developer) and a token, and managing that process.
 
-**Note:** The sender email isn't enabled by defualt in Tyk Cloud. Therefore, you won't receive any email when configuring the key approval manually.
+**Note:** The sender email isn't enabled by default in Tyk Cloud. Therefore, you won't receive any email when configuring the key approval manually.
 
 ### Secure Key Approval
 

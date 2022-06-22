@@ -119,6 +119,14 @@
   background-color: #36364c;
 }
 
+.button.button.feedback--yes {
+  background-color: #00d9ba;
+}
+
+.button.button.feedback--no {
+  background-color: #00d9ba;
+}
+
 .hero .container {
   position: relative;
 }

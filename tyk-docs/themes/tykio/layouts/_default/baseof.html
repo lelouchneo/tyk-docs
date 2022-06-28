@@ -200,6 +200,8 @@
           {{ .Content }}
           {{ end }}
         </div>
+        
+      <!-- Feedback Widget -->  
         {{ if not .Params.hide_feedback }}
         <h2>Feedback</h2>
         <p class="feedback--prompt">Was this page helpful?</p>
@@ -244,6 +246,7 @@
           });
         </script>
       {{ end }}
+      <!--End Feedback Widget -->
         <nav class="docs-share-print share-print f-14 bold ucase">
           <!-- <a href="#" class="icon-print" data-print><span>Print</span></a> -->
 <!--           <div id="date">

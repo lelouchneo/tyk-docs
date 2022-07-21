@@ -29,9 +29,9 @@ We suggest you read the [portal concepts]({{< ref "/content/tyk-stack/tyk-develo
 - Access to the file system
 - Access to your Tyk Self-Managed installation
 
-## Part 1 - Create a new page in the Dashboard
+## Part 1 - Create a new page in the Dashboard using an existing template
 
-Follow the example below to create a new page called “hello” using an existing template.
+Follow the example below to create a new page called “My first page” using an existing template.
 
 {{< img src="/img/dashboard/portal-management/enterprise-portal/create-new-page1.png" alt="The pages section within the Tyk Enterprise Portal app" >}}
 
@@ -39,11 +39,11 @@ Follow the example below to create a new page called “hello” using an existi
 2. Navigate to Pages from the side bar menu.
 3. Click Add and enter the following values:
 
-{{< img src="/img/dashboard/portal-management/enterprise-portal/add-page-details.png" alt="Add new page details" >}}
+{{< img src="/img/dashboard/portal-management/enterprise-portal/add-a-content-page-using-an-existing-template.png" alt="Add a new content page" >}}
 
 ## Part 2 - Create a new page template
 
-### Create the layout file
+### Create the template file
 
 A layout behaves like a component that can be reused to inject templates in order to avoid duplicating elements such as `<head>` and `<link>`.So let’s create one that looks like the one below.
 

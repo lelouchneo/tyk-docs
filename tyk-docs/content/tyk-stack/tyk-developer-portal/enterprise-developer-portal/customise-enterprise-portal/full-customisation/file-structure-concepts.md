@@ -25,7 +25,7 @@ The following page explains how they are structured and their main concepts. We 
 
 ## Theming
 
-Generally speaking, a theme defines an application styling, templates, and scripts.
+Generally speaking, a theme defines an application styling, [templates (pre-designed page layouts)](/docs/tyk-stack/tyk-developer-portal/enterprise-developer-portal/customise-enterprise-portal/full-customisation/file-structure-concepts/#go-templates), and scripts.
 In the Tyk Developer Portal, a “themes” folder is located in the root of the application and is the directory where each theme folder must be added. If you navigate to `path /themes/`, you’ll see our default theme which has the following structure:
 
 {{< img src="/img/dashboard/portal-management/enterprise-portal/theme-file-structure.png" alt="Default Tyk Enterprise Portal theme structure" >}}

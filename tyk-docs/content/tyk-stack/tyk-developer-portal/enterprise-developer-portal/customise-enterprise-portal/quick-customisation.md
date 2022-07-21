@@ -31,7 +31,7 @@ In this section we will explain how to apply your branding (styling - CSS) on th
 ### Part 1 - Changing the portal logo
 
 1. Access the file directory for the Developer portal
-2. The default logo is located in `/themes/default/assets/images/` and is called `raava-logo.svg`.
+2. The default logo is located in `/themes/default/assets/images/` and is called `dev-portal-logo.svg`.
 3. Replace the default image with your own, keeping the same file name and in `.svg` format, ensuring that `xmlns="http://www.w3.org/2000/svg"` is included within your `<svg>` tag.
 
 {{< note success >}}

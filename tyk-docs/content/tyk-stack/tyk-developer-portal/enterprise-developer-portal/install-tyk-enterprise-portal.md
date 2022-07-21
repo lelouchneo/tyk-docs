@@ -76,7 +76,7 @@ $ docker run -d \
 This command will launch the portal on port 3001 and **bootstrap**  the portal. Now you can access your portal on port 3001.
 
 #### Bootstrapping
-**The portal must be bootstrapped on the first launch.** You can remove the `--bootstrap` command later if you don't want the portal to try bootstrapping. However, if `--bootstrap` is specified, the portal  will firstly check if it's already bootstrapped. So if your portal is already bootstrapped, it is safe to launch the portal using `--bootstrap` command. Neither of your assets will be modified.
+**The portal must be bootstrapped on the first launch.** You can remove the `--bootstrap` command later if you don't want the portal to try bootstrapping. However, if `--bootstrap` is specified, the portal  will firstly check if it's already bootstrapped. If your portal is already bootstrapped, it is safe to launch the portal using `--bootstrap` command. Neither of your assets will be modified.
 
 
 ### Launch the Tyk Enterprise Developer portal with MySQL

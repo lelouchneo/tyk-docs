@@ -118,10 +118,10 @@ Only follow this step after creating a new template file in Section 1 above, unl
 5. You now need to reference your new layout and template. From your Manifest file (`themes.json`) add a new key to the object that will look like this:
 
 ```json
-}
+{
   "name": "My new Template",
-	"template": "my_template",
-	"layout": "my_layout"
+  "template": "my_template",
+  "layout": "my_layout"
 }
 ```
 Alternatively, you can give it your prefered name but reference the template and layout names we created earlier in the manifest file.

@@ -9,13 +9,6 @@ menu:
 weight: 3
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 In this section, you will learn how to publish the API products and plans to the public-facing portal so that API Consumers can access them.

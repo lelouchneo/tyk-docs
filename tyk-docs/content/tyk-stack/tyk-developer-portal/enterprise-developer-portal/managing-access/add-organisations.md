@@ -9,13 +9,6 @@ menu:
 weight: 4
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 In this section, you’ll learn how to create a new organisation for your external API Consumers.

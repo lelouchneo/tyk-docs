@@ -9,13 +9,6 @@ menu:
 weight: 5
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 When an external developer is looking to access a specific API(s) as a part of an API Product, they will request access via the public facing portal.

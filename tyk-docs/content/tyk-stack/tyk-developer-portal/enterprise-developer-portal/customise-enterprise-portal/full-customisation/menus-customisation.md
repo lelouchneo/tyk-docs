@@ -8,12 +8,6 @@ menu:
     parent: "Content Manager Workflow"
 weight: 3
 ---
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
 
 ## Introduction
 

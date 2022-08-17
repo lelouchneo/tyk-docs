@@ -10,13 +10,6 @@ url: "tyk-developer-portal/tyk-enterprise-developer-portal/api-consumer-portal/r
 weight: 2
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 This page goes through the reset password routine. If you have forgotten your password you can easily reset it via the portal.

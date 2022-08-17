@@ -9,13 +9,6 @@ menu:
 weight: 3
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 We suggest you read the [portal concepts]({{< ref "/content/tyk-stack/tyk-developer-portal/enterprise-developer-portal/enterprise-portal-concepts.md" >}}) first. If you've already done that, we will show you an example on how to:

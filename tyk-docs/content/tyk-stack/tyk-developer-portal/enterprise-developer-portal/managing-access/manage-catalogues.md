@@ -9,13 +9,6 @@ menu:
 weight: 1
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 Catalogues are a way for you to tailor the audience for API products and Plans. You can, for example create a Partner Catalogue, with a specific API product tailored to them and a preferential plan not available in your public portal.

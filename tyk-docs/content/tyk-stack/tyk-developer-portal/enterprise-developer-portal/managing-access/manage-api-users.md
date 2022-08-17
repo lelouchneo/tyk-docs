@@ -9,13 +9,6 @@ menu:
 weight: 3
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 Here you’ll learn about how to add and invite a new external user to the developer portal.

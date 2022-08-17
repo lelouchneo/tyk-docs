@@ -8,12 +8,6 @@ menu:
     parent: "Tyk Enterprise Developer Portal"
 weight: 3
 ---
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access, contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
 
 
 To get started with the Enterprise Developer portal, you need to accomplish three steps:

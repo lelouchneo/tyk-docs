@@ -9,13 +9,6 @@ menu:
 weight: 3
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 This section explains how to approve/reject external users self-registering requests to the developer portal. Follow the step-by-step guide.

@@ -8,12 +8,6 @@ menu:
     parent: "Full Customisation"
 weight: 2
 ---
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
 
 ## Introduction
 For organisations with content manager(s) managing the developer portal content, we are recommending the following workflow.

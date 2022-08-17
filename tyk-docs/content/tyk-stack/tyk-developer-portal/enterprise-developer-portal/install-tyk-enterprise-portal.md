@@ -9,13 +9,6 @@ menu:
 weight: 2
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Installing Tyk Enterprise Developer Portal 
 We deliver the Tyk Enterprise Developer Portal as a Docker container. To  install Tyk Enterprise Developer Portal, you need to launch the Docker image for the portal.
 

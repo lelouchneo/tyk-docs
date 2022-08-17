@@ -9,13 +9,6 @@ menu:
 weight: 2
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access, contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Developer portal themes
 
 The Developer Portal uses themes for customising the live portal.

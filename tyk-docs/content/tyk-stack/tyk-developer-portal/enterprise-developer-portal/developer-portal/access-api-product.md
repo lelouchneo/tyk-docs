@@ -10,13 +10,6 @@ url: "tyk-developer-portal/tyk-enterprise-developer-portal/api-consumer-portal/a
 weight: 2
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 This section explains how to access API products as a registered portal developer

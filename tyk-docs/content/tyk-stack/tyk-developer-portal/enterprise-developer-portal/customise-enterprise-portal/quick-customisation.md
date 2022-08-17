@@ -9,13 +9,6 @@ menu:
 weight: 1
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 In this section we will explain how to apply your branding (styling - CSS) on the portal elements with your own colours and logo within minutes.

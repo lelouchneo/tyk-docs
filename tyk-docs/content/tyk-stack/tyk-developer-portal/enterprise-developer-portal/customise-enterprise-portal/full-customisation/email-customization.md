@@ -8,12 +8,6 @@ menu:
     parent: "Full Customisation"
 weight: 1
 ---
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access, contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
 
 The Tyk Enterprise Developer Portal enables admin users to customize emails that are sent to the API consumers and admin users upon certain events that happen on the portal.
 As an admin user, you can fully customize emails that are sent from the  portal.

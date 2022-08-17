@@ -8,14 +8,6 @@ menu:
     parent: "Tyk Enterprise Developer Portal"
 weight: 5
 ---
-
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 The Tyk Enterprise Developer portal provides a special container for access credentials - an application. Applications hold developer credentials that can be used to access APIs published on the portal with a specific plan. A sample relationship between applications, credentials, API Products, and plans is demonstrated in the diagram below.

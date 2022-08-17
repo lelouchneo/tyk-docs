@@ -9,13 +9,6 @@ menu:
 weight: 5
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 Here you’ll learn about how to create invite codes to add a new external user to the developer portal. Invite codes can be used to simplify user onboarding. Using invite codes, users will be directly assigned to a team and organisation, giving them the same access rights as this team. For example you can use invite codes to:

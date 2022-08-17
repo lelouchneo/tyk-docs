@@ -20,10 +20,3 @@ The Tyk Enterprise Developer Portal enables you to:
 *   Create multiple API catalogues to tailor API products and plans visibility to a certain audience.
 *   Integrate with the most popular Identity providers via Dynamic client registration.
 *   Fully control the flow of the developer sign-up and enrollment.
-
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}

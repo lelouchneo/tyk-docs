@@ -9,13 +9,6 @@ menu:
 weight: 1
 ---
 
-{{< note success >}}
-**Tyk Enterprise Developer Portal**
-
-If you are interested in getting access contact us at [support@tyk.io](<mailto:support@tyk.io?subject=Tyk Enterprise Portal Beta>)
-
-{{< /note >}}
-
 ## Introduction
 
 The first step in getting started with the developer portal is to connect the portal to a provider. The current provider supported is Tyk-pro, although you can still use multiple instances of Tyk Pro. When the connection is established, it will import policies as API Products to the portal. The 'Getting started guide'  part shows you how to set up a policy and import it to the developer portal.

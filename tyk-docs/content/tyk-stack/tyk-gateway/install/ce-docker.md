@@ -15,7 +15,12 @@ We will show you two methods of installing our Community Edition Gateway on Dock
 
 The quickest way to get started is using docker-compose.  Visit our [Dockerhub](https://hub.docker.com/u/tykio/) to view the official images.
 
-
+The following are required for a Tyk OSS installation:
+ - Redis   - required for all Tyk installations.
+             Simple redis installation instructions are included below.
+ - MongoDB - Required only if you chose to use the MongoDB Tyk pump with your Tyk OSS installation. Same goes with any
+             [other pump](/analytics-and-reporting/other-data-stores/) you choose to use.
+             
 {{< tabs_start >}}
 {{< tab_start "Docker Compose" >}}
 

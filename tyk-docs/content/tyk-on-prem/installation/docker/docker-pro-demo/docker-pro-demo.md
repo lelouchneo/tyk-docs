@@ -26,7 +26,8 @@ The Tyk Pro Docker demo is our [Self-Managed]({{< ref "/content/tyk-on-prem/with
 {{< note success >}}
 **Note**  
 
-The Tyk Pro Docker demo is our full [Self-Managed]({{< ref "/content/tyk-on-prem/with-tyk-on-premises.md" >}}) solution, which includes our Gateway, Dashboard, and analytics processing pipeline. This demo will run Tyk Self-Managed on your machine, which contains 5 containers: Tyk Gateway, Tyk Dashboard, Tyk Pump, Redis and MongoDB. This demo is great for proof of concept and demo purposes, but if you want to test performance, you will need to move each component to a separate machine.
+The Pro Docker demo does not provide access to the [Developer Portal]({{< ref "/content/tyk-stack/tyk-developer-portal/tyk-developer-portal.md" >}}).
+{{< /note >}}
 
 ## Prerequisites
 
@@ -50,11 +51,11 @@ You need to add the following to your hosts file:
 
 From your installation folder:
 
-``` conf
-"license_key": ""
-```
+Create an `.env` file - `cp .env.example .env.` Then add your license string to `TYK_DB_LICENSEKEY`.
 
-### Step Four - Run the Docker Compose file
+### Step Four - Initialise the Docker containers
+
+#### With MongoDB
 
 Run the following command from your installation folder:
 
@@ -105,9 +106,16 @@ Click **Bootstrap** to save the details.
 You can now log in to the Tyk Dashboard from `127.0.0.1:3000`, using the username and password created in the Dashboard
 Setup screen.
 
-## Configure your Developer Portal
+## Removing the demo installation
 
-To set up your [Developer Portal]({{< ref "/content/tyk-stack/tyk-developer-portal/tyk-developer-portal.md" >}}) follow our Self-Managed [tutorial on publishing an API to the Portal Catalogue]({{< ref "/content/getting-started/tutorials/create-portal-entry.md" >}}).
+To delete all containers as well as remove all volumes from your host:
+
+### With MongoDB
+
+```
+docker-compose down -v
+```
+### With PostgreSQL:
 
 ```
 docker-compose -f ./docker-compose.yml -f ./docker-compose.postgres.yml down -v

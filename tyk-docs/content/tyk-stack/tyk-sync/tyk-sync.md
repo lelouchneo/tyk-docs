@@ -88,9 +88,10 @@ Usage:
 Available Commands:
   dump        Dump will extract policies and APIs from a target (dashboard)
   help        Help about any command
-  publish     publish API definitions from a Git repo or file system to a gateway or dashboard
-  sync        Synchronise a github repo or file system with a gateway
-  update      A brief description of your command
+  publish     publish API definitions from a Git repo or file system to a Tyk Gateway or Dashboard
+  sync        Synchronise a github repo or file system with a Tyk Gateway
+  update      Update a Tyk Dashboard or Gateway with APIs and policies
+  version     This command will show the current Tyk-Sync version
 
 Flags:
   -h, --help   help for tyk-sync
@@ -267,3 +268,12 @@ For example `--apis="ac35df594b574c9c7a3806286611d211,30e7b4001ea94fb970c324bad1
 
 The same behaviour applies to policies.
 
+## Example: Check the currently installed version of Tyk Sync
+
+To check the current Tyk Sync version, we need to run the version command:
+
+
+```
+tyk-sync version
+v1.2.2
+```

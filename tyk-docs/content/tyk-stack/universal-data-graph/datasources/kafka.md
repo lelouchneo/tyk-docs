@@ -123,7 +123,7 @@ When you change any of the fields, all subscribers of the `productUpdated`kafk f
 
 The result should be similar to the following:
 
-![API Menu](/docs/img/2.10/kafka0.png)
+{{< img src="/img/2.10/kafka0.png" alt="API Menu" >}}
 
 #### API Definition for the Kafka DataSource
 

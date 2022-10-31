@@ -109,8 +109,6 @@ Tyk's Hybrid option provides you with a Tyk-hosted Cloud deployment, with the ab
 * [Docker Repo](https://github.com/TykTechnologies/tyk-gateway-docker)
  
 
-{{< img src="/img/hybrid-gateway/image2-33.jpeg" alt="API credentials" >}}
-
 ### Steps for installation
 
 1. Firstly, clone all repo files.
@@ -131,6 +129,9 @@ Tyk's Hybrid option provides you with a Tyk-hosted Cloud deployment, with the ab
 {{< img src="/img/hybrid-gateway/image4-37.png" alt="Deployment" >}}
 
 4. Next, we need an **ORG ID** and **API key** from the Tyk Cloud account.
+
+{{< img src="/img/hybrid-gateway/image2-33.jpeg" alt="API credentials" >}}
+
 5. Launch the API Manager Dashboard. 
    
 {{< img src="/img/hybrid-gateway/image6-39.png" alt="API Manager Dashboard" >}}   

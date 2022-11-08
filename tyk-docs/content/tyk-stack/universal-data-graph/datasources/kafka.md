@@ -12,7 +12,8 @@ aliases:
 
 The Kafka DataSource is able to subscribe to Kafka topics and query the events with GraphQL.
 
-The Kafka DataSource utilizes consumer groups to subscribe to the given topics, it inherits all behavior of the consumer group concept.   
+
+The Kafka DataSource utilises consumer groups to subscribe to the given topics, and inherits all behavior of the consumer group concept.   
 
 Consumer groups are made up of multiple cooperating consumers, and the membership of these groups can change over time. Users can easily add a new consumer to the group to scale the processing load. A consumer can also go offline either for planned maintenance or due to an unexpected failure. Kafka maintains the membership of each group and redistributes work when necessary.   
 
@@ -124,6 +125,7 @@ When you change any of the fields, all subscribers of the `productUpdated`kafk f
 The result should be similar to the following:
 
 {{< img src="/img/2.10/kafka0.png" alt="API Menu" >}}
+
 
 #### API Definition for the Kafka DataSource
 

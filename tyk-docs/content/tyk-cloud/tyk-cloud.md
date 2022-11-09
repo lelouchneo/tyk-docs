@@ -10,7 +10,9 @@ menu:
 url: /tyk-cloud/
 ---
 
-The new Tyk Cloud platform allows you to quickly setup the full Tyk Enterprise API Management platform by simply choosing the regions where you want to locate your Tyk Gateways and where you wish your data to reside.
+It is now possible to run and operate Tyk using your chosen cloud provider in whichever region you like!
+
+The new Tyk Cloud platform allows you to quickly setup the full Tyk Enterprise API Management platform by simply choosing the regions where you want to locate your Tyk Gateways and where you wish your data to reside. The idea of Tyk Cloud is to aid all engineering teams access, create, deploy, govern, manage and scale their APIs at ease. Tyk Cloud simplifies API management overhead while also helping you retain control.
 
 Sign up for a free trial to test it out:
 

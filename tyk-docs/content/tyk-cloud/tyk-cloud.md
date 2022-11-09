@@ -10,7 +10,7 @@ menu:
 url: /tyk-cloud/
 ---
 
-It is now possible to run and operate Tyk using your chosen cloud provider in whichever region you like!
+It is now possible to run and operate APIM in our cloud environment or manage your deployments in your chosen cloud provider and region, in whichever region you like.
 
 The new Tyk Cloud platform allows you to quickly setup the full Tyk Enterprise API Management platform by simply choosing the regions where you want to locate your Tyk Gateways and where you wish your data to reside. The idea of Tyk Cloud is to aid all engineering teams access, create, deploy, govern, manage and scale their APIs at ease. Tyk Cloud simplifies API management overhead while also helping you retain control.
 

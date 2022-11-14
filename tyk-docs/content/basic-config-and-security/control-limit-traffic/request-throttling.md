@@ -1,7 +1,7 @@
 ---
 date: 2019-04-01T12:47:30Z
-title: ottling
-tags: ["ottling"]
+title: Request Throttling
+tags: ["Request Throttling"]
 description: "How to queue and retry requests in Tyk"
 menu:
   main:
@@ -9,7 +9,7 @@ menu:
 weight: 2 
 ---
 
-## ottling Overview
+## Request Throttling Overview
 
 From v2.8, when hitting quota or rate limits, the Gateway can automatically queue and auto-retry client requests. Throttling can be configured at a *key* or *policy* level via the following two fields: 
 
@@ -17,11 +17,11 @@ From v2.8, when hitting quota or rate limits, the Gateway can automatically queu
 2. `throttle_retry_limit`: Total request retry number.
 
 
-### Can I disable ottling?
+### Can I disable Request Throttling?
 
 Yes, you can. If you set `throttle_interval` and `throttle_retry_limit` values to smaller than `0`, the feature will not work. The default value is `-1` and means it is disabled by default.    
 
-## Set ottling with the Dashboard
+## Set Request Throttling with the Dashboard
 
 1.  At the key level: From **System Management** > **Keys** > **Add Key** or open an existing key.
     Or
@@ -35,6 +35,6 @@ Yes, you can. If you set `throttle_interval` and `throttle_retry_limit` values t
 
 4.  Save the token/policy.
 
-## Set ottling in the object
+## Set Request Throttling in the object
 
 Get the policy object with `GET /api/portal/policies/` or the key's session object via `GET /api/apis/{aPI-ID}/keys/` and then  set two fields, `throttle_interval` and `throttle_retry_limit` in the object and create a new object or update the exsiting one.

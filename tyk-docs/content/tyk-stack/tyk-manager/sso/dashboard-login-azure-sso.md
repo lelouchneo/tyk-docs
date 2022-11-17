@@ -15,7 +15,7 @@ This is an end-to-end worked example of how you can use [AzureAD](https://azure.
 This guide assumes the following:
 
 * You already have authorised access to Tyk's Dashboard. If you haven't, [get the authorisation key by following this doc](/docs/basic-config-and-security/security/dashboard/create-users/#a-name-with-api-a-create-a-dashboard-user-with-the-api).
-* For simplicity, you are running TIB locally on port 3010
+* TIB is now embedded within the dashboard.
 * You are able to edit TIB's configuration file.
 
 

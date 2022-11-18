@@ -36,6 +36,7 @@ See their documentation for more detail: https://docs.microsoft.com/en-us/azure/
   - Profile Configuation may look something like this:
   (/docs/img/azureAD/profile-configuration.png)
   - The Discover URL is created by Azure and can be located by selecting Endpoints on their site
+
   (/docs/img/azureAD/endpoints.png)
 
 8. Test that it works:
@@ -53,29 +54,5 @@ See their documentation for more detail: https://docs.microsoft.com/en-us/azure/
 
 ![Generate Or Login User Profile flow](/docs/img/diagrams/generate-or-login-user-profile.png)
 
-## Enhancements
 
-Once it's working you can also add two more enhancements - SSO login page for the dashboard and automatic user group mapping from your AzureAD security groups or users groups to Tyk Dashboards RBAC groups
-
-### SSO login into the dashboard via a login page
-   You will need to:
-	- set up a web server with a login page and a form for `user` and `password`
-	- Update `tyk_analytics.conf` to redirect logins to that url
-    Explicit details are in [steps 6-7](/docs/advanced-configuration/integrate/3rd-party-identity-providers/dashboard-login-ldap-tib/#6-create-a-login-page)
-
-### User group mapping
-You can specify User Groups within a TIB Profile. This can either be a static or dynamic setting.
-
-```.json
-{
-  "DefaultUserGroupID": "{DEFAULT-TYK-USER-GROUP-ID}",
-  "CustomUserGroupField": "{SCOPE}",
-  "UserGroupMapping": {
-    "{AZURE-GROUP-ID-ADMIN}": "{TYK-USER-GROUP-ID-ADMIN}",
-    "{AZURE-GROUP-ID-READ-ONLY}": "{TYK-USER-GROUP-ID-READ-ONLY}",
-  }
-}
-```
-For a static setting, use DefaultUserGroupID
-For a dynamic setting based on claims configured in Azure AD, use CustomUserGroupField with UserGroupMapping listing your User Groups and ID.
 

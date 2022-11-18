@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction
 
-You can use Tyk Cloud to manage your APIs effectively and with minimal effort. This page explains how to create an account, in order to start doing so.
+This page will help you create a new Tyk Cloud account to help manage your APIs effectively and with minimal effort. If you are familiar with this step, you can skip to [setting up your organisation]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-org.md" >}}).
 
 ## What happens when you create your Tyk Cloud account?
 

@@ -14,18 +14,17 @@ aliases:
 
 ## Introduction
 
-Now that you have created the new Tyk Cloud account with your basic details, it is time to set up your organisation. This page will tell you how to set up your organisation and also about the two ways of setting it up.
+Now that you have created the new Tyk Cloud account with your basic details, it is time to set up your organisation. This page will tell you how to set up your organisation and also about the two ways of setting it up. If you have already set up your organisation, you can start [setting up your team]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-team.md" >}}).
 
 ## What is an organisation?
 
-* An organisation is the main entity for all your data (Environments, APIs, Users, etc)
-* An Organisation is connected to a single region and once connected, cannot be changed.
+An organisation is the main entity for all your data (Environments, APIs, Users, etc). It is connected to a single region and once connected, **cannot be changed**.
   
 ## Steps to set up your organisation  
 
-* **Step 1 - Name your Organisation:** Give your organisation a name. This is up to you, but most users use their company name.
+* **Step 1 - Name your organisation:** Give your organisation a name. This is up to you, but most users use their company name.
 
-* **Step 2 - Select a Home Region:** Select a region from the drop-down list where your [Control Plane]({{< ref "/content/tyk-cloud/troubleshooting-&-support/glossary.md#control-plane" >}}) will be deployed and your data stored. The number of regions available will depend on your licence. Further regions can be added as an upgrade option.
+* **Step 2 - Select a home region:** Select a region from the drop-down list where your [Control Plane]({{< ref "/content/tyk-cloud/troubleshooting-&-support/glossary.md#control-plane" >}}) will be deployed and your data stored. The number of regions available will depend on your licence. Further regions can be added as an upgrade option.
 
 {{< note success >}}
 **Note**

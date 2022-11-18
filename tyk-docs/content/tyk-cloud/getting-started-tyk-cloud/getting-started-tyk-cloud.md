@@ -12,21 +12,18 @@ url: /tyk-cloud/getting-started
 
 ## Introduction
 
-Tyk Cloud delivers an easy API management solution. This page walks you through how to start using the product:
+Tyk Cloud delivers an easy API management solution. This page will give you a brief introduction to the first set of steps that you will have to follow before you start using the product:
 
-* Creating your Tyk Cloud account
-* Your first Organisation
-* Creating your first Team and Environment
-* Configuring and deploying your Control Plane and creating your Edge Gateway
-* Adding and testing your first API
+* [Creating your Tyk Cloud account]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/create-account.md" >}})
+* [Creating Your first organisation]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-org.md" >}})
+* [Creating your first team and environment]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-environment.md" >}})
+* [Configuring and deploying control planes]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-environment.md" >}})
+* [Creating your edge gateway and adding your first API]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/first-api.md" >}})
+* [Testing your first API]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/test-api.md" >}})
 
-At the end of this process you will have a simple API set up via a Tyk Dashboard and you'll see analytics for this API on the Tyk Activity Dashboard.
+## Hierarchy
 
-Depending on your initial requirements in terms of Environments, Teams and Users, the setup process should take between 15 to 30 minutes.
-
-### Hierarchy
-
-This diagram shows how _Organisation, Teams, Environments, Control Planes and Edge Gateways_ fit in with each other and which object contains which:
+This diagram shows how *Organisation, Teams, Environments, Control Planes and Edge Gateways* fit in with each other and which object contains which:
 
 ![image](https://user-images.githubusercontent.com/3155222/141136984-46820458-01ac-4a50-b91f-fc4836caf204.png)
 
@@ -37,3 +34,7 @@ The following information would be useful so you can set up Tyk Cloud as quickly
 
 * Team member information including their email address and the role you plan to assign to them.
 * We have some specific terminology used within Tyk Cloud. It would be useful to checkout our [Glossary]({{< ref "/content/tyk-cloud/troubleshooting-&-support/glossary.md" >}}) so you understand what we are referring to.
+
+## How long does the setup take?
+
+At the end of this process you will have a simple API set up via a Tyk Dashboard and you'll see analytics for this API on the Tyk Activity Dashboard. Depending on your initial requirements in terms of Environments, Teams and Users, the setup process should take between **15 to 30 minutes**.

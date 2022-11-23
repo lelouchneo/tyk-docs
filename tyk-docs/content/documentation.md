@@ -18,13 +18,13 @@ hideSidebar: true
 
 {{< grid >}}
 
-{{< badge read="7 mins" imageStyle="object-fit:contain" href="/docs/apim/open-source/" image="/docs/img/logos/Tyk-Open-Source-White.png">}}
+{{< badge read="7 mins" imageStyle="object-fit:contain" href="/docs/apim/open-source/" image="/docs/img/logos/tyk-logo-opensource.png">}}
 {{< /badge >}}
 
-{{< badge read="10 mins" imageStyle="object-fit:contain" href="/docs/tyk-on-premises/" image="/docs/img/logos/Tyk-Self-Managed-Whiite.png">}}
+{{< badge read="10 mins" imageStyle="object-fit:contain" href="/docs/tyk-on-premises/" image="/docs/img/logos/tyk-logo-selfmanaged.png">}}
 {{< /badge >}}
 
-{{< badge read="15 mins" imageStyle="object-fit:contain" href="/docs/tyk-cloud/" image="/docs/img/logos/Tyk-Cloud-White.png" >}}
+{{< badge read="15 mins" imageStyle="object-fit:contain" href="/docs/tyk-cloud/" image="/docs/img/logos/tyk-logo-cloud.png" >}}
 {{< /badge >}}
 
 

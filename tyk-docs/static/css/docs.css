@@ -131,9 +131,10 @@
 }
 
 .hasSidebar .section-page {
-  background: top center url("../img/content-bg.svg") repeat-x;
+  background: top center url("../img/front-bg-1.svg") repeat-x,
+    bottom center url("../img/front-bg-2.svg") repeat-x;
   background-size: 4817.57px;
-  background-color: white;
+  background-color: #36364C;
 }
 
 .section-page .container {
@@ -803,7 +804,7 @@ iframe {
 }
 
 .docs-navigation a {
-  color: #505071 !important;
+  color: #fff !important;
   font-size: 16px;
   text-align: left !important;
   font-family: "Open Sans";
@@ -813,7 +814,7 @@ iframe {
 .docs-navigation a span {
   font-size: 16px;
   font-weight: bold;
-  color: #7a79a1;
+  color: #fff;
   display: block;
   font-family: "Open Sans";
 }
@@ -1296,7 +1297,7 @@ pre {
   width: calc(100% - 30px);
 }
 .st-treed a:hover {
-  color: #2f3f9e;
+  color: #00D9BA;
 }
 
 .st-treed li:not(.st-file):after {
@@ -1333,11 +1334,11 @@ pre {
 }
 
 .st-treed > ul > li > a {
-  color: #505071;
+  color: #fff;
 }
 
 .st-treed > ul > li > a:hover {
-  color: #7A79A1;
+  color: #fff;
 }
 
 .st-treed > ul > li:before {
@@ -1391,7 +1392,7 @@ pre {
 
 .st-treed .st-open > a {
   font-weight: bold;
-  color: #505071;
+  color: #fff;
 }
 
 .st-treed .st-open:last-child .st-open:last-child:before {

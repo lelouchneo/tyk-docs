@@ -18,7 +18,7 @@
 }
 
 .header {
-  background-color: white;
+  background-color: #505071;
   z-index: 11;
   width: 100%;
   padding-left: 50px;
@@ -108,7 +108,7 @@
 }
 
 .button.button-green {
-  background-color: #00d9ba;
+  background-color: #00CDB0;
 }
 
 .button.button-red {
@@ -127,7 +127,7 @@
   background: top center url("../img/front-bg-1.svg") repeat-x,
     bottom center url("../img/front-bg-2.svg") repeat-x;
   background-size: 4817.57px;
-  background-color: #ebebf2;
+  background-color: #36364C;
 }
 
 .hasSidebar .section-page {
@@ -181,7 +181,7 @@
 }
 
 .badge {
-  background: #ffffff;
+  background: #EDEDF9;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   width: 300px;
@@ -192,7 +192,7 @@
   padding-top: 40px;
   font-size: 14px;
   line-height: 19px;
-  color: #505071;
+  color: #fff;
   position: relative;
   flex: 0 0 auto;
   display: block;
@@ -213,7 +213,7 @@
 }
 
 .badge * {
-  color: #505071;
+  color: #fff;
 }
 
 .badge.with_image p {
@@ -280,6 +280,7 @@
 
 .grid.mid .badge {
   padding-top: 28px;
+  background-color: #505071;
 }
 
 .grid.mid .badge img {
@@ -524,7 +525,7 @@ iframe {
 }
 /* Footer */
 .footer {
-  background: #505071;
+  background: #36364C;
   margin-left: auto;
   margin-right: auto;
 }
@@ -940,7 +941,7 @@ iframe {
   Hero
    ========================================================================== */
 .hero {
-  background: white;
+  background: #505071;
   color: #fff;
   height: 100px;
   min-height: 0;

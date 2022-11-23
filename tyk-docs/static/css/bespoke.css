@@ -437,7 +437,7 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: #505071;
   color: #7A79A1;
 }
 
@@ -884,7 +884,7 @@ body {
    ========================================================================== */
 .header {
   background: rgba(0, 0, 24, 0.85);
-  color: #505071;
+  color: #fff;
   position: relative;
   top: 0;
   left: 0;
@@ -1990,7 +1990,7 @@ body {
 .wysiwyg h3,
 .wysiwyg h4 {
   line-height: 1.3;
-  color: #505071;
+  color: #fff;
 }
 
 .wysiwyg h1 {

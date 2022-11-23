@@ -25,9 +25,9 @@ This Helm Chart provides a method of adding Hybrid Gateways into your Kubernetes
 The Hybrid Gateways can be connected to *Tyk Cloud* or to a *Tyk Self managed Control plane* (a.k.a *MDCB*/*Tyk Multi Data Centre Bridge (MDCB)*).
 
 ### Prerequisites
-- Redis: It is required for all Tyk installations and must be installed in the cluster or reachable from inside K8s. 
+- Redis: It is required for all Tyk installations and must be installed in the cluster or reachable from inside K8s.
 
-- Tyk Cloud Account: You need to set up a Tyk Cloud account 
+- Tyk Cloud Account: You need to set up a Tyk Cloud account
 [Getting Started with Tyk Cloud]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/getting-started-tyk-cloud.md" >}}) (With CP deployment set-up)
 
 ### Installation
@@ -42,11 +42,10 @@ please use [GitHub Tyk-helm-chart repo](https://github.com/TykTechnologies/tyk-h
 
 #### Installation
 
-1. clone all the repo files:
+1. Add a chart repository:
 
 ```bash
-helm repo add tyk-helm https://helm.tyk.io/public/helm/charts/
-helm repo update
+Add tyk-helm repo into your local Helm registry
 ```
 
 2. Before we proceed with installation of the chart we need to set some custom values. To see what options are configurable on a chart and save that options to a custom values.yaml file run:
@@ -105,9 +104,9 @@ Tyk's Hybrid option provides you with a Tyk-hosted Cloud deployment, with the ab
 ### Requirements
 
 * **Redis** - This is required for all Tyk installations. You can find instructions for a simple Redis installation in the Docker repo mentioned below.
-* Set up a [Tyk Cloud account](https://tyk.io/docs/tyk-cloud/getting-started/) (With CP deployment set-up) 
+* Set up a [Tyk Cloud account](https://tyk.io/docs/tyk-cloud/getting-started/) (With CP deployment set-up)
 * [Docker Repo](https://github.com/TykTechnologies/tyk-gateway-docker)
- 
+
 
 ### Steps for installation
 
@@ -121,7 +120,7 @@ Tyk's Hybrid option provides you with a Tyk-hosted Cloud deployment, with the ab
 "slave_options": {
 "rpc_key": "<ORG_ID>",
 "api_key": "<API-KEY>",
-"connection_string": "<MDCB-INGRESS>:443", 
+"connection_string": "<MDCB-INGRESS>:443",
 ```
 
 3. For the **MDCB-INGRESS**, choose the correct deployment and copy the MDCB URL.
@@ -131,8 +130,8 @@ Tyk's Hybrid option provides you with a Tyk-hosted Cloud deployment, with the ab
 4. Next, we need an **ORG ID** and **API key** from the Tyk Cloud account.
 
 
-5. Launch the API Manager Dashboard. 
-   
+5. Launch the API Manager Dashboard.
+
 {{< img src="/img/hybrid-gateway/image6-39.png" alt="API Manager Dashboard" >}}   
 
 Within the API Manager Dashboard select your Hybrid user. Under that user, copy the API key and add it. Then copy and paste the Org ID and save.
@@ -141,7 +140,7 @@ Within the API Manager Dashboard select your Hybrid user. Under that user, copy 
 
 6 . Finally, edit the <docker-compose.yml> file to swap over the standalone config file to use the hybrid config file that was just configured.
 
-From: 
+From:
 
 ```bash
 - ./tyk.standalone.conf:/opt/tyk-gateway/tyk.conf
@@ -150,7 +149,7 @@ To:
 
 ```bash
 - ./tyk.hybrid.conf:/opt/tyk-gateway/tyk.conf
-``` 
+```
 In this compose file, we've now got our gateway image, we've got Redis and we have some volume mappings.
 
 ```bash
@@ -161,4 +160,3 @@ In this compose file, we've now got our gateway image, we've got Redis and we ha
 You should now have two running containers, a Gateway and a Redis.
 
 Now it is time to publish a new API [Task 5 - Deploy your Edge Gateway and add your first API]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/first-api.md" >}})
-

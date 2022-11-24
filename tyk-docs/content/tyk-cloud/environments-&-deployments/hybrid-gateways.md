@@ -42,7 +42,7 @@ please use [GitHub Tyk-helm-chart repo](https://github.com/TykTechnologies/tyk-h
 
 #### Installation
 
-1. Add a chart repository:
+1. Add the Tyk official Helm repo:
 
 ```bash
 Add tyk-helm repo into your local Helm registry

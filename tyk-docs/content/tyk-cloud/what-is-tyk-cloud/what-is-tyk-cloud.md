@@ -31,10 +31,10 @@ Paid plans and Enterprise trials allow users to select one of 5 AWS locations as
 
 ### Next Level SaaS
 
-* Tyk is cloud native and has always been a true multi-cloud product and now we’re taking it to the next level with our next level SaaS platform, Tyk Cloud. 
-* It lets optimise your platforms across and between a myriad of providers such as AWS, Google Cloud etc. without having to worry about vendor lock-in, or complex deployments.
+* Tyk is cloud native and has always been a true multi-cloud product and now we’re taking it to the next level with our next level SaaS platform, Tyk Cloud.
+* Now you don’t need to worry about vendor lock-in, or complex deployments, you can benefit from being able to optimise your platforms across and between a myriad of providers such as AWS, Google Cloud etc.
 
-### Quick deployments - wherever you need them
+### Quick deployments Wherever you need them
 
 * Be it handling Government API traffic in Singapore or wanting to add local Gateways in Australia to improve performance and resilience or deploying your management layer to your own hosted servers rather than a cloud provider - we've got you covered!
 * The new Tyk Cloud platform allows you to quickly setup the full Tyk Enterprise API Management platform, simply choosing the regions where you wish to locate your gateways and where you wish your data to reside, resulting in immediate and secure data sovereignty. 
@@ -42,5 +42,5 @@ Paid plans and Enterprise trials allow users to select one of 5 AWS locations as
 
 ### Designed for Enterprises
 
-* Tyk Cloud is designed for Enterprises who may have multi-organisations and multi-teams, so you can combine or isolate your platform and the underlying providers, the choice is completely yours! 
+* Tyk Cloud is designed for Enterprises who may have multi-organisations and multi-teams, so you can combine or isolate your platform and the underlying providers, the choice is completely yours!
 * To make it even simpler, Tyk Cloud is pre-configured so you can be up and running within a few clicks, no laborious tasks for your internal teams and best practice configuration and security is delivered out of the box.

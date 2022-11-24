@@ -38,4 +38,4 @@ Yes, you can. If you set `throttle_interval` and `throttle_retry_limit` values t
 ## Set Request Throttling in the object
 
 Get the policy object with `GET /api/portal/policies/` or the key's session object via `GET /api/apis/{aPI-ID}/keys/` and then  set two fields, `throttle_interval` and `throttle_retry_limit` in the object and create a new object or update the exsiting one.
- 
+

@@ -23,7 +23,7 @@ canonifyurls = "false"
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = "manni"
+    style = "dracula"
     tabWidth = 2
 
   [markup.tableOfContents]

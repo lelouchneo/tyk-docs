@@ -60,7 +60,7 @@ func AddFooBarHeader(rw http.ResponseWriter, r *http.Request) {
 }
 ```
 
-See our [Golang plugin documentation](/docs/plugins/golang-plugins/golang-plugins) for more details.
+See our [Golang plugin documentation](/docs/plugins/supported-languages/golang/) for more details.
 
 ### Distributed tracing
 

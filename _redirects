@@ -1,8 +1,8 @@
 /docs/basic-config-and-security/security/authentication-authorization/oauth2.0/auth-code-grant/ /docs/basic-config-and-security/security/authentication-&-authorization/oauth2-0/auth-code-grant/
-/docs/basic-config-and-security/security/authentication-authorization/oauth2.0/refresh-token-grant/ /docs/basic-config-and-security/security/authentication-authorization/oauth2-0/refresh-token-grant
-/docs/basic-config-and-security/security/authentication-authorization/oauth2.0/username-password-grant/ /docs/basic-config-and-security/security/authentication-authorization/oauth2-0/username-password-grant
-/docs/basic-config-and-security/security/authentication-authorization/oauth2.0/client-credentials-grant/ /docs/basic-config-and-security/security/authentication-authorization/oauth2-0/client-credentials-grant
-/docs/basic-config-and-security/security/your-apis/oauth2.0/revoke-oauth-tokens/ /docs/basic-config-and-security/security/your-apis/oauth2-0/revoke-oauth-tokens
+/docs/basic-config-and-security/security/authentication-authorization/oauth2.0/refresh-token-grant/ /docs/basic-config-and-security/security/authentication-authorization/oauth2-0/refresh-token-grant/
+/docs/basic-config-and-security/security/authentication-authorization/oauth2.0/username-password-grant/ /docs/basic-config-and-security/security/authentication-authorization/oauth2-0/username-password-grant/
+/docs/basic-config-and-security/security/authentication-authorization/oauth2.0/client-credentials-grant/ /docs/basic-config-and-security/security/authentication-authorization/oauth2-0/client-credentials-grant/
+/docs/basic-config-and-security/security/your-apis/oauth2.0/revoke-oauth-tokens/ /docs/basic-config-and-security/security/your-apis/oauth2-0/revoke-oauth-tokens/
 /docs/get-started/with-tyk-on-premise/tutorials/tyk-on-premise-pro/ /docs/getting-started/
 /docs/get-started/with-tyk-cloud/tutorials/create-api-token/ /docs/getting-started/create-api-key/
 /docs/customise-tyk/plugins/rich-plugins/grpc/ /docs/plugins/supported-languages/rich-plugins/grpc/
@@ -104,7 +104,7 @@
 /docs/security/your-apis/bearer-tokens/ /docs/basic-config-and-security/security/authentication-authorization/bearer-tokens/
 /docs/basic-config-and-security/security/authentication-authorization/oauth2-0/refresh-token-grant/ /docs/basic-config-and-security/security/authentication-&-authorization/oauth2-0/refresh-token-grant/
 /docs/tyk-cloud/troubleshooting-support/glossary/ /docs/tyk-cloud/troubleshooting-&-support/glossary/
-/docs/planning-for-production/database-settings/sql  /docs/planning-for-production/database-settings/postgresql
+/docs/planning-for-production/database-settings/sql  /docs/planning-for-production/database-settings/postgresql/
 /docs/analyse/redis-mongodb-sizing  /docs/planning-for-production/database-settings/
 /docs/analytics-and-reporting/redis-mongodb-sizing/  /docs/planning-for-production/database-settings/
 /docs/planning-for-production/redis-mongodb-sizing/  /docs/planning-for-production/database-settings/

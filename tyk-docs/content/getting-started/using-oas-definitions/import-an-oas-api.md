@@ -219,7 +219,7 @@ curl -H "x-tyk-authorization: {your-secret}" -s http://{your-tyk-host}:{port}/ty
 
 #### Check your OAS API definition
 
-Go to the `/apps` folder of your Tyk Gateway installation (by default in `/var/tyk-gateway`) and check the newly created Tyk OAS API Definition. You’ll see that now Tyk doesn’t read the upstream URL from the server section of the OAS API Definition and that under the `x-tyk-api-gateway` section the `upstream.url` value points now to http://tyk.io and the `server.listenPath.` value has the `/oas-api/` value, which are the values that you passed as query parameters.
+Go to the `/apps` folder of your Tyk Gateway installation (by default in `/var/tyk-gateway`) and check the newly created Tyk OAS API Definition. You’ll see that now Tyk doesn’t read the upstream URL from the server section of the OAS API Definition and that under the `x-tyk-api-gateway` section the `upstream.url` value points now to https://tyk.io and the `server.listenPath.` value has the `/oas-api/` value, which are the values that you passed as query parameters.
 
 ```.json
 {
@@ -241,7 +241,7 @@ Go to the `/apps` folder of your Tyk Gateway installation (by default in `/var/t
       }
     },
     "upstream": {
-      "url": "http://tyk.io"
+      "url": "https://tyk.io"
     },
     "server": {
       "listenPath": {

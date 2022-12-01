@@ -40,7 +40,7 @@ We have a lot to update you on with our UX & UI revamp, but one thing we want to
 
 When you create, view or edit a key the steps are in a more logical order. We’ve removed the long form that needed to be filled out and replaced it with tabs so you can find and enter information easily. We’ve also grouped all information within each API so you know the exact set up of each of your access rights without any confusion. The new workflow should allow tasks to be completed faster and more efficiently.
 
-See updated tutorials on how to [create a policy](/docs/try-out-tyk/tutorials/create-security-policy) and [keys](/docs/try-out-tyk/tutorials/create-api-key/)
+See updated tutorials on how to [create a policy](/docs/getting-started/create-security-policy/) and [keys](/docs/try-out-tyk/tutorials/create-api-key/)
 
 We also have a [blog post](https://tyk.io/the-transformation-of-policies-and-keys/) that explains what we've done, and why we did it.
 

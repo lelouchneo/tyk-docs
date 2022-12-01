@@ -58,7 +58,7 @@ Also to overcome the CORS issues that you might encounter while testing document
 ### Portal - API key is hidden in email
 You now have the option to hide the API key in the email generated after you approve the key request for a developer.
 
-[Docs here](https://tyk.io/docs/tyk-developer-portal/key-requests/)
+[Docs here](https://tyk.io/docs/tyk-developer-portal/tyk-portal-classic/key-requests/)
 
 
 ## Bug Fixes

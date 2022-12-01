@@ -27,7 +27,7 @@ When a developer requests a token, a new Auth token is generated on the linked p
 
 A key request is a record that is generated when a developer requests an access token for an API published in the API Catalogue. The Key request encompasses the following information:
 
-Read more about them in the [Key Request section](/docs/tyk-developer-portal/key-requests)
+Read more about them in the [Key Request section](/docs/tyk-developer-portal/tyk-portal-classic/key-requests/)
 
 ### Multiple APIs for a single Key Request
 

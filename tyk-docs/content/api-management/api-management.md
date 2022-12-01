@@ -48,7 +48,7 @@ Which one is right for your organisation depends on your requirements and prefer
 [8]: /docs/tyk-multi-data-centre/
 [9]: /docs/tyk-developer-portal/
 [10]: /docs/tyk-dashboard-analytics/
-[11]:/docs/apim/open-source
+[11]:/docs/apim/open-source/
 [12]: /docs/tyk-on-premises/
 [13]: https://account.cloud-ara.tyk.io/signup
 [14]: https://tyk.io/price-comparison/?__hstc=181257784.269e6993c6140df347029595da3a8f[…]4015210561.61&__hssc=181257784.22.1614015210561&__hsfp=1600587040
@@ -69,4 +69,4 @@ Head on over to the [OSS section][11] for more information on it and the other o
 With Tyk Cloud all of the above closed-source components are available. Get your free account [here][13].
 
 
-There are many open and closed source [Tyk components](/docs/tyk-stack) that make up the various solutions.
+There are many open and closed source [Tyk components](/docs/tyk-stack/) that make up the various solutions.

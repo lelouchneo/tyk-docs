@@ -20,7 +20,7 @@ Metadata is also injected by other Tyk Components when keys are created using "g
 ### Plugins that can use meta data:
 Metadata is exposed in three plugin middleware but are accessed differently depending on the caller as follows:
 
-1.   [URL Rewriter](/docs/advanced-configuration/transform-traffic/url-rewriting/#meta-data) - Syntax is `$tyk_meta.METADATA_KEY`
+1.   [URL Rewriter](/docs/transform-traffic/url-rewriting/#meta-data) - Syntax is `$tyk_meta.METADATA_KEY`
 2.   [Modify Headers](/docs/advanced-configuration/transform-traffic/request-headers/#a-name-meta-data-a-injecting-custom-dynamic-data-into-headers) - Syntax is `$tyk_meta.METADATA_KEY`
 3.   [Body Transforms](/docs/advanced-configuration/transform-traffic/request-body/#a-name-meta-data-a-meta-data) - Syntax is `{{ ._tyk_meta.METADATA_KEY }}`
 

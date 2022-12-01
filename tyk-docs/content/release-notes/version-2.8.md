@@ -11,7 +11,7 @@ weight: 9
 You now can configure complex request pipelines, allowing you to specify different actions for the same path, depending 
 on defined conditions.
 
-Visit the [looping section](/docs/advanced-configuration/transform-traffic/looping) for more information.
+Visit the [looping section](/docs/advanced-configuration/transform-traffic/looping/) for more information.
 
 ---
 

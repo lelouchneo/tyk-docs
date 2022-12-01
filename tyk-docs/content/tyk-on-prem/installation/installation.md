@@ -55,4 +55,4 @@ We distribute Tyk via Packagecloud.io APT and Yum repositories, as well as via o
 
 ### Licencing
 
-Read more about licensing [here](/docs/tyk-on-premises/licensing).
+Read more about licensing [here](/docs/tyk-on-premises/licensing/).

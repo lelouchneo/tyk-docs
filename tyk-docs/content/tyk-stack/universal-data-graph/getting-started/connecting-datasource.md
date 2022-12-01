@@ -40,7 +40,7 @@ To avoid typos in template you can use the UI component to automatically create 
 
 To learn more about arguments click [here](../../concepts/arguments/)
 
-To learn more about reusing response fields click [here](../../concepts/reusing_response_fields)
+To learn more about reusing response fields click [here](../../concepts/reusing_response_fields/)
 
 #### 5. Enter datasource name.
 
@@ -62,7 +62,7 @@ Keep the field mapping disabled by default.
 
 You can use field mapping to map the API response with your schema.
 
-You can learn more about field mapping [here](../../concepts/field_mappings)
+You can learn more about field mapping [here](../../concepts/field_mappings/)
 
 #### 9. Update Configuration
 

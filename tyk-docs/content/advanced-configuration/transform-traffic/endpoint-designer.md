@@ -163,7 +163,7 @@ This plugin allows you to manually select each endpoint for tracking.
 
 ### URL Rewrite
 
-This plugin allows you to translate an outbound API interface to your internal structure of your services. See [URL Rewriting](/docs/advanced-configuration/transform-traffic/url-rewriting/) for more details.
+This plugin allows you to translate an outbound API interface to your internal structure of your services. See [URL Rewriting](/docs/transform-traffic/url-rewriting/) for more details.
 
 ### Virtual Endpoint
 

@@ -48,7 +48,7 @@ You can then control OPA functionality on a global level via your `tyk_analytics
 
 With the OPA turned on, the majority of the security rules will be dynamically evaluated based on these rules.
 
-Additionally, users can modify OPA rules, and define their own, through the [OPA API](/docs/tyk-dashboard-api/org/permissions/). For Self-Managed installations you can access and modify the OPA rules from your Tyk installation directory from [schemas/dashboard.rego](/docs/tyk-dashboard/opa-rules).
+Additionally, users can modify OPA rules, and define their own, through the [OPA API](/docs/tyk-dashboard-api/org/permissions/). For Self-Managed installations you can access and modify the OPA rules from your Tyk installation directory from [schemas/dashboard.rego](/docs/tyk-dashboard/opa-rules/).
 Moreover, using these rules you can also modify request content. Our recommendation is to use those modifications in a development environment and remember to create a backup of the rego rules.
 
 ### Language intro

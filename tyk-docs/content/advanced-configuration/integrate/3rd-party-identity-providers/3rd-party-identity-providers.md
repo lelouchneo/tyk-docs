@@ -89,4 +89,4 @@ The settings will behave as next:
 * If `enabled` = true and tib host is set, then external TIB will be loaded
 * If `enabled` = true and tib host is not present the internal TIB will be loaded
 
-If you want install it as a separate component see [installing TIB](/docs/tyk-identity-broker/getting-started#installation).
+If you want install it as a separate component see [installing TIB](/docs/tyk-identity-broker/getting-started/#installation).

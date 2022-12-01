@@ -18,11 +18,11 @@ The main requirement to make it work is that SSL traffic should be terminated by
 
 Tyk has support for mutual TLS in the following areas:
 
-* [Client mTLS](./client-mtls)
-* [Upstream mTLS](./upstream-mtls)
+* [Client mTLS](./client-mtls/)
+* [Upstream mTLS](./upstream-mtls/)
 
 ### mTLS for cloud users:
 - Cloud users can secure their upstream services with mTLS but mTLS between the client (caller of the API) and Tyk's gateway cannot be done for the time being.
 - Multi cloud users - since you own and manage the gateways, you can use mTLS for gateway <--> upstream  as well as client <--> gateway connections.
 
-Before going into details about each of these areas, let's [describe the basic building blocks](./concepts) used to make it work.
+Before going into details about each of these areas, let's [describe the basic building blocks](./concepts/) used to make it work.

@@ -150,6 +150,6 @@ Although we have set the main factors of the key, they will be overridden by the
 
 [With the Dashboard API](/docs/getting-started/tutorials/create-security-policy/#tutorial-create-a-security-policy-with-the-api)
 
-[With the Gateway API - Open Source tab](/docs/getting-started/tutorials/create-security-policy)
+[With the Gateway API - Open Source tab](/docs/getting-started/tutorials/create-security-policy/)
 
 [With the Dashboard](/docs/getting-started/tutorials/create-security-policy/#tutorial-create-a-security-policy-with-the-dashboard)

@@ -355,7 +355,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/3.2/basic-config-and-security/security/mutual-tls/client-mtls</loc>
+    <loc>https://tyk.io/docs/3.2/basic-config-and-security/security/mutual-tls/client-mtls/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -2211,7 +2211,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/3.1/basic-config-and-security/security/mutual-tls/client-mtls</loc>
+    <loc>https://tyk.io/docs/3.1/basic-config-and-security/security/mutual-tls/client-mtls/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -4035,7 +4035,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/3.2/universal-data-graph/concepts/field_mappings</loc>
+    <loc>https://tyk.io/docs/3.2/universal-data-graph/concepts/field_mappings/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -6507,7 +6507,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/3-lts/basic-config-and-security/security/mutual-tls/client-mtls</loc>
+    <loc>https://tyk.io/docs/3-lts/basic-config-and-security/security/mutual-tls/client-mtls/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -6641,7 +6641,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/nightly/universal-data-graph/concepts/reusing_response_fields</loc>
+    <loc>https://tyk.io/docs/nightly/universal-data-graph/concepts/reusing_response_fields/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -7453,7 +7453,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/nightly/basic-config-and-security/security/mutual-tls/client-mtls</loc>
+    <loc>https://tyk.io/docs/nightly/basic-config-and-security/security/mutual-tls/client-mtls/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -10345,7 +10345,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/nightly/universal-data-graph/concepts/field_mappings</loc>
+    <loc>https://tyk.io/docs/nightly/universal-data-graph/concepts/field_mappings/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -10715,7 +10715,7 @@
       </image:image>
   </url>
   <url>
-    <loc>https://tyk.io/docs/3.2/universal-data-graph/concepts/reusing_response_fields</loc>
+    <loc>https://tyk.io/docs/3.2/universal-data-graph/concepts/reusing_response_fields/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

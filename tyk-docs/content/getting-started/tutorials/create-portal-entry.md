@@ -14,7 +14,7 @@ aliases:
     - /getting-started/tutorials/create-portal-entry/
 ---
 
-This is for the closed source [Tyk Developer Portal](/docs/tyk-developer-portal) only
+This is for the closed source [Tyk Developer Portal](/docs/tyk-developer-portal/) only
 
 {{< tabs_start >}}
 {{< tab_start "Cloud" >}}

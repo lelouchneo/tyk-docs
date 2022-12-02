@@ -30,8 +30,6 @@ Paid plans and Enterprise trials allow users to select one of 5 AWS locations as
 
 ### Next Level SaaS
 
-<<<<<<< .merge_file_Hb8iWc
-<<<<<<< .merge_file_Rpr7zj
 * Tyk is cloud native and has always been a true multi-cloud product and now we’re taking it to the next level with our next level SaaS platform, Tyk Cloud.
 * Now you don’t need to worry about vendor lock-in, or complex deployments, you can benefit from being able to optimise your platforms across and between a myriad of providers such as AWS, Google Cloud etc.
 

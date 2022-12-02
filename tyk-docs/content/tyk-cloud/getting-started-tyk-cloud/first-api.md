@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction
 
-Your onboarding is now complete! The next step will be to setup a very basic API to demonstrate how APIs are managed within Tyk Cloud.
+Your onboarding is now officially complete! The next step will be to setup a very basic API to demonstrate how APIs are managed within Tyk Cloud. If you know how to add an API, go ahead and [start testing it!]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/test-api.md" >}})
 
 ## Steps to add an API in Tyk Cloud
 

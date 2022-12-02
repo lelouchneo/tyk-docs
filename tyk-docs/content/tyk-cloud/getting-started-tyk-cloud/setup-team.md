@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction
 
-Following organisation setup, you will have to set up your team(s) on Tyk Cloud. This page will tell you all about the process.
+Following organisation setup, you will have to set up your team(s) on Tyk Cloud. This page will tell you all about the process. If you have already set up your team, you can move on to the next step which is [setting up environments and deployments]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-environment.md" >}}).
 
 ## What is a team?
 
@@ -32,8 +32,10 @@ After creating your Organisation you'll land on the success screen. Click **Get 
 
 Out of the box, the following roles are setup:
 
-* **Team member:** They can manage deployment activity for the team they are added to.
-* **Team admin:** They can manage deployment activity and users for the team they are added to.
-* **Organisation admin:** They can manage deployment activity and users for a single organisation.
+| **Role**           | **What can they do?**                                                         |
+|--------------------|-------------------------------------------------------------------------------|
+| Team Member        | They can manage deployment activity for the team they are added to.           |
+| Team admin         | They can manage deployment activity and users for the team they are added to. |
+| Organisation admin | They can manage deployment activity and users for a single organisation.      |
 
 Next you'll create an [Environment](/docs/tyk-cloud/getting-started-tyk-cloud/setup-environment/).

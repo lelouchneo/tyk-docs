@@ -21,4 +21,4 @@ We have now created and tested our API. How do we know that they are performing 
   
 * **Step 2 - Create an Error:** From the Edge Gateway, make a call that will throw an error. For example, use `me-app` instead of `my-app`. You should see the error displayed in the Analytics.
 
-Next - what we covered.
+Yayy! We're all done. So how about a [recap]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/to-conclude.md" >}})?.

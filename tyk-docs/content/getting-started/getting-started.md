@@ -26,7 +26,7 @@ The following tutorials will show you how to get up and running with Tyk dependi
 
 How to add a basic API to Tyk
 
-### [Create a Security Policy](/docs/getting-started/tutorials/create-security-policy/)
+### [Create a Security Policy](/docs/getting-started/create-security-policy/)
 
 Create a Security Policy that can be applied to multiple keys
 

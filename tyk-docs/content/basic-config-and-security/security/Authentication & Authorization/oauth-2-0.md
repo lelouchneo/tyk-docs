@@ -104,7 +104,7 @@ The remaining fields are only required for grant types which include a redirect,
 
 ### 4. Create a Policy
 
-Next, [create a policy](/docs/getting-started/tutorials/create-security-policy/) which includes this API on it’s Access rights.
+Next, [create a policy](/docs/getting-started/create-security-policy/) which includes this API on it’s Access rights.
 
 ### 5. Create an OAuth Client
 

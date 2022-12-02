@@ -38,7 +38,7 @@ Which one is right for your organisation depends on your requirements and prefer
 | Fully-Managed SaaS       | -		      |-	              |✅
 | HIPAA, SOC2, PCI          | ✅		      |✅	              | -
 
-[1]: /docs/apim/open-source#tyk-gateway
+[1]: /docs/apim/open-source/#tyk-gateway
 [2]: /docs/tyk-sync/
 [3]: /docs/tyk-pump/
 [4]: /docs/tyk-dashboard/

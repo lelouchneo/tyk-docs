@@ -41,7 +41,7 @@ We are telling Tyk to extract this unique ID from the `sub` Header, which is the
 
 #### Step 4: Set a Default Policy
 
-If Tyk cannot find a `pol` claim, it will apply this Default Policy. Select a policy that gives access to this API we are protecting, or [go create one first](/docs/getting-started/tutorials/create-security-policy/) if it doesn't exist.
+If Tyk cannot find a `pol` claim, it will apply this Default Policy. Select a policy that gives access to this API we are protecting, or [go create one first](/docs/getting-started/create-security-policy/) if it doesn't exist.
 
 ![Default Policy](/docs/img/2.10/jwt_default_policy.png)
 

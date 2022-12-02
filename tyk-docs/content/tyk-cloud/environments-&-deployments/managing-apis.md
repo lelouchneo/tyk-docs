@@ -15,7 +15,7 @@ url: /tyk-cloud/environments-&-deployments/managing-apis
 APIs are managed via your Control Plane Dashboard. From there you have access to the full scope of Tyk API management functionality, including:
 
 * [Adding APIs](/docs/getting-started/tutorials/create-api/) to Tyk, including REST and GraphQL APIs
-* Applying Quotas and Rate limits via [Security Policies](/docs/getting-started/tutorials/create-security-policy/) and [Keys](/docs/getting-started/tutorials/create-api-key/)
+* Applying Quotas and Rate limits via [Security Policies](/docs/getting-started/create-security-policy/) and [Keys](/docs/getting-started/tutorials/create-api-key/)
 * [Securing](/docs/basic-config-and-security/security/) your APIs
 * Viewing granular [Analytics](/docs/tyk-dashboard-analytics/) for your Tyk managed APIs
 * [Transform traffic](/docs/advanced-configuration/transform-traffic/) with the Tyk API Designer

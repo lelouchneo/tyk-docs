@@ -7,7 +7,7 @@ menu:
 weight: 5 
 url: /transform-traffic/url-rewriting/
 aliases:
-  - /advanced-configuration/transform-traffic/url-rewriting
+  - /advanced-configuration/transform-traffic/url-rewriting/
 
 ---
 

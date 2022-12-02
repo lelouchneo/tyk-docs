@@ -28,4 +28,4 @@ We have actually only scratched the surface of what is possible with Tyk Cloud.
 What to go through next:
 
 * [Managing your Deployments]({{< ref "/content/tyk-cloud/environments-&-deployments" >}})
-* Adding [Plugins and Middleware](/docs/tyk-cloud/using-plugins/) to your Control Plane
+* Adding [Plugins and Middleware]({{< ref "/content/tyk-cloud/configuration-options/using-plugins/using-plugins.md" >}}) to your Control Plane.

@@ -14,7 +14,7 @@ aliases:
 
 ## Introduction
 
-Now that you have created the new Tyk Cloud account with your basic details, it is time to set up your organisation. This page will tell you how to set up your organisation and also about the two ways of setting it up. If you have already set up your organisation, you can start [setting up your team]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-team.md" >}}).
+Now that you have created the new Tyk Cloud account with your basic details, it is time to set up your organisation. This page will tell you how to set up your organisation and also about the two ways of setting it up. If you have already set up your organisation, you can jump to [setting up your team]({{< ref "/content/tyk-cloud/getting-started-tyk-cloud/setup-team.md" >}}).
 
 ## What is an organisation?
 

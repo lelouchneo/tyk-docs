@@ -82,5 +82,5 @@ The most important elements here are:
 Once this is complete, you can restart the Tyk Gateway in the Slave DC, and it will connect to the MDCB instance, load its API definitions, and is ready to proxy traffic.
 
 ## Installing in Kubernetes
-If you want to follow the mentioned steps in Kubernetes, you firstly need to install it. To deploy your Hybrid Gateways in a Kubernetes cluster, you can follow the steps in [Managing Hybrid Gateways]({{< ref "/content/tyk-cloud/environments-&-deployments/hybrid-gateways.md" >}})
+If you want to follow the mentioned steps in Kubernetes, you firstly need to install it. To deploy your Hybrid Gateways in a Kubernetes cluster, using Tyk Helm charts, follow [these steps]({{< ref "/content/tyk-cloud/environments-deployments/hybrid-gateways/#installation" >}})(The steps are part of Hybrid gateways for Tyk cloud but essentially they are similar)
 

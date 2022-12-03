@@ -26,7 +26,7 @@ Modify the Tyk Gateway configuration (`tyk.conf`) as follows:
 
 Next, we need to ensure that the policy loader and analytics pump use the RPC driver:
 
-```{.json}
+```console
 "policies": {
   "policy_source": "rpc",
   "policy_record_name": "tyk_policies"
@@ -39,7 +39,7 @@ Next, we need to ensure that the policy loader and analytics pump use the RPC dr
 
 Lastly, we add the sections that enforce the RPC Slave mechanism:
 
-```{.json}
+```console
 "slave_options": {
   "use_rpc": true,
   "rpc_key": "{ORGID}",

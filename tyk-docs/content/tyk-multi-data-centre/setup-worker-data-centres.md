@@ -81,8 +81,6 @@ The most important elements here are:
 |`bind_to_slugs` | For all Tyk installations except for Tyk Classic Cloud this should be set to false.|
 
 Once this is complete, you can restart the Tyk Gateway in the Worker DC, and it will connect to the MDCB instance, load its API definitions, and is ready to proxy traffic.
-## Installing Kubernetes
-If you want to follow the mentioned steps in Kubernetes, you firstly need to install it. To install Kubernetes, you can go to [Managing Hybrid Gateways]({{< ref "tyk-cloud/environments-deployments/hybrid-gateways/#installation" >}})
-For more information related to Tyk Helm charts, check [Tyk Helm Chart]({{< ref "tyk-on-prem/installation/kubernetes/helm-chart.md" >}}).
-Check [Tyk Control plane]({{< ref "/content/tyk-multi-data-centre/" >}}) for more configuration details.
+## Installing in Kubernetes
+If you want to follow the mentioned steps in Kubernetes, you firstly need to install it. To deploy your Hybrid Gateways in a Kubernetes cluster, using Tyk Helm charts, follow [these steps]({{< ref "/content/tyk-cloud/environments-deployments/hybrid-gateways/#installation" >}})(The steps are part of Hybrid gateways for Tyk cloud but essentially they are similar)
 

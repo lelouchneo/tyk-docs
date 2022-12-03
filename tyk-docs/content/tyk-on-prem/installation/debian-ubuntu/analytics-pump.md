@@ -33,7 +33,7 @@ $ git clone https://github.com/TykTechnologies/tyk-ansible
 $ cd tyk-ansible
 ```
 
-3. Run initalization script to initialize environment
+3. Run initialisation script to initialise environment
 
 ```bash
 $ sh scripts/init.sh
@@ -99,29 +99,39 @@ sudo apt-get install -y apt-transport-https
 Now lets add the required repos and update again (notice the `-a` flag in the second Tyk commands - this is important!):
 
 ```bash
-echo "deb https://packagecloud.io/tyk/tyk-pump/ubuntu/ bionic main" | sudo tee /etc/apt/sources.list.d/tyk_tyk-pump.list
+echo "deb https://packagecloud.io/tyk/tyk-pump/ubuntu/ <ubuntu-release>" | sudo tee /etc/apt/sources.list.d/tyk_tyk-pump.list
 
-echo "deb-src https://packagecloud.io/tyk/tyk-pump/ubuntu/ bionic main" | sudo tee -a /etc/apt/sources.list.d/tyk_tyk-pump.list
+echo "deb-src https://packagecloud.io/tyk/tyk-pump/ubuntu/ <ubuntu-release>" | sudo tee -a /etc/apt/sources.list.d/tyk_tyk-pump.list
 
 sudo apt-get update
 ```
 
-**What we've done here is:**
+{{< note success >}}
+
+**Note**  
+
+
+
+Substitute your particular Ubuntu release, e.g. Bionic.
+
+{{< /note >}}
+
+**What you've done here is:**
 
 - Added the Tyk Pump repository
 - Updated our package list
 
 #### Step 2: Install the Tyk Pump
 
-We're now ready to install the Tyk Pump. To install it, run:
+You're now ready to install the Tyk Pump. To install it, run:
 
 ```bash
 sudo apt-get install -y tyk-pump
 ```
 
-What we've done here is instructed apt-get to install Tyk Pump without prompting. Wait for the downloads to complete.
+What you've done here is instructed `apt-get` to install Tyk Pump without prompting. Wait for the downloads to complete.
 
-When Tyk Pump is finished installing, it will have installed some `init` scripts, but it will not be running yet. The next step will be to setup each application - thankfully this can be done with three very simple commands.
+When Tyk Pump has finished installing, it will have installed some `init` scripts, but it will not be running yet. The next step will be to setup each application using three very simple commands.
 
 #### Verify the origin key (optional)
 
@@ -165,16 +175,16 @@ sudo /opt/tyk-pump/install/setup.sh --redishost=<hostname> --redisport=6379 --mo
 ```
 {{< tab_end >}}
 {{< tab_start "SQL" >}}
-
-We recommend installing MongoDB and then using our new [SQL migration tool]({{< ref "/content/planning-for-production/database-settings/sql-configuration.md#migrating-from-an-existing-mongodb-instance" >}}).
-
+<br>
 {{< note success >}}
-**Note**  
+**Note**
 
-The migration tool will not migrate any Logs, Analytics or Uptime analytics data.
+You need to replace `<hostname>` for `--redishost=<hostname>`, and `<Postgres Host Name>`,`<Port>`, `<User>`, `<Password>`, `<DB>` for `--postgres="host=<Postgres Host Name> port=<Port> user=<User> password=<Password> dbname=<DB>"` with your own values to run this script.
 {{< /note >}}
 
-See [Database options]({{< ref "/content/tyk-stack/tyk-manager/database-options.md" >}}) for our supported SQL platforms.
+```bash
+sudo /opt/tyk-pump/install/setup.sh --redishost=<hostname> --redisport=6379 --postgres="host=<Postgres Host Name> port=<Port> user=<User> password=<Password> dbname=<DB>"
+```
 {{< tab_end >}}
 {{< tabs_end >}}
 #### Step 4: Start Tyk Pump

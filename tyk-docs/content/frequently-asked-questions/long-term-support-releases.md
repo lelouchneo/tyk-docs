@@ -21,14 +21,14 @@ Here’s what you need to know about how we support an LTS release at Tyk:
 
 An LTS release at Tyk is left on production for 3 months in [Hypercare](#what-is-hypercare) - a period immediately after a release where an elevated period of support is available, patches are run based on need and criticality, and single fix patching is done whenever needed. During this period, the release is carefully monitored and anything that needs fixing is fixed then and there to ensure stability.
 
-During the Hypercare period, measures are taken to stabilize the release, and breaking changes are released. All this is done while also aiming for backward compatibility.
+During the Hypercare period, measures are taken to stabilise the release, and breaking changes are released. All this is done while also aiming for backward compatibility.
 
 After the Hypercare 3 month period, this release is labelled as a recommended release to customers. This is followed by full support for 12 months. This means that the release will be on full support for 15 months.
 
 {{< note success >}}
 **Note**  
 
-Minor releases are not a part of the LTS but are fully supported until the next minor release is live.
+Minor releases are not a part of the LTS but are fully supported until the next minor release is live. See [How do we support minor releases?](#how-do-we-support-minor-releases)
 {{< /note >}}
 
 After 12 months, there is a new LTS release, and the previous version remains in full support for a further 3 months before it moves into [extended support](#what-is-extended-support).
@@ -63,3 +63,15 @@ In the extended support period Tyk will continue to patch any production critica
 
 From R4 onwards, extended support will be for 12 months after the full support end date.
 {{< /note >}}
+
+## How do we support minor releases?
+
+We only patch our minor releases (4.1. 4.2, 4.3, etc) until the next minor is out.
+
+### Example for release 4
+ - Our next LTS patch release will be 4.0.3, and a minor release (4.1) will have all of the 4.0.3 patches
+ - The following LTS patch release will be 4.0.4 and our minor release 4.1 will be patched, becoming 4.1.1
+ - The following LTS patch will be 4.0.5 and our minor release 4.1.1 will be patched, becoming 4.1.2
+ - The following LTS patch will be 4.0.6 and a new minor release (4.2) will have all of the 4.0.6 patches
+ - At this point we stop supporting minor release 4.1 and only patch 4.2
+ - This schedule is repeated until our next LTS release

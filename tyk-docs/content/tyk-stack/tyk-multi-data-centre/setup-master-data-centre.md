@@ -60,7 +60,7 @@ This setting enables multi-cluster, multi Data-Centre API management from a sing
 ### Configuration Example
 Once installed, modify your `/opt/tyk-sink/tyk_sink.conf` file as follows:
 
-```{.json}
+```json
 {
   "listen_port": 9091,
   "healthcheck_port": 8181,
@@ -101,12 +101,12 @@ Once installed, modify your `/opt/tyk-sink/tyk_sink.conf` file as follows:
 
 You should now be able to start the MDCB service, check that it is up and running and ensure that the service starts on system boot:
 
-```{.copyWrapper}
+```console
 sudo systemctl start tyk-sink
 ```
 
 
-```{.copyWrapper}
+```console
 sudo systemctl enable tyk-sink
 ```
 
@@ -122,13 +122,13 @@ To use the health check service, call the `/health` endpoint i.e. `http://my-mdc
 
 #### Check that the MDCB service is running 
 
-```{.copyWrapper}
+```console
 > sudo systemctl status tyk-sink
 ```
 
 Should Return:
 
-```
+```console
 tyk-sink.service - Multi Data Centre Bridge for the Tyk API Gateway
 
   Loaded: loaded (/usr/lib/systemd/system/tyk-sink.service; enabled; vendor preset: disabled)
@@ -143,13 +143,13 @@ tyk-sink.service - Multi Data Centre Bridge for the Tyk API Gateway
 
 #### Check that MDCB is listening on port 9091
 
-```{.copyWrapper}
+```console
 > sudo netstat -tlnp
 ```
 
 Should Return:
 
-```
+```console
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 ...
@@ -158,13 +158,13 @@ tcp6       0      0 :::9091                 :::*                    LISTEN      
 
 #### Check the logs for MDCB
 
-```{.copyWrapper}
+```console
 > sudo journalctl -u tyk-sink 
 ```
 
 Add the `-f` flag to follow the log. The command should return output similar to this:
 
-```
+```console
 -- Logs begin at Thu 2018-05-03 09:30:56 UTC, end at Mon 2018-05-07 08:58:23 UTC. --
 May 06 11:50:37 master tyk-sink[1798]: time="2018-05-06T11:50:37Z" level=info msg="RPC Stats:{\"RPCCalls\":0,\"RPCTime\":0,\"Byte
 May 06 11:50:38 master tyk-sink[1798]: time="2018-05-06T11:50:38Z" level=info msg="RPC Stats:{\"RPCCalls\":0,\"RPCTime\":0,\"Byte
@@ -194,14 +194,14 @@ You can find your organisation id in the Dashboard, under your user account deta
 
 4.Send a GET request to the Dashboard API to `/admin/organisations/$ORG_ID` to retrieve the organisation object. In the example below, we are redirecting the output json to a file `myorg.json` for easy editing.
 
-```{.copyWrapper}
+```console
 curl $DASH_URL/admin/organisations/$ORG_ID -H "Admin-Auth: $DASH_ADMIN_SECRET" | python -mjson.tool > myorg.json
 ```
 
 5.Open `myorg.json` in your favourite text editor and add the following fields as follows. 
 New fields are between the `...` .
 
-```{.json}
+```json
 {
   "_id": "55780af69b23c30001000049",
   "owner_slug": "portal-test",
@@ -234,13 +234,13 @@ New fields are between the `...` .
 
 6.Update your organisation with a PUT request to the same endpoint, but this time, passing in your modified `myorg.json` file.
 
-```{.copywrapper}
+```console
 curl -X PUT $DASH_URL/admin/organisations/$ORG_ID -H "Admin-Auth: $DASH_ADMIN_SECRET" -d @myorg.json
 ```
 
 This should return:
 
-```
+```console
 {"Status":"OK","Message":"Org updated","Meta":null}
 ```
  

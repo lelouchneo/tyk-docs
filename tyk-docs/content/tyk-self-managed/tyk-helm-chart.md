@@ -223,7 +223,6 @@ To deploy MDCB in your Kubernetes cluster, set `mdcb.enabled` in your `values.ya
 
 Check [Tyk Control plane](https://tyk.io/docs/tyk-multi-data-centre/) for more configuration details.
 
-This enables multi-cluster, multi Data-Centre API management from a single Dashboard.
 
 
 ### Tyk Identity Broker (TIB)

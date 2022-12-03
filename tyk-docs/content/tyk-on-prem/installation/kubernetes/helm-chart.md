@@ -185,7 +185,7 @@ the **Segment Tags (Node Segmentation)** section in your Tyk Dashboard.
 Check [Tyk Gateway Sharding]({{< ref "/content/advanced-configuration/manage-multiple-environments/manage-multiple-environments.md#api-sharding" >}}) for more details.
 
 
-## Other Tyk Components
+## Other Tyk components
 
 ### Installing MDCB, the Tyk Self-managed control plane
 Deploying the MDCB ( Master Data Centre Bridge) component enables multi-cluster, multi data-centre API management from a single Dashboard.

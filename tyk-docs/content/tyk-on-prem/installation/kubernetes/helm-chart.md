@@ -209,7 +209,7 @@ the **Segment Tags (Node Segmentation)** section in your Tyk Dashboard.
 Check [Tyk Gateway Sharding]({{< ref "/content/advanced-configuration/manage-multiple-environments/manage-multiple-environments.md#api-sharding" >}}) for more details.
 
 
-## Other Tyk components
+## Other Tyk Components
 
 ### Installing Tyk Enterprise Developer Portal
 If you are deploying the **Tyk Enterprise Developer Portal**, set the appropriate values under the `enterprisePortal` section in your `values.yaml`. Please visit [Tyk Enterprise Developer Portal installation]({{< ref "/content/tyk-stack/tyk-developer-portal/enterprise-developer-portal/install-tyk-enterprise-portal.md#launch-the-tyk-enterprise-developer-portal-using-helm" >}}) for a step by step guide.

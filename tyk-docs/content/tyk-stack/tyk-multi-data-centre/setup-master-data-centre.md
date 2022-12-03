@@ -54,7 +54,7 @@ Deploying the MDCB ( Master Data Centre Bridge) component enables multi-cluster,
 To deploy the **MDCB** ( Master Data Centre Bridge) component in your Kubernetes cluster, set `mdcb.enabled` in your `values.yaml` to `true`.
 
 For more information related to Tyk Helm charts, check [Tyk Helm Chart]({{< ref "/content/tyk-on-prem/installation/kubernetes/helm-chart.md" >}})
-Check [Tyk Control plane](https://tyk.io/docs/tyk-multi-data-centre/) for more configuration details.
+Check [Tyk Control plane]({{< ref "/content/tyk-multi-data-centre/" >}}) for more configuration details.
 
 This setting enables multi-cluster, multi Data-Centre API management from a single dashboard. For more information, you can go to [Tyk Helm Chart]({{< ref "/content/tyk-on-prem/installation/kubernetes/helm-chart.md" >}})
 

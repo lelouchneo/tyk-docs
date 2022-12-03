@@ -188,7 +188,11 @@ Check [Tyk Gateway Sharding]({{< ref "/content/advanced-configuration/manage-mul
 ## Other Tyk Components
 
 ### Installing Tyk Self-managed Control Plane
-If you are deploying the Master Data Centre in an *MDCB* deployment then you can set the `mdcb.enabled` option in your `values.yaml` to true to add the MDCB component to your cluster.
+Deploying the MDCB ( Master Data Centre Bridge) component enables multi-cluster, multi data-centre API management from a single Dashboard.
+
+To deploy MDCB in your Kubernetes cluster, set `mdcb.enabled` in your `values.yaml`  to `true`.
+
+Check [Tyk Control plane](https://tyk.io/docs/tyk-multi-data-centre/) for more configuration details.
 
 This enables multi-cluster, multi Data-Centre API management from a single Dashboard.
 

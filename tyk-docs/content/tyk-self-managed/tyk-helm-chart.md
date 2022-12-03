@@ -217,8 +217,10 @@ Check [Tyk Gateway Sharding]({{< ref "/content/advanced-configuration/manage-mul
 ### Installing Tyk Enterprise Developer Portal
 To deploy **Tyk Enterprise Developer Portal**, set the appropriate values under the `enterprisePortal` section in your `values.yaml`. Please visit [Tyk Enterprise Developer Portal installation]({{< ref "tyk-stack/tyk-developer-portal/enterprise-developer-portal/install-tyk-enterprise-portal.md#launch-the-tyk-enterprise-developer-portal-using-helm" >}}) for a step by step guide.
 
-### Installing Tyk Control Plane (Self-managed)
-MDCB ( Master Data Centre Bridge) component enables multi-cluster, multi data-centre API management from a single Dashboard.
+### Installing Tyk Self-managed control plane (MDCB)
+
+Part of Tyk control plane is the MDCB (Master Data Centre Bridge) component which enables you to manage your APIs across multi-cluster and multi data-centres from a single Dashboard.
+
 To deploy MDCB in your Kubernetes cluster, set `mdcb.enabled` in your `values.yaml`  to `true`.
 
 Check [Tyk Control plane](https://tyk.io/docs/tyk-multi-data-centre/) for more configuration details.

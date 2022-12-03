@@ -8,6 +8,14 @@
   <link rel="stylesheet" href="{{ "css/docs.css" | relURL }}">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/cookie.css" | relURL }}">
+  
+  {{ if not (or (findRE `docs/nightly` .Permalink) (findRE `docs/\d\.\d` .Permalink)) }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ else }}
+  <meta name="robots" content="noindex" />
+  {{ end }} 
+
+
 
   <link rel="icon" type="image/png" href="{{ "images/favicon/favicon-32x32.png" | relURL }}" sizes="32x32" />
   <link rel="icon" type="image/png" href="{{ "images/favicon/favicon-16x16.png" | relURL }}" sizes="16x16" />
@@ -213,7 +221,7 @@
 
         <nav class="docs-navigation clear" {{if .Params.hideSidebar}}style="display: none !important"{{end}}>
           <a id="previousArticle"></a>
-          <img src="/docs/img/nav-center.png" /> 
+          <img src="/docs/img/nav-center.png"alt="Page forward and back image" /> 
           <a id="nextArticle"></a>
         </nav>
 

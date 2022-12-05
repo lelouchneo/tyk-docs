@@ -26,7 +26,6 @@ Paid plans and Enterprise trials allow users to select one of 5 AWS locations as
 - aws-eu-west-2, London, UK
 - aws-us-east-1, N. Virginia, USA
 - aws-us-west-2, Oregon, USA
-
 ## Why Tyk Cloud?
 
 ### Next Level SaaS

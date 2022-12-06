@@ -23,4 +23,4 @@ jobs:
           hugo-version: '0.92.1'
 
       - name: Build
-        run: hugo
+        run: cd tyk-docs && hugo

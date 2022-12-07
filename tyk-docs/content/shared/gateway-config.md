@@ -322,7 +322,10 @@ This option is used for storing a policies  if `policies.policy_source` is set t
 it should be some existing file path on hard drive
 
 ### ports_whitelist
-Defines the ports that will be available for the API services to bind to.
+EV: <b>TYK_GW_PORTWHITELIST</b><br />
+Type: `PortsWhiteList`<br />
+
+Defines the ports that will be available for the API services to bind to in the following format: `"{“":“”}"`. Remember to escape JSON strings.
 This is a map of protocol to PortWhiteList. This allows per protocol
 configurations.
 
@@ -569,6 +572,12 @@ EV: <b>TYK_GW_SLAVEOPTIONS_RPCGLOBALCACHEEXPIRATION</b><br />
 Type: `float32`<br />
 
 RPCKeysCacheExpiration defines the expiration time of the rpc cache that stores the keys, defined in seconds
+
+### slave_options.synchroniser_enabled
+EV: <b>TYK_GW_SLAVEOPTIONS_SYNCHRONISERENABLED</b><br />
+Type: `bool`<br />
+
+SynchroniserEnabled enable this config if MDCB has enabled the synchoniser. If disabled then it will ignore signals to synchonise recources
 
 ### management_node
 EV: <b>TYK_GW_MANAGEMENTNODE</b><br />

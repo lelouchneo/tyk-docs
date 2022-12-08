@@ -259,6 +259,60 @@ paths:
       operationId: getApis
       tags:
         - APIs
+      parameters:
+        - name: compressed
+          in: query
+          required: false
+          deprecated: true
+          schema:
+            type: string
+          allowEmptyValue: true
+          description: Return smaller API list payload.
+        - name: graph
+          in: query
+          required: false
+          deprecated: true
+          schema:
+            type: string
+          allowEmptyValue: true
+          description: Transform the response payload for graphql.
+        - name: api_type
+          in: query
+          required: false
+          schema:
+            type: string
+          description: API Type, internal or external.
+        - name: q
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Query string for search/filtering.
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Sorting criteria.
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter APIs by category (CSV).
+        - name: auth_type
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter APIs by authentication type (CSV).
+        - name: base_apis
+          in: query
+          required: false
+          schema:
+            type: string
+          allowEmptyValue: true
+          description: For versioned APIs, return only the base versions.
       responses:
         '200':
           description: List of API definitions

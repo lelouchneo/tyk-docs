@@ -16,7 +16,6 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
       - name: Update branch
         run: |
-          git branch -D stable
           git checkout -b stable
           git push origin -f stable
 

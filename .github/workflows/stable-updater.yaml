@@ -16,5 +16,8 @@ jobs:
       - name: Update branch
         run: |
           git checkout -b stable
+          sed -i 's|//tyk.io/docs/nightly/|//tyk.io/docs/|g' tyk-docs/config.toml
+          git add -A
+          git commit -m "Fix url"
           git push origin -f stable
 

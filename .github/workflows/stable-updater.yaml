@@ -1,9 +1,8 @@
-name: Index update
-on: 
+name: Stable branch update
+on:
   push:
     branches:
-      # Replace it with current stable branch
-      - release-4.3
+      - release-4.3 # Replace it with current stable branch
 
 
 jobs:

@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  index:
+  stable-update:
     runs-on: ubuntu-latest      
     steps:
       - name: Update branch

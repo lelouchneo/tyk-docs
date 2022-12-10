@@ -1,6 +1,5 @@
 name: Stable branch update
-on:
-  push:
+on: push
 
 jobs:
   stable-update:

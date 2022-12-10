@@ -1,5 +1,8 @@
 name: Stable branch update
-on: push
+on:
+  push:
+    branches:
+      - 'release**'
 
 jobs:
   stable-update:

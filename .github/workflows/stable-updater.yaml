@@ -19,5 +19,7 @@ jobs:
           sed -i 's|//tyk.io/docs/nightly/|//tyk.io/docs/|g' tyk-docs/config.toml
           git add -A
           git commit -m "Fix url"
+          git config --global user.email "bender@tyk.io"
+          git config --global user.name "Bender"
           git push origin -f stable
 

@@ -1,0 +1,18 @@
+name: Index update
+on: 
+  push:
+    branches:
+      # Replace it with current stable branch
+      - release-4.3
+
+
+jobs:
+  index:
+    runs-on: ubuntu-latest      
+    steps:
+      - name: Update branch
+        run: |
+          git branch -D stable
+          git checkout -b stable
+          git push origin -f stable
+

@@ -2,7 +2,9 @@ name: Stable branch update
 on:
   push:
     branches:
-      - 'release**'
+      - main
+      - master
+      - release-*
 
 jobs:
   stable-update:

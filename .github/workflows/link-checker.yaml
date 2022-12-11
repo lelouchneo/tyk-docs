@@ -21,3 +21,17 @@ jobs:
           echo "Base PR commit: $commit_before_pull_request"
           
           cd tyk-docs && bash ../scripts/urlcheck.sh $commit_before_pull_request
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: urlcheck-new
+          path: /tmp/urlcheck.new.json
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: urlcheck-prev
+          path: /tmp/urlcheck.prev.json
+#       - name: Setup upterm session
+#         if: always()
+#         uses: lhotari/action-upterm@v1
+

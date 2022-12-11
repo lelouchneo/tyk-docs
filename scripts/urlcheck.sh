@@ -9,9 +9,12 @@ hugo
 cp ./public/urlcheck.json /tmp/urlcheck.prev.json
 rm -rf public/*
 git checkout -
-NEW_URLS=$(cat /tmp/urlcheck.new.json | jq -r '.path')
-PREV_URLS=$(cat /tmp/urlcheck.prev.json | jq -r '.path')
-BROKEN_URLS=$(comm -3 -1 <(echo $NEW_URLS | sort) <(echo $PREV_URLS | sort))
+
+export LC_COLLATE=POSIX
+
+cat /tmp/urlcheck.new.json | jq -r '.path' | sed -E "s|/nightly||g" | sort | uniq > /tmp/urlcheck.new
+cat /tmp/urlcheck.prev.json | jq -r '.path' | sed -E "s|/nightly||g" | sort | uniq > /tmp/urlcheck.prev
+BROKEN_URLS=$(comm -3 -1 /tmp/urlcheck.new /tmp/urlcheck.prev)
 
 if [ -n "$BROKEN_URLS" ]; then
   echo "The following links are broken"

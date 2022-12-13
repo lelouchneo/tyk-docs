@@ -54,7 +54,7 @@ To see what options are configurable on a chart and save those options to a cust
 helm show values tyk-helm/tyk-headless > values.yaml
 ```
 
-Some of the necessary configration parameters will be explained in the next steps.
+Some of the necessary configuration parameters will be explained in the next steps.
 
 ### Step 4 - Installing Redis
 

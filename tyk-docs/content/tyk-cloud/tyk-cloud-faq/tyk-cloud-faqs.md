@@ -55,6 +55,7 @@ A: This will be exposed in later phases per deployment.
 ## Q8: Is there any sender email configured in Tyk Cloud?
 
 A: No, the sender email isn't enabled by default in Tyk Cloud. Therefore, you won't receive any key approval emails. However, you can contact your Account Manager or Support to request to have the email enabled.
+
 ## Q9: How do Segment tags work with Tyk Cloud?
 
 A: When an Edge Gateway is deployed, the tag 'edge' and a location tag are automatically generated for the Edge Gateway. You use these tags to connect your API to the appropriate Edge Gateway. It works as follows:

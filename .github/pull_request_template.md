@@ -1,14 +1,5 @@
----
-name: Pull request
-about: Create a PR to help us improve our docs
-title: ''
-labels: pr
-assignees: 
-
----
-
 ## Related Issue (if applicable)
-<!-- If applicable, please reference to a related issue the your repository. -->
+<!-- If applicable, please reference to a related issue in this repository. -->
 
 ## Description
 <!-- Describe your changes in detail.
@@ -22,7 +13,17 @@ assignees:
        to compare text after such a change 
      - @mentions of the person or team responsible for reviewing proposed changes. -->
 
+## Motivation and Context
+<!-- Why is this change required? What problem does it solve? -->
 
 ## Screenshots (if appropriate)
 
+## Types of changes
+<!-- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
+- [ ] Fixing typo 
+- [ ] Documenting a new feature
 
+## Checklist
+<!-- Go over all the following points, and put an `x` in all the boxes that apply -->
+- [ ] I have [reviewed the guidelines](../CONTRIBUTING.md) for contributing to this repository.
+- [ ] Make sure you have started *your change* off *our latest `master`*.

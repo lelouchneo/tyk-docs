@@ -16,6 +16,8 @@
 ## Motivation and Context
 <!-- Why is this change required? What problem does it solve? -->
 
+## Preview Link
+<!-- Add a preview link to make it easier for reviewer to review. -->
 ## Screenshots (if appropriate)
 
 ## Types of changes
@@ -28,3 +30,5 @@
 - [ ] I have [reviewed the guidelines](../CONTRIBUTING.md) for contributing to this repository.
 - [ ] I have [read the technical guidelines](../CONTRIBUTING-TECHNICAL-GUIDE.md) for contributing to this repository.
 - [ ] Make sure you have started *your change* off *our latest `master`*.
+- [ ] I have added a preview link.
+

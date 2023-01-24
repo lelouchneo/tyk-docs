@@ -334,11 +334,8 @@ OIDC contains the configurations related to OIDC authentication mode.
 
 Tyk native API definition: `auth_configs["oidc"]`.
 
-**Field: `goPlugin` ([GoPlugin](#goplugin))**
-GoPlugin contains the configurations related to GoPlugin authentication mode.
-
-**Field: `customPlugin` ([CustomPlugin](#customplugin))**
-CustomPlugin contains the configurations related to CustomPlugin authentication mode.
+**Field: `custom` ([CustomPluginAuthentication](#custompluginauthentication))**
+Custom contains the configurations related to Custom authentication mode.
 
 Tyk native API definition: `auth_configs["coprocess"]`.
 
@@ -490,18 +487,10 @@ Scope contains the scope name.
 PolicyID contains the Policy ID.
 
 
-### **GoPlugin**
+### **CustomPluginAuthentication**
 
 **Field: `enabled` (`boolean`)**
-Enabled enables the GoPlugin authentication mode.
-
-Tyk native API definition: `use_go_plugin_auth`.
-
-
-### **CustomPlugin**
-
-**Field: `enabled` (`boolean`)**
-Enabled enables the CustomPlugin authentication mode.
+Enabled enables the CustomPluginAuthentication authentication mode.
 
 Tyk native API definition: `enable_coprocess_auth`.
 
@@ -566,6 +555,11 @@ PluginConfig contains the configuration related custom plugin bundles/driver.
 CORS contains the configuration related to cross origin resource sharing.
 
 Tyk native API definition: `CORS`.
+
+**Field: `authenticationPlugin` ([AuthenticationPlugin](#authenticationplugin))**
+AuthenticationPlugin contains configuration related to custom authentication plugin.
+
+Tyk native API definition: `custom_middleware.auth_check`.
 
 **Field: `cache` ([Cache](#cache))**
 Cache contains the configurations related to caching.
@@ -636,6 +630,21 @@ Tyk native API definition: `CORS.allowed_origins`.
 AllowedMethods holds a list of methods to allow access via.
 
 Tyk native API definition: `CORS.allowed_methods`.
+
+
+### **AuthenticationPlugin**
+
+**Field: `enabled` (`boolean`)**
+Enabled enables custom authentication plugin.
+
+**Field: `functionName` (`string`)**
+FunctionName is the name of authentication method.
+
+**Field: `path` (`string`)**
+Path is the path to shared object file in case of gopluign mode or path to js code in case of otto auth plugin.
+
+**Field: `rawBodyOnly` (`boolean`)**
+RawBodyOnly if set to true, do not fill body in request or response object.
 
 
 ### **Cache**

@@ -1195,13 +1195,6 @@ span.algolia-autocomplete {
   font-family: Smoolthan;
 }
 
-.algolia-autocomplete .ds-dropdown-menu {
-  width: 100%;
-  max-width: none !important;
-  min-width: auto !important;
-  height: 100px !important;
-}
-
 .algolia-autocomplete input::-webkit-input-placeholder {
   color: #7a79a1;
 }
@@ -1779,4 +1772,12 @@ pre {
     width: 100%;
     text-align: center;
   }
+}
+
+
+.algolia-autocomplete .ds-dropdown-menu {
+  width: 100%;
+  max-width: none !important;
+  min-width: auto !important;
+  height: 100px !important;
 }

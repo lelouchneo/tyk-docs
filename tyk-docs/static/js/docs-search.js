@@ -12,5 +12,5 @@
   // matching your search input
   inputSelector: '#searchbox input',
   // Set debug to true to inspect the dropdown
-  // debug: true,
+  debug: true,
 });

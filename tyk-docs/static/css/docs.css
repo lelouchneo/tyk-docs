@@ -1199,7 +1199,7 @@ span.algolia-autocomplete {
   width: 100%;
   max-width: none !important;
   min-width: auto !important;
-  height: 1000px;
+  height: 100px;
 }
 
 .algolia-autocomplete input::-webkit-input-placeholder {

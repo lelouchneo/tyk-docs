@@ -114,6 +114,13 @@
   {{ if .HasShortcode "github_star_button" }}
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}
+  <style>
+    .algolia-autocomplete .ds-dropdown-menu [class^='ds-dataset-'] {
+      max-height: 200px!important;
+
+    }
+  </style>
+
 </head>
 
 <body class="page-documentation {{if not .Params.hideSidebar}}hasSidebar{{end}}">

@@ -114,12 +114,7 @@
   {{ if .HasShortcode "github_star_button" }}
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}
-  <style>
-    .algolia-autocomplete .ds-dropdown-menu [class^='ds-dataset-'] {
-      max-height: 200px!important;
-
-    }
-  </style>
+  <link rel="stylesheet" href="{{ "css/algolia.css" | relURL }}">
 
 </head>
 

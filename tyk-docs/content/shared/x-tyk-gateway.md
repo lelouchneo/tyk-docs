@@ -492,7 +492,7 @@ PolicyID contains the Policy ID.
 **Field: `enabled` (`boolean`)**
 Enabled enables the CustomPluginAuthentication authentication mode.
 
-Tyk native API definition: `enable_coprocess_auth`.
+Tyk native API definition: `enable_coprocess_auth`/`use_go_plugin_auth`.
 
 **Field: `header` ([AuthSource](#authsource))**
 Header contains configurations for the header value auth source, it is enabled by default.
@@ -565,6 +565,21 @@ Tyk native API definition: `custom_middleware.pre`.
 AuthenticationPlugin contains configuration related to custom authentication plugin.
 
 Tyk native API definition: `custom_middleware.auth_check`.
+
+**Field: `postAuthenticationPlugin` ([PostAuthenticationPlugin](#postauthenticationplugin))**
+PostAuthenticationPlugin contains configuration related to custom post authentication plugin.
+
+Tyk native API definition: `custom_middleware.post_key_auth`.
+
+**Field: `postPlugin` ([PostPlugin](#postplugin))**
+PostPlugin contains configuration related to custom post plugin.
+
+Tyk native API definition: `custom_middleware.post`.
+
+**Field: `responsePlugin` ([ResponsePlugin](#responseplugin))**
+ResponsePlugin contains configuration related to custom post plugin.
+
+Tyk native API definition: `custom_middleware.response`.
 
 **Field: `cache` ([Cache](#cache))**
 Cache contains the configurations related to caching.
@@ -672,6 +687,10 @@ Path is the path to shared object file in case of gopluign mode or path to js co
 **Field: `rawBodyOnly` (`boolean`)**
 RawBodyOnly if set to true, do not fill body in request or response object.
 
+**Field: `requireSession` (`boolean`)**
+RequireSession if set to true passes down the session information for plugins after authentication.
+RequireSession is used only with JSVM custom middleware.
+
 
 ### **AuthenticationPlugin**
 
@@ -686,6 +705,27 @@ Path is the path to shared object file in case of gopluign mode or path to js co
 
 **Field: `rawBodyOnly` (`boolean`)**
 RawBodyOnly if set to true, do not fill body in request or response object.
+
+
+### **PostAuthenticationPlugin**
+
+**Field: `plugins` (`[]`[CustomPlugin](#customplugin))**
+Plugins configures custom plugins to be run on pre authentication stage.
+The plugins would be executed in the order of configuration in the list.
+
+
+### **PostPlugin**
+
+**Field: `plugins` (`[]`[CustomPlugin](#customplugin))**
+Plugins configures custom plugins to be run on post stage.
+The plugins would be executed in the order of configuration in the list.
+
+
+### **ResponsePlugin**
+
+**Field: `plugins` (`[]`[CustomPlugin](#customplugin))**
+Plugins configures custom plugins to be run on post stage.
+The plugins would be executed in the order of configuration in the list.
 
 
 ### **Cache**
@@ -833,11 +873,20 @@ Code is the HTTP response code that will be returned.
 **Field: `body` (`string`)**
 Body is the HTTP response body that will be returned.
 
-**Field: `headers` (`string`)**
+**Field: `headers` (`[]`[Header](#header))**
 Headers are the HTTP response headers that will be returned.
 
 **Field: `fromOASExamples` ([FromOASExamples](#fromoasexamples))**
 FromOASExamples is the configuration to extract a mock response from OAS documentation.
+
+
+### **Header**
+
+**Field: `name` (`string`)**
+Name is the name of the header.
+
+**Field: `value` (`string`)**
+Value is the value of the header.
 
 
 ### **FromOASExamples**

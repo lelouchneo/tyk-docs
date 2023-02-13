@@ -511,9 +511,3 @@ Type: `int`<br />
 
 Specifies the group key TTL in seconds. This key is used to prevent a group of gateways from re-syncing when is not required. On login (GroupLogin call), if the key doesn't exist then the sync process is triggered. If the key exists then the TTL just gets renewed. In case the cluster of gateways is down, the key will expire and get removed and if they connect again a sync process will be triggered. Default value: 180 seconds. Min value: 30 seconds.
 
-### enable_ownership
-EV: <b>TYK_MDCB_ENABLEOWNERSHIP</b><br />
-Type: `bool`<br />
-
-Set it to `true` to enable API Ownership in MDCB. Defaults to `false`.
-

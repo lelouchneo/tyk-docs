@@ -117,6 +117,8 @@ Flags:
       --apis               Specific api_id's selection (optional)
 ```
 
+The API secret to use with tyk-sync is your “Tyk Dashboard API Access key”.
+
 ### Publish Command
 
 Publish API definitions from a Git repo to a Tyk Gateway or Dashboard. This will not update any existing APIs, and if it detects a collision, the command will stop.

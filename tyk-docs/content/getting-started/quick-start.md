@@ -11,8 +11,8 @@ weight: 1
 At Tyk we understand that getting started with any tool can be overwhelming and time-consuming. This is the reason we created a few projects to give you a quick start in minutes - 
 
 ### For Tyk self-manged:
-- Docker compose environment - [tyk-demo]("getting-started/quick-start/tyk-demo.md")
-- Kubernetes environment - [tyk-k8s-demo]("getting-started/quick-start/tyk-k8s-demo.md")
+- Docker compose environment - [tyk-demo]({{< "getting-started/quick-start/tyk-demo.md" >}})
+- Kubernetes environment - [tyk-k8s-demo]({{< "getting-started/quick-start/tyk-k8s-demo.md" >}})
 The idea behind these projects is to provide an enriched environment with many integrations that can act as examples 
 while demonstrating Tyk's capabilities.
 

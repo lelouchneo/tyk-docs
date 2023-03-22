@@ -132,12 +132,6 @@ Type: `bool`<br />
 
 Set to true to enable SSL connections
 
-### http_server_options.use_ssl_le
-EV: <b>TYK_GW_HTTPSERVEROPTIONS_USELE_SSL</b><br />
-Type: `bool`<br />
-
-Enable Lets-Encrypt support
-
 ### http_server_options.enable_http2
 EV: <b>TYK_GW_HTTPSERVEROPTIONS_ENABLEHTTP2</b><br />
 Type: `bool`<br />
@@ -643,7 +637,7 @@ Default: 5
 EV: <b>TYK_GW_DRLENABLESENTINELRATELIMITER</b><br />
 Type: `bool`<br />
 
-Controls which algorithm to use as a fallback when your distributed rate limiter can't be used.
+Controls which algorthm to use as a fallback when your distributed rate limiter can't be used.
 
 ### enforce_org_data_age
 EV: <b>TYK_GW_ENFORCEORGDATAAGE</b><br />

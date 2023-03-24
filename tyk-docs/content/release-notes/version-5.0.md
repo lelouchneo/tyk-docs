@@ -35,7 +35,7 @@ This release is all about making things easier for our users with GraphQL and Un
 In order to get our users up and running with a working Universal Data Graph quickly, we’ve created a repository of examples that anyone can import into their Dashboard or Gateway and see what Universal Data Graph is capable of. Import can be done in two ways:
 - manually, by simply copying a Tyk API definition from GitHub - TykTechnologies/tyk-examples: A repository containing example API definitions and policies for Tyk products. 
 - via command line using tyk-sync
-- 
+
 To make it easier for our users to find their way to Universal Data Graph, we’ve also given it its own space in the Dashboard. From now on you can find UDG under Data Graphs section of the menu.
 
 It also got a lot easier to turn a Kafka topic into a GraphQL subscription. Using our new Dashboard API endpoint, users will be able to transform their AsyncAPI documentation into Universal Data Graph definition with a single click. Support for OAS coming soon as well!
@@ -49,21 +49,34 @@ Additionally we’ve added Dashboard support for introspection control on policy
 ## Tyk Gateway
 
 ### Deprecated
-- LetsEncrypt
+- Tyk Gateway no longer natively support LetsEncrypt integration. You still can use LetsEncrypt CLI tooling to generate certificates, and use them with Tyk.
 
 ### Added
+- Support for OpenAPI request validation (including query params, headers and the rest of OAS rules)
+- Transform request/response middleware for OpenAPI apis
+- Custom middleware for OpenAPI apis
+- Added a new API endpoint to manage versions for OpenAPI apis
+- Improved Mock API plugin for OpenAPI
+- Universal Data Graph and GraphQL APIs now support using context variables in request headers, allowing passing information it to your subgraphs
+- Now you can control access to introspection on policy and key level
 
 ### Changed
 
 ### Fixed
+- Fixed potential race when using distributed rate limiter
 
 ## Tyk Dashboard
 
 ### Added
+- Numerous UX improvements
+- New UI for custom middleware for OpenAPI apis
+- Significantly improved OpenAPI versioning user experience
+- It now possible to use PATCH method to modify OpenAPI apis via Dashboard API
+- Now you can turn Kafka topic into GraphQL subscription by simply importing your AsyncAPI definition
+- Way to control access to introspection on policy and key level
 
 ### Changed
-
-### Fixed
+- Universal Data Graph moved to a separate dashboard section
 
 # Updated Versions
 Tyk Gateway 5.0

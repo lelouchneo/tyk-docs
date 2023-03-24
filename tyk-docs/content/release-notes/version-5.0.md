@@ -6,9 +6,9 @@ menu:
 weight: 1
 ---
 
-# Major features
+## Major features
 
-## Improved OpenAPI support
+### Improved OpenAPI support
 
 We have added some great features to the Tyk OAS API definition bringing it closer to parity with our Tyk Classic API and to make it easier to get on board with Tyk using your Open API workflows.
 
@@ -28,7 +28,7 @@ Of course, we’ve also addressed some bugs and usability issues as part of our 
 Thanks to our community contributors [armujahid](https://github.com/armujahid), [JordyBottelier](https://github.com/JordyBottelier) and [ls-michal-dabrowski](https://github.com/ls-michal-dabrowski) for your PRs that further improve the quality of Tyk OSS Gateway!
 
 
-## GraphQL and Universal Data Graph improvements
+### GraphQL and Universal Data Graph improvements
 
 This release is all about making things easier for our users with GraphQL and Universal Data Graph.
 
@@ -44,14 +44,14 @@ With this release we are also giving our users improved headers for GQL APIs. It
 
 Additionally we’ve added Dashboard support for introspection control on policy and key level. It is now possible to allow or block certain consumers from being able to introspect any graph while creating a policy or key via Dashboard.
 
-# Changelog
+## Changelog
 
-## Tyk Gateway
+### Tyk Gateway
 
-### Deprecated
+#### Deprecated
 - Tyk Gateway no longer natively support LetsEncrypt integration. You still can use LetsEncrypt CLI tooling to generate certificates, and use them with Tyk.
 
-### Added
+#### Added
 - Support for OpenAPI request validation (including query params, headers and the rest of OAS rules)
 - Transform request/response middleware for OpenAPI apis
 - Custom middleware for OpenAPI apis
@@ -60,14 +60,14 @@ Additionally we’ve added Dashboard support for introspection control on policy
 - Universal Data Graph and GraphQL APIs now support using context variables in request headers, allowing passing information it to your subgraphs
 - Now you can control access to introspection on policy and key level
 
-### Changed
+#### Changed
 
-### Fixed
+#### Fixed
 - Fixed potential race when using distributed rate limiter
 
-## Tyk Dashboard
+### Tyk Dashboard
 
-### Added
+#### Added
 - Numerous UX improvements
 - New UI for custom middleware for OpenAPI apis
 - Significantly improved OpenAPI versioning user experience
@@ -75,14 +75,14 @@ Additionally we’ve added Dashboard support for introspection control on policy
 - Now you can turn Kafka topic into GraphQL subscription by simply importing your AsyncAPI definition
 - Way to control access to introspection on policy and key level
 
-### Changed
+#### Changed
 - Universal Data Graph moved to a separate dashboard section
 
-# Updated Versions
+## Updated Versions
 Tyk Gateway 5.0
 Tyk Dashboard 5.0
 
-# Upgrade process
+## Upgrade process
 
 Follow the [standard upgrade guide]({{< ref "upgrading-tyk.md" >}}), there are no breaking changes in this release.
 

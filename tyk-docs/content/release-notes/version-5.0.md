@@ -1,0 +1,82 @@
+---
+title: Tyk v4.3
+menu:
+  main:
+    parent: "Release Notes"
+weight: 1
+---
+
+# Major features
+
+## Improved OpenAPI support
+
+We have added some great features to the Tyk OAS API definition bringing it closer to parity with our Tyk Classic API and to make it easier to get on board with Tyk using your Open API workflows.
+
+Tyk’s OSS users can now make use of extensive [**custom middleware**](https://tyk.io/docs/plugins/) options with your OAS APIs, to transform API requests and responses, exposing your upstream services in the way that suits your users and internal API governance rules. We’ve enhanced the Request Validation for Tyk OAS APIs to include parameter validation (path, query, headers, cookie) as well as the body validation that was introduced in Tyk 4.1.
+
+Tyk Dashboard has been enhanced with an all **new custom middleware UI** for Tyk OAS APIs, so **for the first time** you can configure and manage all of your Tyk API middleware from the Dashboard; this covers the full suite of custom middleware from pre- to post- and response plugins. We’ve got support for middleware bundles, Go plugins and Tyk Virtual Endpoints, all within the new improved Tyk Dashboard.
+
+[**Versioning** your Tyk OAS APIs](https://tyk.io/docs/getting-started/key-concepts/oas-versioning/) is easier than ever, with the Tyk OSS Gateway now looking after the maintenance of the list of versions associated with the base API for you; we’ve also added a new endpoint on the Tyk API that will return details of the versions for a given API.
+
+Tyk Dashboard hasn’t been left out, we’ve implemented a brand new version management UI for Tyk OAS APIs, to make it as easy as possible for you to manage those API versions as you develop and extend your API products with Tyk.
+
+We’ve improved support for [**OAS Mock Responses**](https://tyk.io/docs/getting-started/using-oas-definitions/mock-response/), with the Tyk OAS API definition now allowing you to register multiple Mock Responses in a single API, providing you with increased testing flexibility.
+
+Another new feature in the Tyk OAS API Designer is that you can now update (PATCH) your existing Tyk OAS APIs through the Dashboard API without having to resort to curl. That should make life just that little bit easier.
+Of course, we’ve also addressed some bugs and usability issues as part of our ongoing ambition to make Tyk OAS API the best way for you to create and manage your APIs.
+
+Thanks to our community contributors [armujahid](https://github.com/armujahid), [JordyBottelier](https://github.com/JordyBottelier) and [ls-michal-dabrowski](https://github.com/ls-michal-dabrowski) for your PRs that further improve the quality of Tyk OSS Gateway!
+
+
+## GraphQL and Universal Data Graph improvements
+
+This release is all about making things easier for our users with GraphQL and Universal Data Graph.
+
+In order to get our users up and running with a working Universal Data Graph quickly, we’ve created a repository of examples that anyone can import into their Dashboard or Gateway and see what Universal Data Graph is capable of. Import can be done in two ways:
+- manually, by simply copying a Tyk API definition from GitHub - TykTechnologies/tyk-examples: A repository containing example API definitions and policies for Tyk products. 
+- via command line using tyk-sync
+- 
+To make it easier for our users to find their way to Universal Data Graph, we’ve also given it its own space in the Dashboard. From now on you can find UDG under Data Graphs section of the menu.
+
+It also got a lot easier to turn a Kafka topic into a GraphQL subscription. Using our new Dashboard API endpoint, users will be able to transform their AsyncAPI documentation into Universal Data Graph definition with a single click. Support for OAS coming soon as well!
+
+With this release we are also giving our users improved headers for GQL APIs. It is now possible to use context variables in request headers and persist headers needed for introspection separately for improved security.
+
+Additionally we’ve added Dashboard support for introspection control on policy and key level. It is now possible to allow or block certain consumers from being able to introspect any graph while creating a policy or key via Dashboard.
+
+# Changelog
+
+## Tyk Gateway
+
+### Deprecated
+- LetsEncrypt
+
+### Added
+
+### Changed
+
+### Fixed
+
+## Tyk Dashboard
+
+### Added
+
+### Changed
+
+### Fixed
+
+# Updated Versions
+Tyk Gateway 5.0
+Tyk Dashboard 5.0
+
+# Upgrade process
+
+Follow the [standard upgrade guide]({{< ref "/content/upgrading-tyk.md" >}}), there are no breaking changes in this release.
+
+If you want switch from MongoDB to SQL, you can [use our migration tool]({{< ref "/content/planning-for-production/database-settings/postgresql.md#migrating-from-an-existing-mongodb-instance" >}}), but keep in mind that it does not yet support the migration of your analytics data.
+
+{{< note success >}}
+**Note**  
+
+Note: Upgrading the Golang version implies that all the Golang custom plugins that you are using need to be recompiled before migrating to 4.3 version of the Gateway. Check our docs for more details [Golang Plugins]({{< ref "/content/plugins/supported-languages/golang.md" >}}).
+{{< /note >}}

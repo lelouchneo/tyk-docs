@@ -14,7 +14,7 @@ We have added some great features to the Tyk OAS API definition bringing it clos
 
 Tyk’s OSS users can now make use of extensive [**custom middleware**](https://tyk.io/docs/plugins/) options with your OAS APIs, to transform API requests and responses, exposing your upstream services in the way that suits your users and internal API governance rules. We’ve enhanced the Request Validation for Tyk OAS APIs to include parameter validation (path, query, headers, cookie) as well as the body validation that was introduced in Tyk 4.1.
 
-Tyk Dashboard has been enhanced with an all **new custom middleware UI** for Tyk OAS APIs, so **for the first time** you can configure and manage all of your Tyk API middleware from the Dashboard; this covers the full suite of custom middleware from pre- to post- and response plugins. We’ve got support for middleware bundles, Go plugins and Tyk Virtual Endpoints, all within the new improved Tyk Dashboard.
+Tyk Dashboard has been enhanced with **all the custom middleware options** for Tyk OAS APIs, so **for the first time** you can configure your custom middleware from the Dashboard; this covers the full suite of custom middleware from pre- to post- and response plugins. We’ve got support for middleware bundles, Go plugins and Tyk Virtual Endpoints, all within the new and improved Tyk Dashboard UI.
 
 [**Versioning** your Tyk OAS APIs](https://tyk.io/docs/getting-started/key-concepts/oas-versioning/) is easier than ever, with the Tyk OSS Gateway now looking after the maintenance of the list of versions associated with the base API for you; we’ve also added a new endpoint on the Tyk API that will return details of the versions for a given API.
 

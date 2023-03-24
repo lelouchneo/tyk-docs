@@ -132,12 +132,6 @@ Type: `bool`<br />
 
 Set to true to enable SSL connections
 
-### http_server_options.use_ssl_le
-EV: <b>TYK_GW_HTTPSERVEROPTIONS_USELE_SSL</b><br />
-Type: `bool`<br />
-
-Enable Lets-Encrypt support
-
 ### http_server_options.enable_http2
 EV: <b>TYK_GW_HTTPSERVEROPTIONS_ENABLEHTTP2</b><br />
 Type: `bool`<br />
@@ -1466,6 +1460,12 @@ EV: <b>TYK_GW_NEWRELIC_LICENSEKEY</b><br />
 Type: `string`<br />
 
 New Relic License key
+
+### newrelic.enable_distributed_tracing
+EV: <b>TYK_GW_NEWRELIC_ENABLEDISTRIBUTEDTRACING</b><br />
+Type: `bool`<br />
+
+Enable distributed tracing
 
 ### enable_http_profiler
 EV: <b>TYK_GW_HTTPPROFILE</b><br />

@@ -20,7 +20,7 @@ Tyk Dashboard has been enhanced with **all the custom middleware options** for T
 
 Tyk Dashboard hasn’t been left out, we’ve implemented a brand new version management UI for Tyk OAS APIs, to make it as easy as possible for you to manage those API versions as you develop and extend your API products with Tyk.
 
-We’ve improved support for [**OAS Mock Responses**](https://tyk.io/docs/getting-started/using-oas-definitions/mock-response/), with the Tyk OAS API definition now allowing you to register multiple Mock Responses in a single API, providing you with increased testing flexibility.
+We’ve improved support for [**OAS Mock Responses**]({{< ref "getting-started/using-oas-definitions/mock-response" >}}), with the Tyk OAS API definition now allowing you to register multiple Mock Responses in a single API, providing you with increased testing flexibility.
 
 Another new feature in the Tyk OAS API Designer is that you can now update (PATCH) your existing Tyk OAS APIs through the Dashboard API without having to resort to curl. That should make life just that little bit easier.
 Of course, we’ve also addressed some bugs and usability issues as part of our ongoing ambition to make Tyk OAS API the best way for you to create and manage your APIs.
@@ -33,14 +33,14 @@ Thanks to our community contributors [armujahid](https://github.com/armujahid), 
 This release is all about making things easier for our users with GraphQL and Universal Data Graph.
 
 In order to get our users up and running with a working Universal Data Graph quickly, we’ve created a repository of examples that anyone can import into their Dashboard or Gateway and see what Universal Data Graph is capable of. Import can be done in two ways:
-- manually, by simply copying a Tyk API definition from GitHub - TykTechnologies/tyk-examples: A repository containing example API definitions and policies for Tyk products. 
-- via command line using tyk-sync
+- manually, by simply copying a Tyk API definition from GitHub - [TykTechnologies/tyk-examples](https://TykTechnologies/tyk-examples): A repository containing example API definitions and policies for Tyk products. 
+- via command line [using tyk-sync]({{< ref "/universal-data-graph/udg-examples/" >}})
 
 To make it easier for our users to find their way to Universal Data Graph, we’ve also given it its own space in the Dashboard. From now on you can find UDG under Data Graphs section of the menu.
 
 It also got a lot easier to turn a Kafka topic into a GraphQL subscription. Using our new Dashboard API endpoint, users will be able to transform their AsyncAPI documentation into Universal Data Graph definition with a single click. Support for OAS coming soon as well!
 
-With this release we are also giving our users improved headers for GQL APIs. It is now possible to use context variables in request headers and persist headers needed for introspection separately for improved security.
+With this release we are also giving our users [improved headers for GQL APIs]({{< ref "graphql/gql-headers" >}}). It is now possible to use context variables in request headers and persist headers needed for introspection separately for improved security.
 
 Additionally we’ve added Dashboard support for introspection control on policy and key level. It is now possible to allow or block certain consumers from being able to introspect any graph while creating a policy or key via Dashboard.
 

@@ -34,7 +34,7 @@ This release is all about making things easier for our users with GraphQL and Un
 
 In order to get our users up and running with a working Universal Data Graph quickly, we’ve created a repository of examples that anyone can import into their Dashboard or Gateway and see what Universal Data Graph is capable of. Import can be done in two ways:
 - manually, by simply copying a Tyk API definition from GitHub - [TykTechnologies/tyk-examples](https://TykTechnologies/tyk-examples): A repository containing example API definitions and policies for Tyk products. 
-- via command line [using tyk-sync]({{< ref "/universal-data-graph/udg-examples/" >}})
+- via command line [using tyk-sync]({{< ref "universal-data-graph/udg-examples" >}})
 
 To make it easier for our users to find their way to Universal Data Graph, we’ve also given it its own space in the Dashboard. From now on you can find UDG under Data Graphs section of the menu.
 

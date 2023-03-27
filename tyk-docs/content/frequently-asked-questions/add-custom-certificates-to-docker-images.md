@@ -7,7 +7,7 @@ menu:
 weight: 0 
 ---
 
-There are three ways to load your own self-signed certs into a Tyk Gateway Docker image.
+There are four ways to load your own self-signed certs into a Tyk Gateway Docker image.
 
 1. Modify or extend the Dockerfile.
 2. Override the entrypoint. This method does not require modifying the Dockerfile or creating your own. Instead, you can mount your root certificate as a volume, and then before executing `entrypoint.sh`, update the ca certificates.
@@ -24,6 +24,29 @@ docker run -it tykio/tyk-gateway:latest \
 
 This applies to the Tyk Gateway Docker image only.
 {{< /note >}}
+
+4. Install Gateway using Helm Chart and mount extra Volume:
+```yaml
+   ## extraVolumes A list of volumes to be added to the pod
+   ## extraVolumes:
+   ##   - name: ca-certs
+   ##     secret:
+   ##       defaultMode: 420
+   ##       secretName: ca-certs
+   extraVolumes: 
+     - name: self-signed-ca
+       secret:
+         secretName: self-signed-ca-secret
+   ## extraVolumeMounts A list of volume mounts to be added to the pod
+   ## extraVolumeMounts:
+   ##   - name: ca-certs
+   ##     mountPath: /etc/ssl/certs/ca-certs.crt
+   ##     readOnly: true
+   extraVolumeMounts: 
+     - name: self-signed-ca
+       mountPath: "/etc/ssl/certs/tykCA.pem"
+       subPath: tykCA.pem
+```
 
 
 Contact us to learn more:

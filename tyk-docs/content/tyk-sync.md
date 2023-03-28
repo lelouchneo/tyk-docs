@@ -9,7 +9,7 @@ aliases:
   - /advanced-configuration/manage-multiple-environments/tyk-sync/
 ---
 
-Tyk Sync is a command line tool and library to manage and synchronise a Tyk installation with your version control system (VCS).
+Tyk Sync is a comman line tool and library to manage and synchronise a Tyk installation with your version control system (VCS).
 
 {{< note success >}}
 **Note**  

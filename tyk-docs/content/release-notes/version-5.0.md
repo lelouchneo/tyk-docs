@@ -79,8 +79,8 @@ Additionally we’ve added Dashboard support for introspection control on policy
 - Universal Data Graph moved to a separate dashboard section
 
 ## Updated Versions
-Tyk Gateway 5.0
-Tyk Dashboard 5.0
+Tyk Gateway 5.0 - [docker](https://hub.docker.com/layers/tykio/tyk-gateway/v5.0.0/images/sha256-196815adff2805ccc14c267b14032f23913321b24ea86c052b62a7b1568b6725?context=repo)
+Tyk Dashboard 5.0 - [docker](https://hub.docker.com/layers/tykio/tyk-dashboard/v5.0/images/sha256-3d736b06b023e23f406b1591f4915b3cb15a417fcb953d380eb8b4d71829f20f?tab=vulnerabilities)
 
 ## Upgrade process
 

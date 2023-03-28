@@ -22,3 +22,12 @@ You should provide JSON payload with the following data:
 | Method       | POST                                                |
 | Body         | {"type": "asyncapi", "data": "<asyncapi_document>"} |
 
+#### Sample Response
+
+```
+{
+    "Status": "OK",
+    "Message": "Data source imported",
+    "Meta": "64102568f2c734bd2c0b8f99"
+}
+```
